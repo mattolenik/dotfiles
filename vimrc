@@ -7,24 +7,10 @@ filetype off                  " required
 
 let g:airline_powerline_fonts=1
 
-function! GetGitDir()
-  let cmd = 'git rev-parse --show-toplevel'
-  let gitdir = substitute(system(cmd), '[\]\|[[:cntrl:]]', '', 'g')
-  return empty(matchstr(gitdir, '^fatal:.*')) ? gitdir : ""
-endfunction
-
-function! Strip(input_string)
-  return substitute(a:input_string, '^\s*\(.\{-}\)\s*$', '\1', '')
-endfunction
-
-let projectvimrc = GetGitDir() . '/.vimrc.local'
-if filereadable(projectvimrc)
-  exe 'source' projectvimrc
-endif
-
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'mattolenik/vim-projectrc'
 NeoBundle 'tpope/vim-sensible'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'nathanaelkane/vim-indent-guides'
