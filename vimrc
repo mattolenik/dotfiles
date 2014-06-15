@@ -11,6 +11,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'mattolenik/vim-projectrc'
+NeoBundle 'mattolenik/vim-gnometerminal-cursor'
 NeoBundle 'tpope/vim-sensible'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -88,12 +89,6 @@ colorscheme kolor
 let g:neocomplete#enable_at_startup=1
 
 :map <C-X> :Unite file buffer
-
-if has("autocmd")
-  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Profile0/cursor_shape ibeam"
-  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Profile0/cursor_shape block"
-  au VimLeave    * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Profile0/cursor_shape block"
-endif
 
 set tabline=%!tabber#TabLine()
 let g:tabber_divider_style = 'fancy'
