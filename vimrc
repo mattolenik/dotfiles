@@ -109,3 +109,12 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+
+hi CursorLine ctermbg=237
+hi MatchParen ctermbg=241
+hi MatchParen ctermfg=250
+
+augroup vagrant
+  au!
+  au BufRead,BufNewFile Vagrantfile set filetype=ruby
+augroup END

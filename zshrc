@@ -76,8 +76,8 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
-alias vagrant-up="vagrant up --provider=docker"
-alias vagrant-pristine="vagrant destroy -f && vagrant-up"
+alias vagrant-pristine="vagrant destroy -f && vagrant up"
+export VAGRANT_DEFAULT_PROVIDER=docker
 
 export TERM="xterm-256color"
 
@@ -91,3 +91,4 @@ export EDITOR=vim
 setopt no_share_history
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
+
