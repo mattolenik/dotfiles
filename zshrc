@@ -74,6 +74,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+alias pathof='readlink -f'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias vagrant-pristine="vagrant destroy -f && vagrant up"

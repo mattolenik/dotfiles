@@ -99,6 +99,7 @@ hi IndentGuidesOdd  ctermbg=236
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = { 'dir': '^dist' }
 
 " Ignore node_modules in ctrlp searches
 set wildignore+=*/node_modules/*
