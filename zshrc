@@ -78,6 +78,7 @@ alias pathof='readlink -f'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias vagrant-pristine="vagrant destroy -f && vagrant up"
+alias npm-exec='PATH=$(npm bin):$PATH'
 export VAGRANT_DEFAULT_PROVIDER=docker
 
 export TERM="xterm-256color"
@@ -93,3 +94,5 @@ setopt no_share_history
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
+source ~/.nvm/nvm.sh
+nvm use 0.10 &> /dev/null

@@ -115,6 +115,9 @@ hi CursorLine ctermbg=237
 hi MatchParen ctermbg=241
 hi MatchParen ctermfg=250
 
+" vim-session aliases
+let g:session_command_aliases = 1
+
 augroup vagrant
   au!
   au BufRead,BufNewFile Vagrantfile set filetype=ruby
