@@ -7,38 +7,39 @@ filetype off                  " required
 
 let g:airline_powerline_fonts=1
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
+call plug#begin('~/.vim/plugged')
 
-NeoBundle 'mattolenik/vim-projectrc'
-NeoBundle 'mattolenik/vim-gnometerminal-cursor'
-NeoBundle 'tpope/vim-sensible'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'xml.vim'
-NeoBundle 'yaifa.vim'
-NeoBundle 'Tabmerge'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'myusuf3/numbers.vim'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'Shougo/vimproc.vim'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'zeis/vim-kolor'
-NeoBundle 'junegunn/seoul256.vim'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'edkolev/tmuxline.vim'
-NeoBundle 'fweep/vim-tabber'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'lukaszkorecki/CoffeeTags'
-NeoBundle 'xolox/vim-session'
-NeoBundle 'xolox/vim-misc'
+Plug 'mattolenik/vim-projectrc'
+Plug 'mattolenik/vim-gnometerminal-cursor'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'xml.vim'
+Plug 'yaifa.vim'
+Plug 'Tabmerge'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'vim-ruby/vim-ruby'
+Plug 'myusuf3/numbers.vim'
+Plug 'bling/vim-airline'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'zeis/vim-kolor'
+Plug 'junegunn/seoul256.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'scrooloose/syntastic'
+Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/unite.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'fweep/vim-tabber'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'lukaszkorecki/CoffeeTags'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'fatih/vim-go'
+Plug 'tpope/vim-fugitive'
 
-call neobundle#end()
+call plug#end()
 
 syntax on
 filetype plugin indent on     " required!
@@ -122,3 +123,40 @@ augroup vagrant
   au!
   au BufRead,BufNewFile Vagrantfile set filetype=ruby
 augroup END
+
+" Compatible with ranger 1.4.2 through 1.6.*
+"
+" Add ranger as a file chooser in vim
+"
+" If you add this code to the .vimrc, ranger can be started using the command
+" ":RangerChooser" or the keybinding "<leader>r".  Once you select one or more
+" files, press enter and ranger will quit again and vim will open the selected
+" files.
+
+function! RangeChooser()
+    let temp = tempname()
+    " The option "--choosefiles" was added in ranger 1.5.1. Use the next line
+    " with ranger 1.4.2 through 1.5.0 instead.
+    "exec 'silent !ranger --choosefile=' . shellescape(temp)
+    exec 'silent !ranger --choosefiles=' . shellescape(temp)
+    if !filereadable(temp)
+        redraw!
+        " Nothing to read.
+        return
+    endif
+    let names = readfile(temp)
+    if empty(names)
+        redraw!
+        " Nothing to open.
+        return
+    endif
+    " Edit the first item.
+    exec 'tabedit ' . fnameescape(names[0])
+    " Add any remaning items to the arg list/buffer list.
+    for name in names[1:]
+        exec 'argadd ' . fnameescape(name)
+    endfor
+    redraw!
+endfunction
+command! -bar RangerChooser call RangeChooser()
+nnoremap <leader>r :<C-U>RangerChooser<CR>

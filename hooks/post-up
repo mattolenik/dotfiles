@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ ! -e $HOME/.vim/bundle/neobundle.vim ]; then
-  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-fi
-$HOME/.vim/bundle/neobundle.vim/bin/neoinstall
-vim +NeoBundleInstall +qall
+#if [ ! -e $HOME/.vim/bundle/neobundle.vim ]; then
+#  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+#fi
+#$HOME/.vim/bundle/neobundle.vim/bin/neoinstall
+#vim +NeoBundleInstall +qall

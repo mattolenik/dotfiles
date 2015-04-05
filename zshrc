@@ -78,7 +78,9 @@ alias pathof='readlink -f'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias vagrant-pristine="vagrant destroy -f && vagrant up"
+alias monodevelop='/opt/monodevelop/bin/monodevelop-launcher.sh'
 alias npm-exec='PATH=$(npm bin):$PATH'
+alias code='pygmentize -g'
 export VAGRANT_DEFAULT_PROVIDER=docker
 
 export TERM="xterm-256color"
@@ -93,6 +95,9 @@ export EDITOR=vim
 setopt no_share_history
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
+
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
 
 source ~/.nvm/nvm.sh
 nvm use 0.10 &> /dev/null
