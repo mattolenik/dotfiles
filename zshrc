@@ -5,8 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="aimo2"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="aimo2"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -87,17 +87,20 @@ export TERM="xterm-256color"
 
 # Fix git prompt slowness. Unfortunately breaks the dirty repo mark character.
 
-function git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
-}
+#function git_prompt_info() {
+#  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+#  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+#}
 export EDITOR=vim
 setopt no_share_history
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
+export PATH="$HOME/.tmuxifier/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/root/bin
 export GOPATH=$HOME/go
 
-source ~/.nvm/nvm.sh
-nvm use 0.10 &> /dev/null
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source /home/matt/.rvm/scripts/rvm
