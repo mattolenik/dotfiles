@@ -7,38 +7,35 @@ filetype off                  " required
 
 let g:airline_powerline_fonts=1
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
+call plug#begin('~/.vim/plugged')
 
-NeoBundle 'mattolenik/vim-projectrc'
-NeoBundle 'mattolenik/vim-gnometerminal-cursor'
-NeoBundle 'tpope/vim-sensible'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'xml.vim'
-NeoBundle 'yaifa.vim'
-NeoBundle 'Tabmerge'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'myusuf3/numbers.vim'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'Shougo/vimproc.vim'
-NeoBundle 'christoomey/vim-tmux-navigator'
-NeoBundle 'zeis/vim-kolor'
-NeoBundle 'junegunn/seoul256.vim'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'edkolev/tmuxline.vim'
-NeoBundle 'fweep/vim-tabber'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'lukaszkorecki/CoffeeTags'
-NeoBundle 'xolox/vim-session'
-NeoBundle 'xolox/vim-misc'
+Plug 'mattolenik/vim-projectrc'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'xml.vim'
+Plug 'yaifa.vim'
+Plug 'Tabmerge'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'vim-ruby/vim-ruby'
+Plug 'myusuf3/numbers.vim'
+Plug 'bling/vim-airline'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'mhinz/vim-tmuxify'
+Plug 'zeis/vim-kolor'
+Plug 'Valloric/YouCompleteMe'
+Plug 'edkolev/tmuxline.vim'
+Plug 'fweep/vim-tabber'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
+Plug 'fatih/vim-go'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
 
-call neobundle#end()
+call plug#end()
 
 syntax on
 filetype plugin indent on     " required!
@@ -88,8 +85,6 @@ colorscheme kolor
 
 let g:neocomplete#enable_at_startup=1
 
-:map <C-X> :Unite file buffer
-
 set tabline=%!tabber#TabLine()
 let g:tabber_divider_style = 'fancy'
 
@@ -99,6 +94,7 @@ hi IndentGuidesOdd  ctermbg=236
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_root_markers = ['.gosrc']
 
 " Ignore node_modules in ctrlp searches
 set wildignore+=*/node_modules/*
@@ -109,3 +105,17 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+autocmd FileType go setlocal shiftwidth=4 tabstop=4
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
+
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    " Do Mac stuff here
+    set clipboard=unnamed
+  endif
+endif
