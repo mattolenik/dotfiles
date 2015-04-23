@@ -10,6 +10,7 @@ let g:airline_powerline_fonts=1
 call plug#begin('~/.vim/plugged')
 
 Plug 'mattolenik/vim-projectrc'
+Plug 'mattolenik/vim-gnometerminal-cursor'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -25,6 +26,11 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'mhinz/vim-tmuxify'
 Plug 'zeis/vim-kolor'
 Plug 'Valloric/YouCompleteMe'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'zeis/vim-kolor'
+Plug 'junegunn/seoul256.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'scrooloose/syntastic'
 Plug 'edkolev/tmuxline.vim'
 Plug 'fweep/vim-tabber'
 Plug 'kien/ctrlp.vim'
@@ -95,6 +101,7 @@ hi IndentGuidesOdd  ctermbg=236
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_root_markers = ['.gosrc']
+let g:ctrlp_custom_ignore = { 'dir': '^dist' }
 
 " Ignore node_modules in ctrlp searches
 set wildignore+=*/node_modules/*
@@ -119,3 +126,52 @@ if has("unix")
     set clipboard=unnamed
   endif
 endif
+
+hi CursorLine ctermbg=237
+hi MatchParen ctermbg=241
+hi MatchParen ctermfg=250
+
+" vim-session aliases
+let g:session_command_aliases = 1
+
+augroup vagrant
+  au!
+  au BufRead,BufNewFile Vagrantfile set filetype=ruby
+augroup END
+
+" Compatible with ranger 1.4.2 through 1.6.*
+"
+" Add ranger as a file chooser in vim
+"
+" If you add this code to the .vimrc, ranger can be started using the command
+" ":RangerChooser" or the keybinding "<leader>r".  Once you select one or more
+" files, press enter and ranger will quit again and vim will open the selected
+" files.
+
+function! RangeChooser()
+    let temp = tempname()
+    " The option "--choosefiles" was added in ranger 1.5.1. Use the next line
+    " with ranger 1.4.2 through 1.5.0 instead.
+    "exec 'silent !ranger --choosefile=' . shellescape(temp)
+    exec 'silent !ranger --choosefiles=' . shellescape(temp)
+    if !filereadable(temp)
+        redraw!
+        " Nothing to read.
+        return
+    endif
+    let names = readfile(temp)
+    if empty(names)
+        redraw!
+        " Nothing to open.
+        return
+    endif
+    " Edit the first item.
+    exec 'tabedit ' . fnameescape(names[0])
+    " Add any remaning items to the arg list/buffer list.
+    for name in names[1:]
+        exec 'argadd ' . fnameescape(name)
+    endfor
+    redraw!
+endfunction
+command! -bar RangerChooser call RangeChooser()
+nnoremap <leader>r :<C-U>RangerChooser<CR>

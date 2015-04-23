@@ -71,14 +71,14 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+if [[ `uname` != 'Darwin' ]]; then
+	alias pathof='readlink -f'
+	alias pbcopy='xsel --clipboard --input'
+	alias pbpaste='xsel --clipboard --output'
+fi
+
 export TERM="xterm-256color"
 
-# Fix git prompt slowness. Unfortunately breaks the dirty repo mark character.
-
-#function git_prompt_info() {
-#  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-#  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
-#}
 export EDITOR=vim
 setopt no_share_history
 export GOPATH=~/go3:~/go
@@ -88,3 +88,15 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.profile
 source ~/.rvm/scripts/rvm
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+if [[ `command -v tmuxifier &> /dev/null` == 0 ]]; then
+	eval "$(tmuxifier init -)"
+fi
+
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/root/bin
+export GOPATH=$HOME/go
+
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
