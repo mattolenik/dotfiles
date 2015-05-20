@@ -29,7 +29,6 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'zeis/vim-kolor'
 Plug 'junegunn/seoul256.vim'
-Plug 'kchmck/vim-coffee-script'
 Plug 'scrooloose/syntastic'
 Plug 'edkolev/tmuxline.vim'
 Plug 'fweep/vim-tabber'
@@ -175,3 +174,6 @@ function! RangeChooser()
 endfunction
 command! -bar RangerChooser call RangeChooser()
 nnoremap <leader>r :<C-U>RangerChooser<CR>
+
+" Auto close scratch window, used by autocomplete plugins
+autocmd CompleteDone * pclose
