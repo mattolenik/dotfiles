@@ -20,7 +20,8 @@ Plug 'Tabmerge'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-ruby/vim-ruby'
 Plug 'myusuf3/numbers.vim'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mhinz/vim-tmuxify'
@@ -39,6 +40,8 @@ Plug 'xolox/vim-misc'
 Plug 'fatih/vim-go'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+Plug 'chrisbra/vim-show-whitespace'
+Plug 'tfnico/vim-gradle'
 
 call plug#end()
 
@@ -74,6 +77,9 @@ let mapleader=","
 set incsearch
 set ignorecase
 set smartcase
+
+"Persistent undo
+set undofile
 
 "Set swap and backup files to the tmp location
 set directory=~/.vimswap//,/var/tmp//,/tmp//,.
@@ -177,3 +183,9 @@ nnoremap <leader>r :<C-U>RangerChooser<CR>
 
 " Auto close scratch window, used by autocomplete plugins
 autocmd CompleteDone * pclose
+
+" check file change every 4 seconds ('CursorHold') and reload the buffer upon detecting change
+set autoread                                                                                                                                                                                    
+au CursorHold * checktime   
+
+let g:session_autosave = 'no'

@@ -83,7 +83,7 @@ export EDITOR=vim
 setopt no_share_history
 export GOPATH=~/go3:~/go
 export PATH=/usr/local/bin:/build/apps/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/go/libexec/bin:${GOPATH//://bin:}/bin
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.profile
