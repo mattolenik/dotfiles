@@ -26,7 +26,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mhinz/vim-tmuxify'
 Plug 'zeis/vim-kolor'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'zeis/vim-kolor'
 Plug 'junegunn/seoul256.vim'

@@ -81,22 +81,18 @@ export TERM="xterm-256color"
 
 export EDITOR=vim
 setopt no_share_history
-export GOPATH=~/go3:~/go
-export PATH=/usr/local/bin:/build/apps/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/go/libexec/bin:${GOPATH//://bin:}/bin
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-source ~/.profile
-source ~/.rvm/scripts/rvm
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-if [[ `command -v tmuxifier &> /dev/null` == 0 ]]; then
-	eval "$(tmuxifier init -)"
+if hash tmuxifier &> /dev/null; then
+	export PATH="$HOME/.tmuxifier/bin:$PATH"
+	if [[ `command -v tmuxifier &> /dev/null` == 0 ]]; then
+		eval "$(tmuxifier init -)"
+	fi
+	export PATH="$HOME/.tmuxifier/bin:$PATH"
 fi
 
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$HOME/root/bin
-export GOPATH=$HOME/go
-
+for src in $HOME/.profile.d/*.sh(N); do
+	source $src
+done
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
