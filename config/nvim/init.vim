@@ -12,6 +12,10 @@ Plug 'tpope/vim-sleuth'
 Plug 'danro/rename.vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'kien/ctrlp.vim'
+Plug 'ervandew/supertab'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'tpope/vim-surround'
+Plug 'tomtom/tcomment_vim'
 
 call plug#end()
 
@@ -44,3 +48,10 @@ nmap <leader>- <Plug>AirlineSelectPrevTab
 nmap <leader>+ <Plug>AirlineSelectNextTab
 
 let g:deoplete#enable_at_startup = 1
+" deoplete keys, ctrl-space to open and tab to cycle
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <C-Space> <C-x><C-o>
+nmap <leader>t :bnext<CR>
+nmap <leader>T :bprevious<CR>
+nmap <C-w> :bd<CR>
+
