@@ -16,10 +16,16 @@ Plug 'ervandew/supertab'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+Plug 'tpope/vim-liquid'
 
 call plug#end()
 
-let mapleader=","
+let mapleader="\<Space>"
+
+" Clear search map on esc
+nnoremap <esc> :noh<return><esc>
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -44,14 +50,15 @@ nmap <leader>6 <Plug>AirlineSelectTab6
 nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
-nmap <leader>- <Plug>AirlineSelectPrevTab
-nmap <leader>+ <Plug>AirlineSelectNextTab
+nmap <leader>T <Plug>AirlineSelectPrevTab
+nmap <leader>t <Plug>AirlineSelectNextTab
 
 let g:deoplete#enable_at_startup = 1
 " deoplete keys, ctrl-space to open and tab to cycle
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <C-Space> <C-x><C-o>
-nmap <leader>t :bnext<CR>
-nmap <leader>T :bprevious<CR>
 nmap <C-w> :bd<CR>
 
+:set number
+
+colorscheme Tomorrow-Night-Eighties
