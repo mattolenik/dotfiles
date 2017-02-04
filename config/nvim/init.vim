@@ -10,8 +10,6 @@ Plug 'rakr/vim-one'
 Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-sleuth'
 Plug 'danro/rename.vim'
-Plug 'Shougo/deoplete.nvim'
-Plug 'kien/ctrlp.vim'
 Plug 'ervandew/supertab'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-surround'
@@ -19,10 +17,14 @@ Plug 'tomtom/tcomment_vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'tpope/vim-liquid'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'wincent/command-t', { 'do': 'cd ruby/command-t && ruby extconf.rb && make' }
 
 call plug#end()
 
 let mapleader="\<Space>"
+
+nmap <silent> <C-p> <Plug>(CommandT)
 
 " Clear search map on esc
 nnoremap <esc> :noh<return><esc>
@@ -57,6 +59,8 @@ let g:deoplete#enable_at_startup = 1
 " deoplete keys, ctrl-space to open and tab to cycle
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <C-Space> <C-x><C-o>
+
+" ctrl-w buffer close
 nmap <C-w> :bd<CR>
 
 :set number
