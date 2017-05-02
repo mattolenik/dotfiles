@@ -22,9 +22,17 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 
+:imap `` <Esc>
+
+:command! EditInit :e ~/.config/nvim/init.vim
+:command! SourceInit :source ~/.config/nvim/init.vim
 let mapleader="\<Space>"
 
-nmap <silent> <C-p> <Plug>(CommandT)
+" Remap macro key to leader q
+noremap <Leader>q q
+noremap q <Nop>
+
+nmap <silent> <leader>p :FZF<cr>
 
 " Clear search map on esc
 nnoremap <esc> :noh<return><esc>
