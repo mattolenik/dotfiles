@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws scala sbt docker maven)
+plugins=(git aws scala sbt docker maven nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,3 +88,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export EDITOR=nvim
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+alias livecat='watch --color -n 1 ccat --color=always'
