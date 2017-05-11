@@ -84,6 +84,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Save history shared but only when exiting session
+setopt noincappendhistory
+setopt nosharehistory
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export EDITOR=nvim
 BASE16_SHELL=$HOME/.config/base16-shell/
@@ -91,4 +95,9 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
+export AWS_DEFAULT_PROFILE=qa
 alias livecat='watch --color -n 1 ccat --color=always'
+alias awsqa='aws --profile qa'
+alias awsprod='aws --profile prod'
+alias zshrc-edit="$EDITOR ~/.zshrc"
+alias zshrc-source='source ~/.zshrc'
