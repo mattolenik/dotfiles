@@ -1,7 +1,13 @@
 #!/bin/sh
 
-#if [ ! -e $HOME/.vim/bundle/neobundle.vim ]; then
-#  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-#fi
-#$HOME/.vim/bundle/neobundle.vim/bin/neoinstall
-#vim +NeoBundleInstall +qall
+PLUG_PATH="$HOME/.local/share/nvim/site/autoload/plug.vim"
+TPM_PATH="$HOME/.tmux/plugins/tpm"
+
+if [ ! -e "$PLUG_PATH" ]; then
+  curl -fLo "$PLUG_PATH" --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+if [ ! -e "$TPM_PATH" ]; then
+  git clone https://github.com/tmux-plugins/tpm "$TPM_PATH"
+fi
