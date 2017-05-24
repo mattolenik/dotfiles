@@ -54,6 +54,7 @@ setopt noincappendhistory
 setopt nosharehistory
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/bin"
 export EDITOR=nvim
 
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
@@ -74,5 +75,8 @@ pidof() { ps aux | grep -i "$1" | awk '{print $2}' }
 mypidof() { ps ux | grep -i "$1" | awk '{print $2}' }
 psinfo() { ps aux | grep -i "$1" }
 mypsinfo() { ps ux | grep -i "$1" }
+
+spy() { fswatch -0 -o "$1" | xargs -0 -n 1 -I {} ${@[2, -1]} }
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
