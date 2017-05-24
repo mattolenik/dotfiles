@@ -9,9 +9,6 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -21,9 +18,6 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -51,38 +45,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws scala sbt docker maven nvm)
+plugins=(git aws docker mvn)
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Save history shared but only when exiting session
 setopt noincappendhistory
@@ -90,8 +55,6 @@ setopt nosharehistory
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export EDITOR=nvim
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
@@ -99,5 +62,17 @@ export AWS_DEFAULT_PROFILE=qa
 alias livecat='watch --color -n 1 ccat --color=always'
 alias awsqa='aws --profile qa'
 alias awsprod='aws --profile prod'
-alias zshrc-edit="$EDITOR ~/.zshrc"
-alias zshrc-source='source ~/.zshrc'
+alias edit-zshrc="$EDITOR ~/.zshrc"
+alias source-zshrc='source ~/.zshrc'
+
+if [ -d $HOME/.config/zshrc ]; then
+  source $HOME/.config/zshrc/*
+fi
+alias mvn-debug='mvn -Dmaven.surefire.debug test'
+
+pidof() { ps aux | grep -i "$1" | awk '{print $2}' }
+mypidof() { ps ux | grep -i "$1" | awk '{print $2}' }
+psinfo() { ps aux | grep -i "$1" }
+mypsinfo() { ps ux | grep -i "$1" }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
