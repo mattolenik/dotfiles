@@ -64,6 +64,7 @@ autocmd BufLeave term://* stopinsert
 
 :set ignorecase
 :set smartcase
+:set tabstop=4
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1

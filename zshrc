@@ -80,3 +80,11 @@ spy() { fswatch -0 -o "$1" | xargs -0 -n 1 -I {} ${@[2, -1]} }
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FUZ_SEPARATOR="@@"
+fuz() {
+  local args="$*"
+  local fzf_out=($(fzf))
+  local subst="${args/$FUZ_SEPARATOR/$fzf_out[@]}"
+  eval ${subst}
+}
