@@ -9,11 +9,9 @@ Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-sleuth'
 Plug 'danro/rename.vim'
 Plug 'ervandew/supertab'
-Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 Plug 'xolox/vim-misc'
-"Plug 'xolox/vim-session'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-liquid'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -24,8 +22,8 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'rakr/vim-one'
 Plug 'lifepillar/vim-solarized8'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'hdima/python-syntax'
 Plug 'sstallion/vim-whitespace'
+"Plug 'python-mode/python-mode'
 
 call plug#end()
 
@@ -47,9 +45,10 @@ let g:tmuxline_theme='vim_statusline_3'
 let mapleader="\<Space>"
 
 " Remap macro key to leader q
-noremap <Leader>q q
+noremap <Leader><Leader> q
 noremap q <Nop>
 
+nnoremap <C-w> :bd<cr>
 nmap <silent> <leader>p :FZF<cr>
 
 " Clear search map on esc
@@ -60,7 +59,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-autocmd BufLeave term://* stopinsert
+"autocmd BufLeave term://* stopinsert
 
 :set ignorecase
 :set smartcase
@@ -88,6 +87,9 @@ inoremap <C-Space> <C-x><C-o>
 
 " leader leader-w buffer close
 nmap <leader><leader>w :bd<CR>
+
+" Disable useless archaic vim garbage hotkeys
+nnoremap Q <nop>
 
 let python_highlight_all = 1
 

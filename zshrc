@@ -65,6 +65,7 @@ alias awsqa='aws --profile qa'
 alias awsprod='aws --profile prod'
 alias edit-zshrc="$EDITOR ~/.zshrc"
 alias source-zshrc='source ~/.zshrc'
+alias edit-tmuxconf="$EDITOR ~/.tmux.conf"
 
 if [ -d $HOME/.config/zshrc ]; then
   source $HOME/.config/zshrc/*
@@ -88,3 +89,9 @@ fuz() {
   local subst="${args/$FUZ_SEPARATOR/$fzf_out[@]}"
   eval ${subst}
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export GOPATH=$HOME/dev/go
+export PATH="$PATH:$GOPATH/bin"
