@@ -24,6 +24,8 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sstallion/vim-whitespace'
 "Plug 'python-mode/python-mode'
+Plug 'junegunn/vim-easy-align'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
@@ -64,6 +66,8 @@ nnoremap <C-H> <C-W><C-H>
 :set ignorecase
 :set smartcase
 :set tabstop=4
+
+set nofoldenable
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1

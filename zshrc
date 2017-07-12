@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="cura"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -49,6 +49,8 @@ plugins=(git aws docker mvn)
 
 source $ZSH/oh-my-zsh.sh
 
+unsetopt auto_cd
+
 # Save history shared but only when exiting session
 setopt noincappendhistory
 setopt nosharehistory
@@ -57,20 +59,23 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/bin"
 export EDITOR=nvim
 
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-
 export AWS_DEFAULT_PROFILE=qa
 alias livecat='watch --color -n 1 ccat --color=always'
-alias awsqa='aws --profile qa'
-alias awsprod='aws --profile prod'
 alias edit-zshrc="$EDITOR ~/.zshrc"
 alias source-zshrc='source ~/.zshrc'
 alias edit-tmuxconf="$EDITOR ~/.tmux.conf"
+alias checkaws='env | grep AWS'
 
 if [ -d $HOME/.config/zshrc ]; then
   source $HOME/.config/zshrc/*
 fi
 alias mvn-debug='mvn -Dmaven.surefire.debug test'
+
+alias http-get='curl -w "\n%{http_code}"'
+alias http-post='curl -w "\n%{http_code}" -X POST'
+alias http-put='curl -w "\n%{http_code}" -X PUT'
+alias http-delete='curl -w "\n%{http_code}" -X DELETE'
+alias http-head='curl -w "\n%{http_code}" -I'
 
 pidof() { ps aux | grep -i "$1" | awk '{print $2}' }
 mypidof() { ps ux | grep -i "$1" | awk '{print $2}' }
@@ -78,6 +83,10 @@ psinfo() { ps aux | grep -i "$1" }
 mypsinfo() { ps ux | grep -i "$1" }
 
 spy() { fswatch -0 -o "$1" | xargs -0 -n 1 -I {} ${@[2, -1]} }
+
+aws-set-qa() { export AWS_PROFILE=qa; export AWS_DEFAULT_PROFILE=qa; export AWS_REGION=us-east-1; }
+aws-set-personal() { export AWS_PROFILE=personal; export AWS_DEFAULT_PROFILE=personal; }
+aws-set-profile() { export AWS_PROFILE=$1; export AWS_DEFAULT_PROFILE=$1; }
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
