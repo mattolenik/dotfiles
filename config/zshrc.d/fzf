@@ -11,7 +11,6 @@ fi
 # Key bindings
 # ------------
 source "$HOME/.fzf/shell/key-bindings.zsh"
-source "/Users/mattolenik/.fzf/shell/key-bindings.zsh"
 
 
 
