@@ -26,6 +26,7 @@ Plug 'sstallion/vim-whitespace'
 "Plug 'python-mode/python-mode'
 Plug 'junegunn/vim-easy-align'
 Plug 'hashivim/vim-terraform'
+Plug 'mhinz/vim-signify'
 
 call plug#end()
 
