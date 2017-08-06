@@ -105,5 +105,3 @@ PY2BIN="$HOME/Library/Python/2.7/bin"
 export PATH="$PY2BIN:$PATH"
 
 powerline-daemon -q
-loc=$(pip show powerline-status | grep Location)
-powerline_repo_root=$([[ $loc =~ "^Location:[[:space:]](.*)$" ]] && echo $match[1])
