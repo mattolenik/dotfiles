@@ -23,7 +23,6 @@ Plug 'rakr/vim-one'
 Plug 'lifepillar/vim-solarized8'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sstallion/vim-whitespace'
-"Plug 'python-mode/python-mode'
 Plug 'junegunn/vim-easy-align'
 Plug 'hashivim/vim-terraform'
 Plug 'mhinz/vim-signify'
@@ -35,8 +34,8 @@ call plug#end()
 set termguicolors
 set mouse=a
 let g:solarized_term_italics = 1
-let g:airline_theme = 'solarized'
 colorscheme solarized8_light_high
+let g:airline_theme = 'solarized'
 
 let g:airline#extensions#tmuxline#enabled = 0
 let g:tmuxline_theme='vim_statusline_3'

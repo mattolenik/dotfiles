@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="cura"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -101,3 +101,10 @@ fuz() {
 
 export GOPATH=$HOME/dev/go
 export PATH="$PATH:$GOPATH/bin"
+PY2BIN="$HOME/Library/Python/2.7/bin"
+export PATH="$PY2BIN:$PATH"
+
+powerline-daemon -q
+loc=$(pip show powerline-status | grep Location)
+powerline_repo_root=$([[ $loc =~ "^Location:[[:space:]](.*)$" ]] && echo $match[1])
+. "$powerline_repo_root/powerline/bindings/zsh/powerline.zsh"
