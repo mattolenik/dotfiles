@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker)
+plugins=(git docker shrink-path)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -77,6 +77,8 @@ alias http-put='curl -w "\n%{http_code}" -X PUT'
 alias http-delete='curl -w "\n%{http_code}" -X DELETE'
 alias http-head='curl -w "\n%{http_code}" -I'
 
+mkcd() { mkdir -p $1 && cd $1 }
+
 pidof() { ps aux | grep -i "$1" | awk '{print $2}' }
 mypidof() { ps ux | grep -i "$1" | awk '{print $2}' }
 psinfo() { ps aux | grep -i "$1" }
@@ -91,17 +93,20 @@ aws-set-profile() { export AWS_PROFILE=$1; export AWS_DEFAULT_PROFILE=$1; }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FUZ_SEPARATOR="@@"
-fuz() {
-  local args="$*"
-  local fzf_out=($(fzf))
-  local subst="${args/$FUZ_SEPARATOR/$fzf_out[@]}"
-  eval ${subst}
-}
-
 export GOPATH=$HOME/dev/go
 export PATH="$PATH:$GOPATH/bin"
-PY2BIN="$HOME/Library/Python/2.7/bin"
-export PATH="$PY2BIN:$PATH"
+export DEV="$HOME/dev"
+command -v powerline-daemon &> /dev/null && powerline-daemon -q
 
-powerline-daemon -q
+# nvm slows down shell startup time, only use it when needed
+if [[ ! -z "$USE_NVM" ]]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
+# Use vim for man page viewing
+export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' \
+    -c 'nnoremap i <nop>' \
+    -c 'nnoremap <Space> <C-f>' \
+    -c 'noremap q :quit<CR>' -\""
