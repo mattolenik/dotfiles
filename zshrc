@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="cura"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -66,9 +66,7 @@ alias source-zshrc='source ~/.zshrc'
 alias edit-tmuxconf="$EDITOR ~/.tmux.conf"
 alias checkaws='env | grep AWS'
 
-if [ -d $HOME/.config/zshrc ]; then
-  source $HOME/.config/zshrc/*
-fi
+[ -d $HOME/.config/zshrc.d ] && for f in $HOME/.config/zshrc.d/*; do source "$f"; done
 alias mvn-debug='mvn -Dmaven.surefire.debug test'
 
 alias http-get='curl -w "\n%{http_code}"'
@@ -91,12 +89,13 @@ aws-set-personal() { export AWS_PROFILE=personal; export AWS_DEFAULT_PROFILE=per
 aws-set-profile() { export AWS_PROFILE=$1; export AWS_DEFAULT_PROFILE=$1; }
 
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 export GOPATH=$HOME/dev/go
 export PATH="$PATH:$GOPATH/bin"
 export DEV="$HOME/dev"
 command -v powerline-daemon &> /dev/null && powerline-daemon -q
+
+# brew python2.7
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # nvm slows down shell startup time, only use it when needed
 if [[ ! -z "$USE_NVM" ]]; then
@@ -107,6 +106,7 @@ fi
 
 # Use vim for man page viewing
 export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' \
-    -c 'nnoremap i <nop>' \
-    -c 'nnoremap <Space> <C-f>' \
-    -c 'noremap q :quit<CR>' -\""
+  -c 'nnoremap i <nop>' \
+  -c 'nnoremap <Space> <C-f>' \
+  -c 'noremap q :quit<CR>' -\""
+

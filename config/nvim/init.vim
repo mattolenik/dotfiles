@@ -17,9 +17,7 @@ Plug 'tpope/vim-liquid'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
-Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 Plug 'edkolev/tmuxline.vim'
-Plug 'rakr/vim-one'
 Plug 'lifepillar/vim-solarized8'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sstallion/vim-whitespace'
@@ -38,7 +36,6 @@ colorscheme solarized8_light_high
 let g:airline_theme = 'solarized'
 
 let g:airline#extensions#tmuxline#enabled = 0
-let g:tmuxline_theme='vim_statusline_3'
 
 :command! EditInit :e ~/.config/nvim/init.vim
 :command! -bar SourceInit :source ~/.config/nvim/init.vim
@@ -46,8 +43,7 @@ let g:tmuxline_theme='vim_statusline_3'
 
 let mapleader="\<Space>"
 
-" Remap macro key to leader q
-noremap <Leader><Leader> q
+" Disable macro key
 noremap q <Nop>
 
 nnoremap <C-w> :bd<cr>
