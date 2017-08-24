@@ -25,11 +25,19 @@ Plug 'junegunn/vim-easy-align'
 Plug 'hashivim/vim-terraform'
 Plug 'mhinz/vim-signify'
 Plug 'sbdchd/neoformat'
+Plug 'kopischke/vim-stay'
 
 
 call plug#end()
 
 :imap `` <Esc>
+
+" vim-stay persistence
+silent !mkdir ~/.config/nvim/undo > /dev/null 2>&1
+set viewoptions=cursor,folds,slash,unix
+set undofile
+set undodir=~/.config/nvim/undo
+" vim-stay persistence
 
 set termguicolors
 set mouse=a

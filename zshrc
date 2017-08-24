@@ -55,7 +55,8 @@ unsetopt auto_cd
 setopt noincappendhistory
 setopt nosharehistory
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
+[ -d "$HOME/.rvm/bin" ] && export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/bin"
 export EDITOR=nvim
 
