@@ -76,6 +76,8 @@ alias http-put='curl -w "\n%{http_code}" -X PUT'
 alias http-delete='curl -w "\n%{http_code}" -X DELETE'
 alias http-head='curl -w "\n%{http_code}" -I'
 
+alias rg='rg --smart-case'
+
 mkcd() { mkdir -p $1 && cd $1 }
 
 pidof() { ps aux | grep -i "$1" | awk '{print $2}' }

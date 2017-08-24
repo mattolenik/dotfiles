@@ -27,7 +27,6 @@ Plug 'mhinz/vim-signify'
 Plug 'sbdchd/neoformat'
 Plug 'kopischke/vim-stay'
 
-
 call plug#end()
 
 :imap `` <Esc>
