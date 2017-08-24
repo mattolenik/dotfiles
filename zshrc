@@ -110,3 +110,5 @@ export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' \
   -c 'nnoremap <Space> <C-f>' \
   -c 'noremap q :quit<CR>' -\""
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

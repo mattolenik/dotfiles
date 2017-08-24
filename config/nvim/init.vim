@@ -24,6 +24,8 @@ Plug 'sstallion/vim-whitespace'
 Plug 'junegunn/vim-easy-align'
 Plug 'hashivim/vim-terraform'
 Plug 'mhinz/vim-signify'
+Plug 'sbdchd/neoformat'
+
 
 call plug#end()
 
@@ -87,6 +89,8 @@ inoremap <C-Space> <C-x><C-o>
 
 " leader leader-w buffer close
 nmap <leader><leader>w :bd<CR>
+
+:set bufhidden=hide
 
 " Disable useless archaic vim garbage hotkeys
 nnoremap Q <nop>
