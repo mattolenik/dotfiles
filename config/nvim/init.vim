@@ -26,6 +26,10 @@ Plug 'hashivim/vim-terraform'
 Plug 'mhinz/vim-signify'
 Plug 'sbdchd/neoformat'
 Plug 'kopischke/vim-stay'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'brooth/far.vim'
+Plug 'tpope/vim-repeat'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -37,6 +41,9 @@ set viewoptions=cursor,folds,slash,unix
 set undofile
 set undodir=~/.config/nvim/undo
 " vim-stay persistence
+
+" Yggdroot/indentLine solarized color
+let g:indentLine_color_gui = '#eee8d5'
 
 set termguicolors
 set mouse=a
@@ -97,7 +104,7 @@ inoremap <C-Space> <C-x><C-o>
 " leader leader-w buffer close
 nmap <leader><leader>w :bd<CR>
 
-:set bufhidden=hide
+:set hidden
 
 " Disable useless archaic vim garbage hotkeys
 nnoremap Q <nop>

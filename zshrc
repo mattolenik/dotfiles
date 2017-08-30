@@ -96,6 +96,7 @@ export GOPATH=$HOME/dev/go
 export PATH="$PATH:$GOPATH/bin"
 export DEV="$HOME/dev"
 command -v powerline-daemon &> /dev/null && powerline-daemon -q
+command -v thefuck &> /dev/null && eval $(thefuck --alias)
 
 # brew python2.7
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
@@ -115,3 +116,5 @@ export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' \
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
