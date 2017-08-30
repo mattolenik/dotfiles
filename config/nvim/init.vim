@@ -44,6 +44,7 @@ set undodir=~/.config/nvim/undo
 
 " Yggdroot/indentLine solarized color
 let g:indentLine_color_gui = '#eee8d5'
+let g:indentLine_char = '│'
 
 set termguicolors
 set mouse=a
