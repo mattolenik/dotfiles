@@ -64,6 +64,7 @@ let mapleader="\<Space>"
 noremap q <Nop>
 
 nnoremap <C-w> :bd<cr>
+nnoremap <C-s> :w<cr>
 nmap <silent> <leader>p :FZF<cr>
 
 " Clear search map on esc
