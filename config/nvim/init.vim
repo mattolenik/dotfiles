@@ -15,6 +15,7 @@ Plug 'xolox/vim-misc'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-liquid'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
 Plug 'edkolev/tmuxline.vim'

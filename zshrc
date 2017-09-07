@@ -75,6 +75,7 @@ alias http-post='curl -w "\n%{http_code}" -X POST'
 alias http-put='curl -w "\n%{http_code}" -X PUT'
 alias http-delete='curl -w "\n%{http_code}" -X DELETE'
 alias http-head='curl -w "\n%{http_code}" -I'
+alias http-get-status='curl -s -o /dev/null -w "%{http_code}"'
 
 alias rg='rg --smart-case'
 
@@ -116,5 +117,3 @@ export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' \
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
