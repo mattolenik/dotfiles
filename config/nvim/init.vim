@@ -24,6 +24,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'sstallion/vim-whitespace'
 Plug 'junegunn/vim-easy-align'
 Plug 'hashivim/vim-terraform'
+Plug 'juliosueiras/vim-terraform-completion'
 Plug 'mhinz/vim-signify'
 Plug 'sbdchd/neoformat'
 Plug 'kopischke/vim-stay'
@@ -117,3 +118,13 @@ let python_highlight_all = 1
 highlight! link ExtraWhitespace ErrorMsg
 
 :set number
+
+let g:neoformat_python_yapf = {
+            \ 'exe': 'python',
+            \ 'args': ["-m yapf", "--style='{based_on_style: pep8, column_limit: 120}'"],
+            \ 'replace': 0,
+            \ 'stdin': 1,
+            \ 'no_append': 1,
+            \ }
+
+let g:neoformat_enabled_python = ['yapf']
