@@ -81,7 +81,8 @@ alias http-delete='curl -w "\n%{http_code}" -X DELETE'
 alias http-head='curl -w "\n%{http_code}" -I'
 alias http-get-status='curl -s -o /dev/null -w "%{http_code}"'
 
-alias rg='rg --smart-case'
+command_exists rg && alias rg='rg --smart-case'
+command_exists ranger && alias ranger="EDITOR='nvr --remote -s' ranger"
 
 mkcd() { mkdir -p $1 && cd $1 }
 
