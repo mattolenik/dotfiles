@@ -47,6 +47,10 @@ ZSH_THEME="cura"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker shrink-path)
 
+command_exists() {
+  command -v "$1" &> /dev/null
+}
+
 source $ZSH/oh-my-zsh.sh
 
 unsetopt auto_cd
@@ -96,8 +100,8 @@ aws-set-profile() { export AWS_PROFILE=$1; export AWS_DEFAULT_PROFILE=$1; }
 export GOPATH=$HOME/dev/go
 export PATH="$PATH:$GOPATH/bin"
 export DEV="$HOME/dev"
-command -v powerline-daemon &> /dev/null && powerline-daemon -q
-command -v thefuck &> /dev/null && eval $(thefuck --alias)
+command_exists powerline-daemon && powerline-daemon -q
+command_exists thefuck && eval $(thefuck --alias)
 
 # brew python2.7
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
@@ -112,8 +116,19 @@ fi
 # Use vim for man page viewing
 export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' \
   -c 'nnoremap i <nop>' \
+  -c 'nnoremap I <nop>' \
+  -c 'nnoremap a <nop>' \
+  -c 'nnoremap A <nop>' \
+  -c 'nnoremap s <nop>' \
+  -c 'nnoremap S <nop>' \
   -c 'nnoremap <Space> <C-f>' \
   -c 'noremap q :quit<CR>' -\""
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if command_exists tmux && command_exists nvr; then
+  export TMUX_WINDOW_ID=$(tmux display-message -p '#I')
+  export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket_tmux_window_$TMUX_WINDOW_ID"
+  alias neovim='nvr --remote -s'
+fi
