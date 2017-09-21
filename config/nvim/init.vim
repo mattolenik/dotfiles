@@ -14,7 +14,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'xolox/vim-misc'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-liquid'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'tag': '3.0', 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
@@ -100,6 +100,9 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 nmap <leader>T <Plug>AirlineSelectPrevTab
 nmap <leader>t <Plug>AirlineSelectNextTab
 
+" Just show the filename (no path) in the tab
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 let g:deoplete#enable_at_startup = 1
 " deoplete keys, ctrl-space to open and tab to cycle
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
@@ -128,3 +131,9 @@ let g:neoformat_python_yapf = {
             \ }
 
 let g:neoformat_enabled_python = ['yapf']
+
+" Allows for editing files in same dir as buffer: edit %%/filename
+cabbr <expr> %% expand('%:p:h')
+
+" Disable dumb garbage "scratch" preview window
+set completeopt-=preview

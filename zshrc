@@ -104,6 +104,8 @@ export DEV="$HOME/dev"
 command_exists powerline-daemon && powerline-daemon -q
 command_exists thefuck && eval $(thefuck --alias)
 
+command_exists mdfind && alias mdhere='mdfind -onlyin .'
+
 # brew python2.7
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
