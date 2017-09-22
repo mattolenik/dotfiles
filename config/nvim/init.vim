@@ -14,7 +14,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'xolox/vim-misc'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-liquid'
-Plug 'Shougo/deoplete.nvim', { 'tag': '3.0', 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'w0rp/ale'
