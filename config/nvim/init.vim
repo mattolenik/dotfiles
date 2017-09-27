@@ -137,3 +137,5 @@ cabbr <expr> %% expand('%:p:h')
 
 " Disable dumb garbage "scratch" preview window
 set completeopt-=preview
+
+:set linebreak
