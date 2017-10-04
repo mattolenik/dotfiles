@@ -1,9 +1,6 @@
 # Returns the private IP of an EC2 instance. Argument can have the 'i-' instance prefix or not.
 get-instance-ip() {
-  local instance_id="$1"
-  aws ec2 describe-instances --instance-id i-${instance_id#i-} | jq -r '.Reservations[].Instances[].NetworkInterfaces[].PrivateIpAddresses[].PrivateIpAddress'
-}
-
-ssh-qa-instance() {
-  ssh-qa ubuntu@$(get-instance-ip $1)
+  local profile=$1
+  local instance_id=$2
+  aws --profile=$profile ec2 describe-instances --instance-id i-${instance_id#i-} | jq -r '.Reservations[].Instances[].NetworkInterfaces[].PrivateIpAddresses[].PrivateIpAddress'
 }

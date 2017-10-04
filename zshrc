@@ -56,7 +56,8 @@ source $ZSH/oh-my-zsh.sh
 unsetopt auto_cd
 
 # Save history shared but only when exiting session
-setopt noincappendhistory
+#setopt noincappendhistory
+setopt inc_append_history
 setopt nosharehistory
 
 [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
