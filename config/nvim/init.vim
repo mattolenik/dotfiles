@@ -66,6 +66,10 @@ nnoremap <C-s> :w<cr>
 nmap <silent> <leader>p :FZF<cr>
 
 
+set clipboard+=unnamedplus
+noremap <leader>y "+y
+
+
 let @q = "ysiw'"
 let @d = 'ysiw"'
 nnoremap <M-'> @q
