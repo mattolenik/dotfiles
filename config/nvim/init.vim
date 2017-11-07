@@ -4,16 +4,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'flazz/vim-colorschemes'
-Plug 'chriskempson/base16-vim'
 Plug 'tpope/vim-sleuth'
 Plug 'danro/rename.vim'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
-Plug 'tomtom/tcomment_vim'
 Plug 'xolox/vim-misc'
-Plug 'tpope/vim-obsession'
-Plug 'tpope/vim-liquid'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -28,10 +23,7 @@ Plug 'juliosueiras/vim-terraform-completion'
 Plug 'mhinz/vim-signify'
 Plug 'sbdchd/neoformat'
 Plug 'kopischke/vim-stay'
-Plug 'jmcantrell/vim-virtualenv'
-Plug 'brooth/far.vim'
-Plug 'tpope/vim-repeat'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -47,6 +39,10 @@ set undodir=~/.config/nvim/undo
 " Yggdroot/indentLine solarized color
 let g:indentLine_color_gui = '#eee8d5'
 let g:indentLine_char = '│'
+let g:indentLine_enabled = 1
+let g:vim_json_syntax_conceal = 0
+let g:indentLine_noConcealCursor='nc'
+let g:vim_json_syntax_conceal = 0
 
 set termguicolors
 set mouse=a
@@ -68,6 +64,12 @@ noremap q <Nop>
 nnoremap <C-w> :bd<cr>
 nnoremap <C-s> :w<cr>
 nmap <silent> <leader>p :FZF<cr>
+
+
+let @q = "ysiw'"
+let @d = 'ysiw"'
+nnoremap <M-'> @q
+nnoremap <M-"> @d
 
 " Clear search map on esc
 nnoremap <esc> :noh<return><esc>

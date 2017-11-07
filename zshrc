@@ -136,3 +136,5 @@ if command_exists tmux && command_exists nvr; then
   export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket_tmux_window_$TMUX_WINDOW_ID"
   alias neovim='nvr --remote -s'
 fi
+
+alias gitroot='git rev-parse --show-toplevel'
