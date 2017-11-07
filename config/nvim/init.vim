@@ -24,6 +24,7 @@ Plug 'mhinz/vim-signify'
 Plug 'sbdchd/neoformat'
 Plug 'kopischke/vim-stay'
 "Plug 'Yggdroot/indentLine'
+Plug 'mhinz/vim-sayonara', { 'on' : 'Sayonara' }
 
 call plug#end()
 
@@ -61,7 +62,7 @@ let mapleader="\<Space>"
 " Disable macro key
 noremap q <Nop>
 
-nnoremap <C-w> :bd<cr>
+nnoremap <C-w> :Sayonara<cr>
 nnoremap <C-s> :w<cr>
 nmap <silent> <leader>p :FZF<cr>
 
