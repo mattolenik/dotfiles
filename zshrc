@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="cura"
+ZSH_THEME="fishy"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -50,6 +50,9 @@ plugins=(git docker shrink-path)
 command_exists() {
   command -v "$1" &> /dev/null
 }
+
+# Work plugins
+hostname | grep -q ENG && source ~/.config/zshrc.d/work/*
 
 source $ZSH/oh-my-zsh.sh
 
