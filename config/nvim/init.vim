@@ -25,6 +25,9 @@ Plug 'sbdchd/neoformat'
 Plug 'kopischke/vim-stay'
 "Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-sayonara', { 'on' : 'Sayonara' }
+Plug 'brooth/far.vim'
+Plug 'tpope/vim-repeat'
+Plug 'fatih/vim-go'
 
 call plug#end()
 
