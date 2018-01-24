@@ -1,0 +1,4 @@
+tmuxx() {
+  local session="${1:-main}"
+  tmux new-session -t "$session"
+}
