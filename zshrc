@@ -2,12 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
+
+is_work=$(hostname | grep -q ENG && printf 0 || printf 1)
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="fishy"
+[[ is_work ]] && ZSH_THEME="cura" || ZSH_THEME="fishy"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -46,13 +48,14 @@ ZSH_THEME="fishy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker shrink-path)
+zshrcd="$HOME/.config/zshrc.d/"
 
 command_exists() {
   command -v "$1" &> /dev/null
 }
 
 # Work plugins
-hostname | grep -q ENG && source ~/.config/zshrc.d/work/*
+#[[ -d "$zshrcd/work" ]] && for f in "$zshrcd/work"; do source $f; done
 
 source $ZSH/oh-my-zsh.sh
 
