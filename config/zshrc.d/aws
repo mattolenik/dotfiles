@@ -1,6 +1,28 @@
+JQ_PRIVATE_IP='.Reservations[].Instances[].NetworkInterfaces[].PrivateIpAddresses[].PrivateIpAddress'
+
+jqr() {
+  echo "$1" | jq -r "$2"
+}
+
+describe-instance() {
+  local instance_id=$1
+  local profile=$2
+  local result="$(aws --profile=$profile ec2 describe-instances --instance-id i-${instance_id#i-} 2>&1)"
+  echo "$result" | grep -q "InvalidInstanceID.NotFound" && return 4
+  echo "$result"
+}
+
+#jq -r "$JQ_PRIVATE_IP"
+
 # Returns the private IP of an EC2 instance. Argument can have the 'i-' instance prefix or not.
 get-instance-ip() {
-  local profile=$1
-  local instance_id=$2
-  aws --profile=$profile ec2 describe-instances --instance-id i-${instance_id#i-} | jq -r '.Reservations[].Instances[].NetworkInterfaces[].PrivateIpAddresses[].PrivateIpAddress'
+  local instance_id=$1
+  local profile=$2
+  if [[ -z $profile ]]; then
+    instance="$(describe-instance $instance_id qa)"
+    [[ $? == 0 ]] && jqr "$instance" "$JQ_PRIVATE_IP" && return
+    instance="$(describe-instance $instance_id prod)"
+    [[ $? == 0 ]] && jqr "$instance" "$JQ_PRIVATE_IP" && return
+    echo "No instance found" && return 1
+  fi
 }
