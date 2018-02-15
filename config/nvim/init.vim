@@ -28,6 +28,7 @@ Plug 'mhinz/vim-sayonara', { 'on' : 'Sayonara' }
 Plug 'brooth/far.vim'
 Plug 'tpope/vim-repeat'
 Plug 'fatih/vim-go'
+Plug 'svsudhir/textile.vim'
 
 call plug#end()
 
