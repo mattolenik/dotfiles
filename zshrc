@@ -4,12 +4,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-is_work=$(hostname | grep -q ENG && printf 0 || printf 1)
+#is_work=$(hostname | grep -q ENG && printf 0 || printf 1)
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-[[ is_work ]] && ZSH_THEME="cura" || ZSH_THEME="fishy"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
