@@ -144,3 +144,5 @@ if command_exists tmux && command_exists nvr; then
 fi
 
 alias gitroot='git rev-parse --show-toplevel'
+[[ -d /home/linuxbrew ]] && export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+powerline-daemon -q
