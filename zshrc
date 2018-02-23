@@ -100,18 +100,12 @@ mypsinfo() { ps ux | grep -i "$1" }
 
 spy() { fswatch -0 -o "$1" | xargs -0 -n 1 -I {} ${@[2, -1]} }
 
-aws-set-qa() { export AWS_PROFILE=qa; export AWS_DEFAULT_PROFILE=qa; export AWS_REGION=us-east-1; }
-aws-set-personal() { export AWS_PROFILE=personal; export AWS_DEFAULT_PROFILE=personal; }
-aws-set-profile() { export AWS_PROFILE=$1; export AWS_DEFAULT_PROFILE=$1; }
-
-
-export GOPATH=$HOME/dev/go
-export PATH="$PATH:$GOPATH/bin"
-export DEV="$HOME/dev"
 command_exists powerline-daemon && powerline-daemon -q
 command_exists thefuck && eval $(thefuck --alias)
 
 command_exists mdfind && alias mdhere='mdfind -onlyin .'
+
+command_exists go && export GOPATH="$HOME/go" && export PATH="$GOPATH/bin:$PATH"
 
 # brew python2.7
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
@@ -119,8 +113,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # nvm slows down shell startup time, only use it when needed
 if [[ ! -z "$USE_NVM" ]]; then
   export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  . "/usr/local/opt/nvm/nvm.sh"
 fi
 
 # Use vim for man page viewing
