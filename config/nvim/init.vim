@@ -94,8 +94,8 @@ let @d = 'ysiw"'
 nnoremap <M-'> @q
 nnoremap <M-"> @d
 
-" alt-` to insert a ` without triggering marks
-nnoremap <M-`> `
+" alt-` to insert ``` for Markdown
+inoremap <M-`> ```
 
 " Clear search map on esc
 nnoremap <esc> :noh<return><esc>
