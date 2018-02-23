@@ -1,34 +1,49 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'xolox/vim-misc'
+
+" Colors
+Plug 'lifepillar/vim-solarized8'
+
+" Cursor/Edit
 Plug 'easymotion/vim-easymotion'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'  " bracket group actions () [] {}
+Plug 'tpope/vim-repeat'  " improved action repeat
+Plug 'brooth/far.vim'  " find and replace
+
+" IDE
+Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-sleuth'
-Plug 'danro/rename.vim'
-Plug 'ervandew/supertab'
-Plug 'tpope/vim-surround'
-Plug 'xolox/vim-misc'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'w0rp/ale'
-Plug 'edkolev/tmuxline.vim'
-Plug 'lifepillar/vim-solarized8'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mhinz/vim-sayonara', { 'on' : 'Sayonara' }  " unified buffer/window close
+Plug 'tpope/vim-sleuth'    " tab width autodetect
+Plug 'kopischke/vim-stay'  " session management
+Plug 'danro/rename.vim'    " file rename
+Plug 'ervandew/supertab'   " better tabs
+
+" Formatting
 Plug 'sstallion/vim-whitespace'
 Plug 'junegunn/vim-easy-align'
+Plug 'sbdchd/neoformat'
+"Plug 'Yggdroot/indentLine'
+
+" Languages
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
-Plug 'mhinz/vim-signify'
-Plug 'sbdchd/neoformat'
-Plug 'kopischke/vim-stay'
-"Plug 'Yggdroot/indentLine'
-Plug 'mhinz/vim-sayonara', { 'on' : 'Sayonara' }
-Plug 'brooth/far.vim'
-Plug 'tpope/vim-repeat'
 Plug 'fatih/vim-go'
 Plug 'svsudhir/textile.vim'
+
+" Autocomplete
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+
+" Linting
+Plug 'w0rp/ale'
+Plug 'mhinz/vim-signify'
 
 call plug#end()
 
