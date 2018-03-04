@@ -4,10 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-#is_work=$(hostname | grep -q ENG && printf 0 || printf 1)
+export STDLIB=$HOME/stdlib.sh/
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
@@ -15,10 +13,7 @@ ZSH_THEME="robbyrussell"
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line to disable auto-setting terminal title.
@@ -50,14 +45,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git docker shrink-path)
 zshrcd="$HOME/.config/zshrc.d/"
 
-command_exists() {
-  command -v "$1" &> /dev/null
-}
+source "$ZSH/oh-my-zsh.sh"
 
-# Work plugins
-#[[ -d "$zshrcd/work" ]] && for f in "$zshrcd/work"; do source $f; done
-
-source $ZSH/oh-my-zsh.sh
+[[ -d $STDLIB ]] && source "$STDLIB"/*.sh
 
 unsetopt auto_cd
 
@@ -79,7 +69,6 @@ alias edit-tmuxconf="$EDITOR ~/.tmux.conf"
 alias checkaws='env | grep AWS'
 
 [ -d $HOME/.config/zshrc.d ] && for f in $HOME/.config/zshrc.d/*; do source "$f"; done
-alias mvn-debug='mvn -Dmaven.surefire.debug test'
 
 alias http-get='curl -w "\n%{http_code}"'
 alias http-post='curl -w "\n%{http_code}" -X POST'
@@ -89,44 +78,24 @@ alias http-head='curl -w "\n%{http_code}" -I'
 alias http-get-status='curl -s -o /dev/null -w "%{http_code}"'
 
 command_exists rg && alias rg='rg --smart-case'
-command_exists ranger && alias ranger="EDITOR='nvr --remote -s' ranger"
 
 mkcd() { mkdir -p $1 && cd $1 }
-
 pidof() { ps aux | grep -i "$1" | awk '{print $2}' }
 mypidof() { ps ux | grep -i "$1" | awk '{print $2}' }
 psinfo() { ps aux | grep -i "$1" }
 mypsinfo() { ps ux | grep -i "$1" }
-
 spy() { fswatch -0 -o "$1" | xargs -0 -n 1 -I {} ${@[2, -1]} }
 
 command_exists powerline-daemon && powerline-daemon -q
 command_exists thefuck && eval $(thefuck --alias)
-
 command_exists mdfind && alias mdhere='mdfind -onlyin .'
-
 command_exists go && export GOPATH="$HOME/go" && export PATH="$GOPATH/bin:$PATH"
-
-# brew python2.7
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # nvm slows down shell startup time, only use it when needed
 if [[ ! -z "$USE_NVM" ]]; then
   export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
 fi
-
-# Use vim for man page viewing
-export MANPAGER="sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' \
-  -c 'nnoremap i <nop>' \
-  -c 'nnoremap I <nop>' \
-  -c 'nnoremap a <nop>' \
-  -c 'nnoremap A <nop>' \
-  -c 'nnoremap s <nop>' \
-  -c 'nnoremap S <nop>' \
-  -c 'nnoremap <Space> <C-f>' \
-  -c 'noremap q :quit<CR>' -\""
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -138,4 +107,3 @@ fi
 
 alias gitroot='git rev-parse --show-toplevel'
 [[ -d /home/linuxbrew ]] && export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-powerline-daemon -q
