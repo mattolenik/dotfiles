@@ -46,7 +46,8 @@ au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'zchee/deoplete-clang'
+"Plug 'zchee/deoplete-clang'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Linting
 Plug 'w0rp/ale'
