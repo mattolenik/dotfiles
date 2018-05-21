@@ -42,7 +42,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker shrink-path)
+plugins=(git docker shrink-path terraform thefuck)
 zshrcd="$HOME/.config/zshrc.d/"
 
 source "$ZSH/oh-my-zsh.sh"
@@ -56,12 +56,11 @@ unsetopt auto_cd
 setopt inc_append_history
 setopt nosharehistory
 
-[ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
-[ -d "$HOME/.rvm/bin" ] && export PATH="$PATH:$HOME/.rvm/bin"
+[ -d "$HOME/.rvm/bin" ] && export PATH="$HOME/.rvm/bin:$PATH"
+[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/bin"
 export EDITOR=nvim
 
-export AWS_DEFAULT_PROFILE=qa
 alias livecat='watch --color -n 1 ccat --color=always'
 alias edit-zshrc="$EDITOR ~/.zshrc"
 alias source-zshrc='source ~/.zshrc'
@@ -87,7 +86,6 @@ mypsinfo() { ps ux | grep -i "$1" }
 spy() { fswatch -0 -o "$1" | xargs -0 -n 1 -I {} ${@[2, -1]} }
 
 command_exists powerline-daemon && powerline-daemon -q
-command_exists thefuck && eval $(thefuck --alias)
 command_exists mdfind && alias mdhere='mdfind -onlyin .'
 command_exists go && export GOPATH="$HOME/go" && export PATH="$GOPATH/bin:$PATH"
 

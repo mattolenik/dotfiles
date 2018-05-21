@@ -43,7 +43,6 @@ nnoremap <localleader>t :EnType<CR>
 au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
 
 " Autocomplete
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 "Plug 'zchee/deoplete-clang'

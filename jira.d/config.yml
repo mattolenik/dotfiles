@@ -1,0 +1,55 @@
+endpoint: https://contextrelevant.atlassian.net
+user: molenik@versive.com
+password-source: keyring
+project: &proj INF
+custom-commands:
+  - name: new
+    help: Create issue helper
+    options:
+      - name: priority
+        type: STRING
+        default: P3
+        enum: ['P0', 'P1', 'P2', 'P3', 'P4']
+      - name: project
+        short: p
+        default: *proj
+    args:
+      - name: title
+        required: true
+      - name: description
+        required: true
+    script: |-
+      pri="{{options.priority}}"
+      [ "$pri" = "P0" ] && pri="P0 - Emergency"
+      [ "$pri" = "P1" ] && pri="P1 - Urgent"
+      [ "$pri" = "P2" ] && pri="P2 - Important"
+      [ "$pri" = "P3" ] && pri="P3 - Normal"
+      [ "$pri" = "P4" ] && pri="P4 - Trivial"
+      {{jira}} create -p {{options.project}} -o "assignee:$USER" -o "summary={{args.title}}" -o "description={{args.description}}" -o "priority=$pri"
+  - name: mine
+    help: display issues assigned to me
+    script: |-
+      if [ -n "$JIRA_PROJECT" ]; then
+          # if `project: ...` configured just list the issues for current project
+          {{jira}} list --template table --query "sprint in openSprints() and type != epic and resolution = unresolved and project=$JIRA_PROJECT ORDER BY rank asc, created"
+      else
+          # otherwise list issues for all project
+          echo "\"project: ...\" configuration missing from .jira.d/config.yml"
+      fi
+      if [ -n "$JIRA_PROJECT" ]; then
+          # if `project: ...` configured just list the issues for current project
+          {{jira}} list --template table --query "resolution = unresolved and assignee=currentuser() and project = $JIRA_PROJECT ORDER BY priority asc, created"
+      else
+          # otherwise list issues for all project
+          {{jira}} list --template table --query "resolution = unresolved and assignee=currentuser() ORDER BY priority asc, created"
+      fi
+  - name: sprint
+    help: display issues for active sprint
+    script: |-
+      if [ -n "$JIRA_PROJECT" ]; then
+          # if `project: ...` configured just list the issues for current project
+          {{jira}} list --template table --query "sprint in openSprints() and type != epic and resolution = unresolved and project=$JIRA_PROJECT ORDER BY rank asc, created"
+      else
+          # otherwise list issues for all project
+          echo "\"project: ...\" configuration missing from .jira.d/config.yml"
+      fi
