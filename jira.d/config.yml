@@ -7,12 +7,20 @@ custom-commands:
     help: Create issue helper
     options:
       - name: priority
-        type: STRING
+        short: r
+        type: ENUM
         default: P3
-        enum: ['P0', 'P1', 'P2', 'P3', 'P4']
+        enum: [P0, P1, P2, P3, P4]
+        help: "Issue priority: P0 (emergency), P1 (urgent), P2 (important), P3 (normal), P4 (trivial). Defaults to p3"
       - name: project
         short: p
         default: *proj
+        help: "Project name, such as INF, HANTO, PLAT, SOL. See https://contextrelevant.atlassian.net/projects for a full list"
+      - name: type
+        short: t
+        type: ENUM
+        default: Bug
+        enum: [task, initiative, epic, story, bug, documentation, showme]
     args:
       - name: title
         required: true
@@ -25,7 +33,7 @@ custom-commands:
       [ "$pri" = "P2" ] && pri="P2 - Important"
       [ "$pri" = "P3" ] && pri="P3 - Normal"
       [ "$pri" = "P4" ] && pri="P4 - Trivial"
-      {{jira}} create -p {{options.project}} -o "assignee:$USER" -o "summary={{args.title}}" -o "description={{args.description}}" -o "priority=$pri"
+      {{jira}} create -p {{options.project}} -o "assignee:$USER" -o "summary={{args.title}}" -o "description={{args.description}}" -o "priority=$pri" -i "{{options.type}}"
   - name: mine
     help: display issues assigned to me
     script: |-
