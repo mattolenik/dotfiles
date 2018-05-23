@@ -56,9 +56,6 @@ unsetopt auto_cd
 setopt inc_append_history
 setopt nosharehistory
 
-[ -d "$HOME/.rvm/bin" ] && export PATH="$HOME/.rvm/bin:$PATH"
-[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
-export PATH="$PATH:$HOME/bin"
 export EDITOR=nvim
 
 alias livecat='watch --color -n 1 ccat --color=always'
@@ -104,4 +101,3 @@ if command_exists tmux && command_exists nvr; then
 fi
 
 alias gitroot='git rev-parse --show-toplevel'
-[[ -d /home/linuxbrew ]] && export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"

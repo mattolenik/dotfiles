@@ -1,5 +1,5 @@
 git-fetchbase () {
-	local remote=${1:-}
-	local branch=${2:-}
+	local remote=${1:-origin}
+	local branch=${2:-master}
 	git fetch $remote $branch && git rebase $remote/$branch
 }

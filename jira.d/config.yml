@@ -3,6 +3,9 @@ user: molenik@versive.com
 password-source: keyring
 project: &proj INF
 custom-commands:
+  #
+  # new
+  #
   - name: new
     help: Create issue helper
     options:
@@ -34,6 +37,10 @@ custom-commands:
       [ "$pri" = "P3" ] && pri="P3 - Normal"
       [ "$pri" = "P4" ] && pri="P4 - Trivial"
       {{jira}} create -p {{options.project}} -o "assignee:$USER" -o "summary={{args.title}}" -o "description={{args.description}}" -o "priority=$pri" -i "{{options.type}}"
+
+  #
+  # mine
+  #
   - name: mine
     help: display issues assigned to me
     script: |-
@@ -51,6 +58,10 @@ custom-commands:
           # otherwise list issues for all project
           {{jira}} list --template table --query "resolution = unresolved and assignee=currentuser() ORDER BY priority asc, created"
       fi
+
+  #
+  # sprint
+  #
   - name: sprint
     help: display issues for active sprint
     script: |-

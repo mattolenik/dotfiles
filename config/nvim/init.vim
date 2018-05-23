@@ -35,6 +35,8 @@ Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 Plug 'fatih/vim-go'
 Plug 'svsudhir/textile.vim'
+Plug 'https://github.com/m-kat/aws-vim'
+
 "" Scala
 Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
 Plug 'derekwyatt/vim-scala'
