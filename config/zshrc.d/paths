@@ -7,7 +7,7 @@ export_paths() {
 
   prefix_paths=(
   "/usr/local/anaconda3/bin"        ""
-  "$HOME/bin"                       ""
+  "$HOME/.local/bin"                ""
   "$HOME/.rvm/bin"                  ""
   "$HOME/.local/bin"                ""
   "/home/linuxbrew/.linuxbrew/bin:" "[[ -d /home/linuxbrew ]]"
