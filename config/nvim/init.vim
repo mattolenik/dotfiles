@@ -29,6 +29,8 @@ Plug 'sstallion/vim-whitespace'
 Plug 'junegunn/vim-easy-align'
 Plug 'sbdchd/neoformat'
 "Plug 'Yggdroot/indentLine'
+Plug 'rhysd/vim-clang-format'
+Plug 'kana/vim-operator-user'
 
 " Languages
 Plug 'hashivim/vim-terraform'
@@ -36,6 +38,13 @@ Plug 'juliosueiras/vim-terraform-completion'
 Plug 'fatih/vim-go'
 Plug 'svsudhir/textile.vim'
 Plug 'https://github.com/m-kat/aws-vim'
+Plug 'posva/vim-vue'
+Plug 'OmniSharp/omnisharp-vim'
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
 "" Scala
 Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }

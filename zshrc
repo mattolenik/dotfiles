@@ -20,7 +20,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -86,6 +86,7 @@ command_exists powerline-daemon && powerline-daemon -q
 command_exists mdfind && alias mdhere='mdfind -onlyin .'
 command_exists go && export GOPATH="$HOME/go" && export PATH="$GOPATH/bin:$PATH"
 
+#USE_NVM=1
 # nvm slows down shell startup time, only use it when needed
 if [[ ! -z "$USE_NVM" ]]; then
   export NVM_DIR="$HOME/.nvm"
