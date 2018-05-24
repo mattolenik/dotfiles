@@ -1,3 +1,4 @@
+# vi: ft=zsh
 JQ_PRIVATE_IP='.Reservations[].Instances[].NetworkInterfaces[].PrivateIpAddresses[].PrivateIpAddress'
 
 jqr() {
@@ -25,4 +26,19 @@ get-instance-ip() {
     [[ $? == 0 ]] && jqr "$instance" "$JQ_PRIVATE_IP" && return
     echo "No instance found" && return 1
   fi
+}
+
+aws-profile() {
+  local profile=$1
+  if [[ -z $profile ]]; then
+    unset AWS_PROFILE
+    unset AWS_DEFAULT_PROFILE
+    return 0
+  fi
+  export AWS_PROFILE=$profile
+  export AWS_DEFAULT_PROFILE=$profile
+}
+
+aws-env() {
+  env | grep -i aws
 }
