@@ -239,6 +239,7 @@ key_bindings:
   - { key: Key8,     mods: Alt,     chars: "\x1b8"                       }
   - { key: Key9,     mods: Alt,     chars: "\x1b9"                       }
   - { key: N,        mods: Alt,     chars: "\x1bn"                       }
+  - { key: Grave,    mods: Alt,     chars: "\x1b`"                       }
 
 
 # Mouse bindings
