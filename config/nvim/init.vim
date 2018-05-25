@@ -1,3 +1,8 @@
+" Use dedicated conda envs for python2 and python3, make sure to import these
+" with conda
+let g:python_host_prog  = systemlist(fnamemodify("cat ~/.config/nvim/neovim2.conda.yml | awk '/prefix:\s*(.*)/ {print $2}'", ''))[0] . '/bin/python'
+let g:python3_host_prog = systemlist(fnamemodify("cat ~/.config/nvim/neovim3.conda.yml | awk '/prefix:\s*(.*)/ {print $2}'", ''))[0] . '/bin/python'
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'xolox/vim-misc'
@@ -40,6 +45,8 @@ Plug 'svsudhir/textile.vim'
 Plug 'https://github.com/m-kat/aws-vim'
 Plug 'posva/vim-vue'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'zchee/deoplete-jedi'  " Python
+Plug 'cjrh/vim-conda'
 
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',

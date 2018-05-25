@@ -1,0 +1,49 @@
+name: neovim2
+channels:
+  - defaults
+dependencies:
+  - ca-certificates=2018.03.07=0
+  - certifi=2018.4.16=py27_0
+  - libcxx=4.0.1=h579ed51_0
+  - libcxxabi=4.0.1=hebd6815_0
+  - libedit=3.1.20170329=hb402a30_2
+  - libffi=3.2.1=h475c297_4
+  - ncurses=6.1=h0a44026_0
+  - openssl=1.0.2o=h26aff7b_0
+  - pip=10.0.1=py27_0
+  - python=2.7.15=h138c1fe_0
+  - readline=7.0=hc1231fa_4
+  - setuptools=39.1.0=py27_0
+  - sqlite=3.23.1=hf1716c9_0
+  - tk=8.6.7=h35a86e2_3
+  - wheel=0.31.1=py27_0
+  - zlib=1.2.11=hf3cbc9b_2
+  - pip:
+    - arrow==0.12.1
+    - backports.functools-lru-cache==1.5
+    - binaryornot==0.4.4
+    - chardet==3.0.4
+    - click==6.7
+    - cookiecutter==1.6.0
+    - future==0.16.0
+    - futures==3.2.0
+    - greenlet==0.4.13
+    - idna==2.6
+    - jedi==0.12.0
+    - jinja2==2.10
+    - jinja2-time==0.2.0
+    - markupsafe==1.0
+    - msgpack==0.5.6
+    - neovim==0.2.6
+    - parso==0.2.1
+    - poyo==0.4.1
+    - python-dateutil==2.7.3
+    - requests==2.18.4
+    - sexpdata==0.0.3
+    - six==1.11.0
+    - trollius==2.2
+    - urllib3==1.22
+    - websocket-client==0.47.0
+    - whichcraft==0.4.1
+prefix: /usr/local/anaconda3/envs/neovim2
+
