@@ -64,7 +64,7 @@ au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 "Plug 'zchee/deoplete-clang'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Linting
 Plug 'w0rp/ale'
@@ -193,3 +193,10 @@ cabbr <expr> %% expand('%:p:h')
 set completeopt-=preview
 
 :set linebreak
+
+
+
+" vim-conda fix
+" https://github.com/cjrh/vim-conda
+let g:jedi#force_py_version = 2
+let g:UltisnipsUsePythonVersion = 2
