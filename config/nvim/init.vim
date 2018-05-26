@@ -100,6 +100,7 @@ let g:airline#extensions#tmuxline#enabled = 0
 :command! EditInit :e ~/.config/nvim/init.vim
 :command! -bar SourceInit :source ~/.config/nvim/init.vim
 :command! Replug SourceInit|PlugUpdate
+:command! ChmodX :!chmod +x %
 
 let mapleader="\<Space>"
 
