@@ -62,7 +62,6 @@ alias livecat='watch --color -n 1 ccat --color=always'
 alias edit-zshrc="$EDITOR ~/.zshrc"
 alias source-zshrc='source ~/.zshrc'
 alias edit-tmuxconf="$EDITOR ~/.tmux.conf"
-alias checkaws='env | grep AWS'
 
 [ -d $HOME/.config/zshrc.d ] && for f in $HOME/.config/zshrc.d/*; do source "$f"; done
 
