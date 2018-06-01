@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export STDLIB=$HOME/.local/lib/stdlib.sh
+export STDLIB=$HOME/stdlib.sh/stdlib.sh
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
@@ -47,7 +47,7 @@ zshrcd="$HOME/.config/zshrc.d/"
 
 source "$ZSH/oh-my-zsh.sh"
 
-[[ -d $STDLIB ]] && source "$STDLIB"/*.sh
+[[ -f $STDLIB ]] && source "$STDLIB"
 
 unsetopt auto_cd
 

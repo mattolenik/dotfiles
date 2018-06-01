@@ -39,7 +39,7 @@ Plug 'kana/vim-operator-user'
 
 " Languages
 Plug 'hashivim/vim-terraform'
-Plug 'juliosueiras/vim-terraform-completion'
+"Plug 'juliosueiras/vim-terraform-completion'
 Plug 'fatih/vim-go'
 Plug 'svsudhir/textile.vim'
 Plug 'https://github.com/m-kat/aws-vim'
