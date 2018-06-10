@@ -201,4 +201,5 @@ set completeopt-=preview
 let g:jedi#force_py_version = 2
 let g:UltisnipsUsePythonVersion = 2
 
-set backupcopy=no
+set backupdir=~/.local/share/nvim/swap,.
+set directory=~/.local/share/nvim/swap,.
