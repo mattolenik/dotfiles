@@ -200,3 +200,5 @@ set completeopt-=preview
 " https://github.com/cjrh/vim-conda
 let g:jedi#force_py_version = 2
 let g:UltisnipsUsePythonVersion = 2
+
+set backupcopy=no
