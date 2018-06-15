@@ -3,3 +3,5 @@ git-fetchbase () {
 	local branch=${2:-master}
 	git fetch $remote $branch && git rebase $remote/$branch
 }
+
+alias gs='git status'

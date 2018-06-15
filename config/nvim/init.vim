@@ -33,7 +33,7 @@ Plug 'ervandew/supertab'   " better tabs
 Plug 'sstallion/vim-whitespace'
 Plug 'junegunn/vim-easy-align'
 Plug 'sbdchd/neoformat'
-"Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 Plug 'rhysd/vim-clang-format'
 Plug 'kana/vim-operator-user'
 
@@ -84,9 +84,8 @@ set undodir=~/.config/nvim/undo
 " Yggdroot/indentLine solarized color
 let g:indentLine_color_gui = '#eee8d5'
 let g:indentLine_char = '│'
-let g:indentLine_enabled = 1
-let g:vim_json_syntax_conceal = 0
 let g:indentLine_noConcealCursor='nc'
+let g:vim_json_syntax_conceal = 0
 let g:vim_json_syntax_conceal = 0
 
 set termguicolors
