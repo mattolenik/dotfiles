@@ -54,7 +54,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ }
 
 "" Scala
-Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
 Plug 'derekwyatt/vim-scala'
 autocmd BufWritePost *.scala silent :EnTypeCheck
 nnoremap <localleader>t :EnType<CR>
@@ -205,3 +205,6 @@ set backupdir^=~/.local/share/nvim/swap,~/tmp,/tmp
 set directory-=.
 set directory^=~/.local/share/nvim/swap,~/tmp,/tmp
 
+" Set Alt-dash and alt-backslash to toggle cursorline and cursorcolumn
+map <A--> :set cursorline!<CR>
+map <A-\> :set cursorcolumn!<CR>
