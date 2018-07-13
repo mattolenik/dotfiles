@@ -33,9 +33,9 @@ Plug 'ervandew/supertab'   " better tabs
 Plug 'sstallion/vim-whitespace'
 Plug 'junegunn/vim-easy-align'
 Plug 'sbdchd/neoformat'
-Plug 'Yggdroot/indentLine'
 Plug 'rhysd/vim-clang-format'
 Plug 'kana/vim-operator-user'
+Plug 'vim-scripts/AdvancedSorters'
 
 " Languages
 Plug 'hashivim/vim-terraform'
@@ -193,8 +193,6 @@ set completeopt-=preview
 
 :set linebreak
 
-
-
 " vim-conda fix
 " https://github.com/cjrh/vim-conda
 let g:jedi#force_py_version = 2
@@ -204,7 +202,12 @@ set backupdir-=.
 set backupdir^=~/.local/share/nvim/swap,~/tmp,/tmp
 set directory-=.
 set directory^=~/.local/share/nvim/swap,~/tmp,/tmp
+set backupdir=~/.local/share/nvim/swap,.
+set directory=~/.local/share/nvim/swap,.
 
 " Set Alt-dash and alt-backslash to toggle cursorline and cursorcolumn
 map <A--> :set cursorline!<CR>
 map <A-\> :set cursorcolumn!<CR>
+
+":set cursorcolumn
+:set cursorline
