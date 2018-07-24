@@ -197,8 +197,8 @@ set backupdir-=.
 set backupdir^=~/.local/share/nvim/swap,~/tmp,/tmp
 set directory-=.
 set directory^=~/.local/share/nvim/swap,~/tmp,/tmp
-set backupdir=~/.local/share/nvim/swap,.
-set directory=~/.local/share/nvim/swap,.
+set backupdir=~/.local/share/nvim/swap
+set directory=~/.local/share/nvim/swap
 
 " Set Alt-dash and alt-backslash to toggle cursorline and cursorcolumn
 map <A--> :set cursorline!<CR>

@@ -93,6 +93,8 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+command_exists pyenv && eval "$(pyenv init -)"
+
 if command_exists tmux && command_exists nvr; then
   export TMUX_WINDOW_ID=$(tmux display-message -p '#I')
   export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket_tmux_window_$TMUX_WINDOW_ID"
@@ -102,5 +104,3 @@ else
 fi
 
 alias gitroot='git rev-parse --show-toplevel'
-
-command_exists pyenv && eval "$(pyenv init -)"
