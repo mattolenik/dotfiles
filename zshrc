@@ -102,3 +102,5 @@ else
 fi
 
 alias gitroot='git rev-parse --show-toplevel'
+
+command_exists pyenv && eval "$(pyenv init -)"
