@@ -42,7 +42,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker shrink-path terraform thefuck)
+plugins=(git docker shrink-path terraform)
 zshrcd="$HOME/.config/zshrc.d/"
 
 source "$ZSH/oh-my-zsh.sh"
@@ -81,7 +81,6 @@ psinfo() { ps aux | grep -i "$1" }
 mypsinfo() { ps ux | grep -i "$1" }
 spy() { fswatch -0 -o "$1" | xargs -0 -n 1 -I {} ${@[2, -1]} }
 
-command_exists powerline-daemon && powerline-daemon -q
 command_exists mdfind && alias mdhere='mdfind -onlyin .'
 command_exists go && export GOPATH="$HOME/go" && export PATH="$GOPATH/bin:$PATH"
 
@@ -98,6 +97,8 @@ if command_exists tmux && command_exists nvr; then
   export TMUX_WINDOW_ID=$(tmux display-message -p '#I')
   export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket_tmux_window_$TMUX_WINDOW_ID"
   alias neovim='nvr --remote -s'
+else
+  echo Install nvr with pip3 install neovim-remote
 fi
 
 alias gitroot='git rev-parse --show-toplevel'

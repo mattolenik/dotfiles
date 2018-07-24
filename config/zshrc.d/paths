@@ -6,7 +6,7 @@ export_paths() {
   local -A suffix_paths
 
   prefix_paths=(
-  "/usr/local/anaconda3/bin"        ""
+  #"/usr/local/miniconda3/bin"       ""
   "$HOME/.local/bin"                ""
   "$HOME/.rvm/bin"                  ""
   "$HOME/.local/bin"                ""
