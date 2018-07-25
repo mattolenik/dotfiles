@@ -22,7 +22,7 @@ custom-commands:
       - name: type
         short: t
         type: ENUM
-        default: Bug
+        default: Task
         enum: [task, initiative, epic, story, bug, documentation, showme]
     args:
       - name: title
