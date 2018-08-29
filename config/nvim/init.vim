@@ -206,3 +206,6 @@ map <A-\> :set cursorcolumn!<CR>
 
 ":set cursorcolumn
 :set cursorline
+
+" Sort words in selected text
+:vnoremap <F2> d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
