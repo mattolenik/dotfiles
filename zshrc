@@ -95,12 +95,4 @@ fi
 
 command_exists pyenv && eval "$(pyenv init -)"
 
-if command_exists tmux && command_exists nvr; then
-  export TMUX_WINDOW_ID=$(tmux display-message -p '#I')
-  export NVIM_LISTEN_ADDRESS="/tmp/nvimsocket_tmux_window_$TMUX_WINDOW_ID"
-  alias neovim='nvr --remote -s'
-else
-  echo Install nvr with pip3 install neovim-remote
-fi
-
 alias gitroot='git rev-parse --show-toplevel'
