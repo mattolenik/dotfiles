@@ -1,7 +1,7 @@
 endpoint: https://contextrelevant.atlassian.net
 user: molenik@versive.com
 password-source: keyring
-project: &proj INF
+project: &project INF
 custom-commands:
   #
   # new
@@ -17,7 +17,7 @@ custom-commands:
         help: "Issue priority: P0 (emergency), P1 (urgent), P2 (important), P3 (normal), P4 (trivial). Defaults to p3"
       - name: project
         short: p
-        default: *proj
+        default: *project
         help: "Project name, such as INF, HANTO, PLAT, SOL. See https://contextrelevant.atlassian.net/projects for a full list"
       - name: type
         short: t

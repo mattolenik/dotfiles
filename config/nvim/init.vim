@@ -25,7 +25,7 @@ Plug 'danro/rename.vim'    " file rename
 Plug 'ervandew/supertab'   " better tabs
 
 " Formatting
-Plug 'sstallion/vim-whitespace'
+"Plug 'sstallion/vim-whitespace'
 Plug 'junegunn/vim-easy-align'
 Plug 'sbdchd/neoformat'
 Plug 'rhysd/vim-clang-format'
@@ -33,9 +33,11 @@ Plug 'kana/vim-operator-user'
 Plug 'vim-scripts/AdvancedSorters'
 
 " Languages
+Plug 'vim-syntastic/syntastic'
 Plug 'hashivim/vim-terraform'
-"Plug 'juliosueiras/vim-terraform-completion'
-Plug 'fatih/vim-go'
+Plug 'juliosueiras/vim-terraform-completion'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'svsudhir/textile.vim'
 Plug 'https://github.com/m-kat/aws-vim'
 Plug 'posva/vim-vue'
