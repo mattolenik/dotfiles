@@ -25,7 +25,7 @@ Plug 'danro/rename.vim'    " file rename
 Plug 'ervandew/supertab'   " better tabs
 
 " Formatting
-"Plug 'sstallion/vim-whitespace'
+Plug 'sstallion/vim-whitespace'
 Plug 'junegunn/vim-easy-align'
 Plug 'sbdchd/neoformat'
 Plug 'rhysd/vim-clang-format'
