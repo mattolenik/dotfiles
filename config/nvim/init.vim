@@ -88,7 +88,8 @@ let g:vim_json_syntax_conceal = 0
 set termguicolors
 set mouse=a
 let g:solarized_term_italics = 1
-colorscheme solarized8_light_high
+set background=light
+colorscheme solarized8
 let g:airline_theme = 'solarized'
 
 let g:airline#extensions#tmuxline#enabled = 0
