@@ -39,6 +39,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/gocode/nvim/symlink.sh' }
+Plug 'tkztmk/vim-vala'
 "Plug 'posva/vim-vue'
 "Plug 'OmniSharp/omnisharp-vim'
 "Plug 'zchee/deoplete-jedi'  " Python
