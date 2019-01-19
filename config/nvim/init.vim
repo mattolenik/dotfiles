@@ -39,7 +39,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/gocode/nvim/symlink.sh' }
-Plug 'tkztmk/vim-vala'
+Plug 'arrufat/vala.vim'
 "Plug 'posva/vim-vue'
 "Plug 'OmniSharp/omnisharp-vim'
 "Plug 'zchee/deoplete-jedi'  " Python
@@ -84,6 +84,9 @@ let g:indentLine_char = '│'
 let g:indentLine_noConcealCursor='nc'
 let g:vim_json_syntax_conceal = 0
 let g:vim_json_syntax_conceal = 0
+
+let g:syntastic_vala_modules = 'gio-2.0 gtk+-3.0 gee'
+"let g:syntastic_vala_vapi_dirs = '/usr/share/vala-0.40/vapi'
 
 set termguicolors
 set mouse=a
