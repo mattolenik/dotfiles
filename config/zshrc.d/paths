@@ -7,6 +7,7 @@ export_paths() {
   local -A suffix_paths
 
   prefix_paths=(
+  "/usr/local/go/bin"               ""
   "/usr/local/opt/openssl/bin"      ""
   "$HOME/.local/bin"                ""
   "$HOME/.rvm/bin"                  ""
