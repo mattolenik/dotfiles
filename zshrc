@@ -42,7 +42,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker shrink-path terraform)
+plugins=(git docker shrink-path terraform pipenv)
 zshrcd="$HOME/.config/zshrc.d/"
 
 source "$ZSH/oh-my-zsh.sh"
@@ -100,5 +100,6 @@ alias gitroot='git rev-parse --show-toplevel'
 command_exists thefuck && eval $(thefuck --alias)
 
 export PATH="$HOME/.local/bin:$PATH"
+export PERSONAL_ARN="arn:aws:iam::635432930383:user/mattolenik"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

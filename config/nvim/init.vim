@@ -43,7 +43,7 @@ Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/goco
 Plug 'arrufat/vala.vim'
 "Plug 'posva/vim-vue'
 "Plug 'OmniSharp/omnisharp-vim'
-"Plug 'zchee/deoplete-jedi'  " Python
+Plug 'zchee/deoplete-jedi'  " Python
 "Plug 'cjrh/vim-conda'
 
 Plug 'autozimu/LanguageClient-neovim', {
@@ -88,6 +88,9 @@ let g:vim_json_syntax_conceal = 0
 
 let g:syntastic_vala_modules = 'gio-2.0 gtk+-3.0 gee'
 "let g:syntastic_vala_vapi_dirs = '/usr/share/vala-0.40/vapi'
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_pylint_post_args='--max-line-length=120'
+let g:syntastic_python_pylint_args='--max-line-length=120'
 
 set termguicolors
 set mouse=a
