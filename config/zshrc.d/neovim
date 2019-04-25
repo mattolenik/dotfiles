@@ -5,7 +5,7 @@ neovim() {
     echo "neovim function requires tmux" && return 1
   fi
   if ! command -v &>/dev/null nvr; then
-    echo "neovim function requires nvr" && return 1
+    echo "neovim function requires neovim-remote pip package" && return 1
   fi
   NVIM_LISTEN_ADDRESS="/tmp/neovim-socket-$(tmux display-message -p '#I')" nvr --remote -s "$@"
 }
