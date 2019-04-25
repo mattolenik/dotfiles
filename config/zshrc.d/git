@@ -9,3 +9,5 @@ alias gd='git diff'
 alias gc='git commit'
 alias ga='git add'
 alias gca='git commit --amend'
+
+alias git-show-changed-files='git show --pretty="format:" --name-only'
