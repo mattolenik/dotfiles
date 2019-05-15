@@ -93,13 +93,14 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-command_exists pyenv && eval "$(pyenv init -)"
+if command_exists pyenv; then
+  eval "$(pyenv init -)"
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+fi
 
 alias gitroot='git rev-parse --show-toplevel'
 
 command_exists thefuck && eval $(thefuck --alias)
 
-export PATH="$HOME/.local/bin:$PATH"
 export PERSONAL_ARN="arn:aws:iam::635432930383:user/mattolenik"
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"

@@ -1,21 +1,19 @@
 # vi: ft=zsh
 # Adds directories to PATH, optionally with a conditional predicate
 
-export PATH=":$PATH"
 export_paths() {
   local -A prefix_paths
   local -A suffix_paths
 
   prefix_paths=(
-  "/usr/local/go/bin"               ""
-  "/usr/local/opt/openssl/bin"      ""
-  "$HOME/.local/bin"                ""
-  "$HOME/.rvm/bin"                  ""
-  "$HOME/.local/bin"                ""
-  "/home/linuxbrew/.linuxbrew/bin:" "[[ -d /home/linuxbrew ]]"
+    "$HOME/.local/bin"                ""
+    "/usr/local/opt/openssl/bin"      "[[ -d /usr/local/opt/openssl/bin ]]"
+    "/home/linuxbrew/.linuxbrew/bin:" "[[ -d /home/linuxbrew ]]"
   )
 
-  suffix_paths=()
+  suffix_paths=(
+    "$HOME/.rvm/bin"  "command_exists rvm"
+  )
   local key
   local val
 
