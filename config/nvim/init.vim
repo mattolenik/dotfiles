@@ -95,11 +95,17 @@ let g:syntastic_python_pylint_args='--max-line-length=120'
 set termguicolors
 set mouse=a
 let g:solarized_term_italics = 1
-set background=light
 colorscheme solarized8
 let g:airline_theme = 'solarized'
+if $THEME_TINT == 'dark'
+    set background=dark
+    let g:airline_solarized_bg='dark'
+else
+    set background=light
+    let g:airline_solarized_bg='light'
+endif
 
-let g:airline#extensions#tmuxline#enabled = 0
+let g:airline#extensions#tmuxline#enabled = 1
 
 :command! EditInit :e ~/.config/nvim/init.vim
 :command! -bar SourceInit :source ~/.config/nvim/init.vim

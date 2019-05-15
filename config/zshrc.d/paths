@@ -1,12 +1,17 @@
 # vi: ft=zsh
+# shellcheck shell=zsh
 # Adds directories to PATH, optionally with a conditional predicate
 
+export PYENV_ROOT="$HOME/.pyenv"
+  export PATH=":$PATH"
 export_paths() {
   local -A prefix_paths
   local -A suffix_paths
 
   prefix_paths=(
+    "$PYENV_ROOT/bin"                 "[[ -d $HOME/.pyenv ]] && export PYENV_ROOT=$HOME/.pyenv"
     "$HOME/.local/bin"                ""
+    "/usr/local/go/bin"               "[[ -d /usr/local/go ]]"
     "/usr/local/opt/openssl/bin"      "[[ -d /usr/local/opt/openssl/bin ]]"
     "/home/linuxbrew/.linuxbrew/bin:" "[[ -d /home/linuxbrew ]]"
   )
