@@ -42,12 +42,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+[[ -f $STDLIB ]] && source "$STDLIB"
+command_exists pyenv && eval "$(pyenv init -)"
+
 plugins=(git docker shrink-path terraform pipenv)
 zshrcd="$HOME/.config/zshrc.d/"
-
 source "$ZSH/oh-my-zsh.sh"
-
-[[ -f $STDLIB ]] && source "$STDLIB"
 
 unsetopt auto_cd
 
@@ -92,10 +92,6 @@ if [[ ! -z "$USE_NVM" ]]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-if command_exists pyenv; then
-  eval "$(pyenv init -)"
-fi
 
 alias gitroot='git rev-parse --show-toplevel'
 
