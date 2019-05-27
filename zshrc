@@ -1,3 +1,15 @@
+if [[ -n ${PROFILE_ZSH:-} ]]; then
+  zmodload zsh/datetime
+  setopt PROMPT_SUBST
+  PS4='+$EPOCHREALTIME %N:%i> '
+
+  logfile=$(mktemp zsh_profile.XXXXXXXX)
+  echo "Logging to $logfile"
+  exec 3>&2 2>$logfile
+
+  setopt XTRACE
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -20,7 +32,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-#ENABLE_CORRECTION="false"
+# ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -43,9 +55,8 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 [[ -f $STDLIB ]] && source "$STDLIB"
-command_exists pyenv && eval "$(pyenv init -)"
 
-plugins=(git docker shrink-path terraform pipenv)
+plugins=(git docker shrink-path)
 zshrcd="$HOME/.config/zshrc.d/"
 source "$ZSH/oh-my-zsh.sh"
 
@@ -98,3 +109,10 @@ alias gitroot='git rev-parse --show-toplevel'
 command_exists thefuck && eval $(thefuck --alias)
 
 export PERSONAL_ARN="arn:aws:iam::635432930383:user/mattolenik"
+
+command_exists pyenv && eval "$(pyenv init - --no-rehash)"
+
+if [[ -n ${PROFILE_ZSH:-} ]]; then
+  unsetopt XTRACE
+  exec 2>&3 3>&-
+fi
