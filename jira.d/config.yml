@@ -1,7 +1,7 @@
-endpoint: https://contextrelevant.atlassian.net
-user: molenik@versive.com
+endpoint: https://esentire.atlassian.net
+user: matt.olenik@esentire.com
 password-source: keyring
-project: &project INF
+project: &project DEVOPS
 custom-commands:
   #
   # new
