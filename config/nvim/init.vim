@@ -68,11 +68,6 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 Plug 'juliosueiras/vim-terraform-completion'
 
-let g:deoplete#omni_patterns = {}
-let g:deoplete#omni_patterns.terraform = '[^ *\t"{=$]\w*'
-let g:deoplete#enable_at_startup = 1
-call deoplete#initialize()
-
 " Linting
 Plug 'w0rp/ale'
 Plug 'mhinz/vim-signify'
