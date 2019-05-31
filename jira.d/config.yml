@@ -1,5 +1,5 @@
 endpoint: https://esentire.atlassian.net
-user: matt.olenik@esentire.com
+user: matt.olenik
 password-source: keyring
 project: &project DEVOPS
 custom-commands:
@@ -18,25 +18,19 @@ custom-commands:
       - name: project
         short: p
         default: *project
-        help: "Project name, such as INF, HANTO, PLAT, SOL. See https://contextrelevant.atlassian.net/projects for a full list"
+        help: "Project name, such as DEVOPS, HANTO, etc."
       - name: type
         short: t
         type: ENUM
-        default: Task
-        enum: [task, initiative, epic, story, bug, documentation, showme]
+        default: Story
+        enum: [story, epic]
     args:
       - name: title
         required: true
       - name: description
         required: true
     script: |-
-      pri="{{options.priority}}"
-      [ "$pri" = "P0" ] && pri="P0 - Emergency"
-      [ "$pri" = "P1" ] && pri="P1 - Urgent"
-      [ "$pri" = "P2" ] && pri="P2 - Important"
-      [ "$pri" = "P3" ] && pri="P3 - Normal"
-      [ "$pri" = "P4" ] && pri="P4 - Trivial"
-      {{jira}} create -p {{options.project}} -o "assignee:$USER" -o "summary={{args.title}}" -o "description={{args.description}}" -o "priority=$pri" -i "{{options.type}}"
+      {{jira}} create -p {{options.project}} -o "assignee={{options.user}}" -o "summary={{args.title}}" -o "description={{args.description}}" -o "priority={{options.priority}}" -i "{{options.type}}"
 
   #
   # mine
