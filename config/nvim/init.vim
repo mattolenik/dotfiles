@@ -1,5 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'neomake/neomake'
+
 Plug 'xolox/vim-misc'
 
 " Colors
@@ -63,6 +65,13 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 "Plug 'zchee/deoplete-clang'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+Plug 'juliosueiras/vim-terraform-completion'
+
+let g:deoplete#omni_patterns = {}
+let g:deoplete#omni_patterns.terraform = '[^ *\t"{=$]\w*'
+let g:deoplete#enable_at_startup = 1
+call deoplete#initialize()
 
 " Linting
 Plug 'w0rp/ale'
