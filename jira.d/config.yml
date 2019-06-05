@@ -1,5 +1,5 @@
 endpoint: https://esentire.atlassian.net
-user: matt.olenik
+user: matt.olenik@esentire.com
 password-source: keyring
 project: &project DEVOPS
 custom-commands:
@@ -30,7 +30,8 @@ custom-commands:
       - name: description
         required: true
     script: |-
-      {{jira}} create -p {{options.project}} -o "assignee={{options.user}}" -o "summary={{args.title}}" -o "description={{args.description}}" -o "priority={{options.priority}}" -i "{{options.type}}"
+      user="matt.olenik"
+      {{jira}} create -p {{options.project}} -o "assignee=$user" -o "summary={{args.title}}" -o "description={{args.description}}" -o "priority={{options.priority}}" -i "{{options.type}}"
 
   #
   # mine
