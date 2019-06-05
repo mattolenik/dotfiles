@@ -4,6 +4,11 @@ snippet-new-bash-script() {
   cat >> $1 << 'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
+[[ -n ${DEBUG:-} ]] && set -x
+
+fail() {
+  echo "$*" 1>&2 && exit 1
+}
 
 main() {
   echo
