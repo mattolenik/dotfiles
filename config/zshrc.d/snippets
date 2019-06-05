@@ -1,0 +1,14 @@
+# vi: ft=zsh
+
+snippet-new-bash-script() {
+  cat >> $1 << 'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+
+main() {
+  echo
+}
+
+main "$@"
+EOF
+}
