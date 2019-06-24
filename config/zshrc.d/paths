@@ -11,6 +11,7 @@ export_paths() {
   prefix_paths=(
     "$PYENV_ROOT/bin"                 "[[ -d $HOME/.pyenv ]] && export PYENV_ROOT=$HOME/.pyenv"
     "$HOME/.local/bin"                ""
+    "/usr/local/sbin"                 ""
     "/usr/local/go/bin"               "[[ -d /usr/local/go ]]"
     "/usr/local/opt/openssl/bin"      "[[ -d /usr/local/opt/openssl/bin ]]"
     "/home/linuxbrew/.linuxbrew/bin:" "[[ -d /home/linuxbrew ]]"
