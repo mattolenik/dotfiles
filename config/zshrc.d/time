@@ -1,0 +1,3 @@
+# vi: ft=zsh
+timestamp() { date -u +%Y%m%d%H%M%S; }
+prettify_timestamp() { date -jf '%Y%m%d%H%M%S' "$1" '+%Y/%m/%d %H:%M:%S UTC'; }

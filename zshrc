@@ -98,5 +98,3 @@ alias gitroot='git rev-parse --show-toplevel'
 command_exists thefuck && eval $(thefuck --alias)
 
 export PERSONAL_ARN="arn:aws:iam::635432930383:user/mattolenik"
-
-alias timestamp='date +%Y%m%d%H%M%S'
