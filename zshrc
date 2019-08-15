@@ -108,8 +108,6 @@ alias gitroot='git rev-parse --show-toplevel'
 
 command_exists thefuck && eval $(thefuck --alias)
 
-export PERSONAL_ARN="arn:aws:iam::635432930383:user/mattolenik"
-
 command_exists pyenv && eval "$(pyenv init - --no-rehash)"
 
 if [[ -n ${PROFILE_ZSH:-} ]]; then
