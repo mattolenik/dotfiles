@@ -119,7 +119,7 @@ let g:airline#extensions#tmuxline#enabled = 1
 let mapleader="\<Space>"
 
 " Disable macro key
-noremap q <Nop>
+"noremap q <Nop>
 
 nnoremap <C-w> :Sayonara<cr>
 nnoremap <C-s> :w<cr>
