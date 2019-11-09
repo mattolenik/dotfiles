@@ -70,6 +70,7 @@ Plug 'juliosueiras/vim-terraform-completion'
 
 " Linting
 Plug 'w0rp/ale'
+let g:ale_sh_shellcheck_options = '-x'
 Plug 'mhinz/vim-signify'
 
 call plug#end()
@@ -168,8 +169,7 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 nmap <leader>T <Plug>AirlineSelectPrevTab
 nmap <leader>t <Plug>AirlineSelectNextTab
 
-" Just show the filename (no path) in the tab
-let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 let g:deoplete#enable_at_startup = 1
 " deoplete keys, ctrl-space to open and tab to cycle
