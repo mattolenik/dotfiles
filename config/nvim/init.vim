@@ -61,12 +61,6 @@ au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'zchee/deoplete-jedi'  " Python
-"Plug 'zchee/deoplete-go', { 'do': 'make'}
-"Plug 'zchee/deoplete-clang'
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-
 Plug 'juliosueiras/vim-terraform-completion'
 
 " Linting
@@ -172,10 +166,9 @@ nmap <leader>t <Plug>AirlineSelectNextTab
 
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
-"let g:deoplete#enable_at_startup = 1
 " deoplete keys, ctrl-space to open and tab to cycle
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <C-Space> <C-x><C-o>
+"inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+"inoremap <C-Space> <C-x><C-o>
 
 " leader leader-w buffer close
 nmap <leader><leader>w :bd<CR>
