@@ -45,7 +45,6 @@ Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/goco
 Plug 'arrufat/vala.vim'
 "Plug 'posva/vim-vue'
 "Plug 'OmniSharp/omnisharp-vim'
-Plug 'zchee/deoplete-jedi'  " Python
 "Plug 'cjrh/vim-conda'
 
 Plug 'autozimu/LanguageClient-neovim', {
@@ -61,8 +60,10 @@ nnoremap <localleader>t :EnType<CR>
 au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
 
 " Autocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'zchee/deoplete-jedi'  " Python
+"Plug 'zchee/deoplete-go', { 'do': 'make'}
 "Plug 'zchee/deoplete-clang'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
@@ -171,7 +172,7 @@ nmap <leader>t <Plug>AirlineSelectNextTab
 
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 " deoplete keys, ctrl-space to open and tab to cycle
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <C-Space> <C-x><C-o>
