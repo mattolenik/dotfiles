@@ -1,7 +1,7 @@
 endpoint: https://esentire.atlassian.net
 user: matt.olenik@esentire.com
 password-source: keyring
-project: &project DEVOPS
+project: &project DSP
 custom-commands:
   #
   # new
@@ -9,12 +9,12 @@ custom-commands:
   - name: new
     help: Create issue helper
     options:
-      - name: priority
-        short: r
-        type: ENUM
-        default: P3
-        enum: [P0, P1, P2, P3, P4]
-        help: "Issue priority: P0 (emergency), P1 (urgent), P2 (important), P3 (normal), P4 (trivial). Defaults to p3"
+      #      - name: priority
+      #        short: r
+      #        type: ENUM
+      #        default: P3
+      #        enum: [P0, P1, P2, P3, P4]
+      #        help: "Issue priority: P0 (emergency), P1 (urgent), P2 (important), P3 (normal), P4 (trivial). Defaults to p3"
       - name: project
         short: p
         default: *project
@@ -30,7 +30,7 @@ custom-commands:
       - name: description
         required: true
     script: |-
-      user="matt.olenik"
+      user="Matt.Olenik"
       {{jira}} create -p {{options.project}} -o "assignee=$user" -o "summary={{args.title}}" -o "description={{args.description}}" -o "priority={{options.priority}}" -i "{{options.type}}"
 
   #
