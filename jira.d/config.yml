@@ -9,28 +9,28 @@ custom-commands:
   - name: new
     help: Create issue helper
     options:
-      #      - name: priority
-      #        short: r
-      #        type: ENUM
-      #        default: P3
-      #        enum: [P0, P1, P2, P3, P4]
-      #        help: "Issue priority: P0 (emergency), P1 (urgent), P2 (important), P3 (normal), P4 (trivial). Defaults to p3"
+      - name: priority
+        short: r
+        type: ENUM
+        default: P3
+        enum: [P0, P1, P2, P3, P4]
+        help: "Issue priority: P0 (emergency), P1 (urgent), P2 (important), P3 (normal), P4 (trivial). Defaults to P3"
       - name: project
         short: p
-        default: *project
-        help: "Project name, such as DEVOPS, HANTO, etc."
+        default: DSP
+        help: "Project name, such as DSP, DEVOPS, etc."
       - name: type
         short: t
         type: ENUM
         default: Story
-        enum: [story, epic]
+        enum: [Bug, Story, Task, Spike]
     args:
       - name: title
         required: true
       - name: description
         required: true
     script: |-
-      user="Matt.Olenik"
+      user="Matt Olenik"
       {{jira}} create -p {{options.project}} -o "assignee=$user" -o "summary={{args.title}}" -o "description={{args.description}}" -o "priority={{options.priority}}" -i "{{options.type}}"
 
   #
