@@ -1,3 +1,11 @@
+if exists('g:vscode')
+call plug#begin('~/.local/share/nvim-vscode/plugged')
+
+let mapleader="\<Space>"
+Plug 'asvetliakov/vim-easymotion'
+
+else
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'neomake/neomake'
@@ -223,3 +231,6 @@ map <A-\> :set cursorcolumn!<CR>
 
 " Sort words in selected text
 :vnoremap <F2> d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
+
+
+end
