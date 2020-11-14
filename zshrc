@@ -114,3 +114,10 @@ if [[ -n ${PROFILE_ZSH:-} ]]; then
   unsetopt XTRACE
   exec 2>&3 3>&-
 fi
+
+export PATH="$PATH:/Users/matt/Library/Android/sdk/tools"
+export PATH="$PATH:/Users/matt/Library/Android/sdk/platform-tools"
+export PATH="/Users/matt/Library/Android/sdk/emulator:$PATH"
+launchctl setenv PATH $PATH
+export ANDROID_SDK=$HOME/Library/Android/sdk
+
