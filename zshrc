@@ -1,3 +1,7 @@
+command_exists() {
+  command -v "$@" &> /dev/null
+}
+
 if [[ -n ${PROFILE_ZSH:-} ]]; then
   zmodload zsh/datetime
   setopt PROMPT_SUBST
