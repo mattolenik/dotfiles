@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 command_exists() {
   command -v "$@" &> /dev/null
 }
@@ -23,7 +30,7 @@ export ZSH=$HOME/.oh-my-zsh
 export STDLIB=$HOME/stdlib.sh/stdlib.sh
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -125,3 +132,6 @@ export PATH="/Users/matt/Library/Android/sdk/emulator:$PATH"
 [[ $(uname) == Darwin ]] && launchctl setenv PATH $PATH
 export ANDROID_SDK=$HOME/Library/Android/sdk
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+command_exists rbenv && eval "$(rbenv init - zsh)"
