@@ -1,0 +1,1 @@
+command_exists groovy && export GROOVY_HOME=/usr/local/opt/groovy/libexec
