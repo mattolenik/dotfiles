@@ -68,7 +68,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 [[ -f $STDLIB ]] && source "$STDLIB"
 
 plugins=(git docker shrink-path)
-zshrcd="$HOME/.config/zshrc.d/"
 source "$ZSH/oh-my-zsh.sh"
 
 unsetopt auto_cd
@@ -85,7 +84,9 @@ alias edit-zshrc="$EDITOR ~/.zshrc"
 alias source-zshrc='source ~/.zshrc'
 alias edit-tmuxconf="$EDITOR ~/.tmux.conf"
 
-[ -d $HOME/.config/zshrc.d ] && for f in $HOME/.config/zshrc.d/*; do source "$f"; done
+# Source everything under zsh config dir
+zshrcd="$HOME/.config/zsh"
+[[ -d $zshrcd ]] && for f in $zshrcd/*; do source "$f"; done
 
 alias http-get='curl -w "\n%{http_code}"'
 alias http-post='curl -w "\n%{http_code}" -X POST'

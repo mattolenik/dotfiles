@@ -3,7 +3,7 @@
 # Adds directories to PATH, optionally with a conditional predicate
 
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH=":$PATH"
+  export PATH=":$PATH"
 export_paths() {
   local -A prefix_paths
   local -A suffix_paths
@@ -11,7 +11,6 @@ export_paths() {
   prefix_paths=(
     "$PYENV_ROOT/bin"                 "[[ -d $HOME/.pyenv ]] && export PYENV_ROOT=$HOME/.pyenv"
     "$HOME/.local/bin"                ""
-    "$HOME/.pyenv/shims"              "command_exists pyenv"
     "/usr/local/sbin"                 ""
     "/usr/local/go/bin"               "[[ -d /usr/local/go ]]"
     "/usr/local/opt/openssl/bin"      "[[ -d /usr/local/opt/openssl/bin ]]"
