@@ -106,7 +106,7 @@ let g:syntastic_python_pylint_args='--max-line-length=120'
 set termguicolors
 set mouse=a
 let g:solarized_term_italics = 1
-colorscheme base16-tomorrow-night
+colorscheme base16-tomorrow-night-eighties
 "let g:airline_theme = 'base16-tomorrow-night'
 if $THEME_TINT == 'dark'
     set background=dark

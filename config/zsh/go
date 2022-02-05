@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+gomod() {
+  awk '/^module/ {print $2;exit;}' "$(git rev-parse --show-toplevel)/go.mod"
+}
