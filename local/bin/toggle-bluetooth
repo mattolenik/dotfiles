@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+source "$HOME/.local/lib/stdbash"
+
+fail_unless $'[[ $(uname) == Darwin ]]' "This program is only supported on macOS"
+fail_unless $'command_exists blueutil' 'This program requires blueutil. Install it with `brew install blueutil`'
+
+toggle_bluetooth() {
+    local enabled
+    enabled="$(blueutil -p)"
+    blueutil -p $((! enabled))
+    state="Disabled"
+    if ((! enabled)); then
+        state="Enabled"
+    fi
+    echo "$state"
+}
+
+notify() {
+osascript <<EOF
+    tell application "System Events"
+        activate
+        display notification "Bluetooth toggled" with title "Bluetooth Now $1"
+    end tell
+EOF
+}
+
+new_state=$(toggle_bluetooth)
+if [[ ${SHOW_NOTIFICATION:-} ]]; then
+    notify "$new_state"
+fi
