@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-fail()        { echo "$1" 1>&2; exit "${2:-1}"; }
-fail_if()     { eval "$1" && fail "$2" "${3:-1}"; }
-fail_unless() { eval "$1" || fail "$2" "${3:-1}"; }
+fail()           { echo "$1" 1>&2; exit "${2:-1}"; }
+fail_if()        { eval "$1" && fail "$2" "${3:-1}"; }
+fail_unless()    { eval "$1" || fail "$2" "${3:-1}"; }
+command_exists() { command -v "$@" &> /dev/null; }
 
 # Usage
 #   fail_if $'<bash shell expression>' "Failure description" [exitCode]
