@@ -3,6 +3,7 @@ set -euo pipefail
 source "$HOME/.local/lib/stdbash"
 
 fail_unless $'[[ $(uname) == Darwin ]]' "This program is only supported on macOS"
+# shellcheck disable=SC2016
 fail_unless $'command_exists blueutil' 'This program requires blueutil. Install it with `brew install blueutil`'
 
 toggle_bluetooth() {
