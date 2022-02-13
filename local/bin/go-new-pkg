@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+pkgName="$1"
+mkdir "$pkgName"
+cd "$pkgName"
+echo "package $pkgName" > "${pkgName}.go"
+echo "package $pkgName" > "${pkgName}_test.go"
