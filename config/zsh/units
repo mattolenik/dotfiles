@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+minutes() {
+  echo "$(( $1 * 60 ))"
+}
+
+hours() {
+  echo "$(( $1 * 60 * 60 ))"
+}
