@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+fail() { 2>&1 echo "$*"; exit 1; }
+
+if [[ ${1:-} == "--help" || ${1:-} == "-h" || $# == 0 ]]; then
+  cat << HELP
+Usage: reveal <name_of_program>...
+HELP
+exit 0
+fi
+
+for n in "$@"; do
+  if [[ $n = -* ]]; then
+    fail "$n not a supported argument"
+  fi
+done
+
+for n in "$@"; do
+  realpath "$(which $n)"
+done
