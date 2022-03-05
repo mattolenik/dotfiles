@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "\"Fira Code\"",
+    "editor.fontFamily": "\"Hack Nerd Font\"",
     "terminal.integrated.fontFamily": "\"Hack Nerd Font\"",
     "terminal.integrated.scrollback": 50000,
     "editor.folding": false,
@@ -88,6 +88,7 @@
         }
     },
     "terminal.integrated.defaultProfile.osx": "tmux",
+    "terminal.integrated.macOptionIsMeta": true, // Allows alt key press to be passed into terminal
     "editor.autoIndent": "full",
     "terminal.integrated.rightClickBehavior": "default",
     "workbench.editor.wrapTabs": true,
