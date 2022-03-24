@@ -95,5 +95,11 @@
     "search.showLineNumbers": true,
     "debug.confirmOnExit": "always",
     "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": "active"
+    "editor.guides.bracketPairs": "active",
+    "workbench.colorCustomizations": {
+      // Highlight active tab
+      "tab.inactiveBackground": "#252526",
+      "tab.border": "#000",
+      "tab.activeBorderTop": "#999"
+    }
 }
