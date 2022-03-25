@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ $1 == "-a" ]]; then
+  shift
+  realpath "$*" | tee /dev/tty | pbcopy
+else
+  realpath --relative-to="$(pwd)" "$*" | tee /dev/tty | pbcopy
+fi
