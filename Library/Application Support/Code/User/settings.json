@@ -84,7 +84,7 @@
                 "new-session",
                 "-t",
                 "main"
-            ],
+            ]
         }
     },
     "terminal.integrated.defaultProfile.osx": "tmux",
@@ -97,7 +97,6 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
     "workbench.colorCustomizations": {
-      // Highlight active tab
       "tab.inactiveBackground": "#252526",
       "tab.border": "#000",
       "tab.activeBorderTop": "#999"
