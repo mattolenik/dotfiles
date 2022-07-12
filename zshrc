@@ -51,3 +51,6 @@ _custom_plugins
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 command_exists zoxide && eval "$(zoxide init zsh)"
+command_exists /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

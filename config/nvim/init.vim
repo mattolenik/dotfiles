@@ -53,15 +53,10 @@ Plug 'juliosueiras/vim-terraform-completion'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/gocode/nvim/symlink.sh' }
 "Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/gocode/nvim/symlink.sh' }
-Plug 'arrufat/vala.vim'
+"Plug 'arrufat/vala.vim'
 "Plug 'posva/vim-vue'
 "Plug 'OmniSharp/omnisharp-vim'
 "Plug 'cjrh/vim-conda'
-
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
 
 "" Scala
 "Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
@@ -71,8 +66,8 @@ nnoremap <localleader>t :EnType<CR>
 au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
 
 " Autocomplete
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'juliosueiras/vim-terraform-completion'
+Plug 'neovim/nvim-lspconfig'
+Plug 'ms-jpq/coq_nvim'
 
 " Linting
 Plug 'w0rp/ale'
