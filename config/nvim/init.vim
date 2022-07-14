@@ -54,9 +54,7 @@ Plug 'juliosueiras/vim-terraform-completion'
 "Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/gocode/nvim/symlink.sh' }
 "Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/gocode/nvim/symlink.sh' }
 "Plug 'arrufat/vala.vim'
-"Plug 'posva/vim-vue'
-"Plug 'OmniSharp/omnisharp-vim'
-"Plug 'cjrh/vim-conda'
+Plug 'prabirshrestha/vim-lsp'
 
 "" Scala
 "Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
