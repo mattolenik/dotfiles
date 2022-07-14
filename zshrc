@@ -52,5 +52,6 @@ _custom_plugins
 
 command_exists zoxide && eval "$(zoxide init zsh)"
 command_exists /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)"
-
+# TODO: make a source_if_exists function
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
