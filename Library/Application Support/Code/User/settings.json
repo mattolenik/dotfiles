@@ -97,8 +97,9 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
     "workbench.colorCustomizations": {
-      "tab.inactiveBackground": "#252526",
-      "tab.border": "#000",
-      "tab.activeBorderTop": "#999"
-    }
+        "tab.inactiveBackground": "#252526",
+        "tab.border": "#000",
+        "tab.activeBorderTop": "#999"
+    },
+    "git.mergeEditor": true
 }
