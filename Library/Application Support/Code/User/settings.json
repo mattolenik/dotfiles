@@ -101,5 +101,7 @@
         "tab.border": "#000",
         "tab.activeBorderTop": "#999"
     },
-    "git.mergeEditor": true
+    "git.mergeEditor": true,
+    "window.zoomLevel": 0.5,
+    "commentWrap.printWidth": 120
 }
