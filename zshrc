@@ -55,3 +55,5 @@ command_exists /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv
 # TODO: make a source_if_exists function
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+[[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]] && source /opt/homebrew/opt/asdf/libexec/asdf.sh
