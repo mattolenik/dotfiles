@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+BREWDIR=/usr/local/Homebrew
+
 export EDITOR=nvim
 command_exists() {
   command -v "$@" &> /dev/null
@@ -50,10 +52,8 @@ _custom_plugins
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-command_exists zoxide && eval "$(zoxide init zsh)"
-command_exists /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)"
 # TODO: make a source_if_exists function
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[[ -f /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
-
-[[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]] && source /opt/homebrew/opt/asdf/libexec/asdf.sh
+#
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+[[ -f $BREWDIR/bin/brew ]] && eval "$($BREWDIR/bin/brew shellenv)"
+[[ -f $BREWDIR/../Cellar/asdf/*/libexec/asdf.sh ]] && source $BREWDIR/../Cellar/asdf/*/libexec/asdf.sh
