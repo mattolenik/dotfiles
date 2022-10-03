@@ -1,0 +1,20 @@
+git-fetchbase () {
+	local remote=${1:-origin}
+	local branch=${2:-master}
+	git fetch $remote $branch && git rebase $remote/$branch
+}
+
+alias gs='git status'
+alias gd='git diff'
+alias gc='git commit'
+alias ga='git add'
+alias gca='git commit --amend'
+
+alias git-show-changed-files='git show --pretty="format:" --name-only'
+
+git-branch-rebase-delete () {
+	local feature_branch="$1" 
+	local base_branch="${2:-master}" 
+	git checkout "$feature_branch" && git rebase "$base_branch" && git checkout "$base_branch" && git branch -d "$feature_branch"
+}
+

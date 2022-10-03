@@ -1,0 +1,9 @@
+# vi: ft=zsh
+# shellcheck shell=zsh
+
+# Mapping of hostname to theme tint
+typeset -A host_themes=(
+  bedroom dark
+)
+
+export THEME_TINT="${host_themes[$(hostname)]:-light}"
