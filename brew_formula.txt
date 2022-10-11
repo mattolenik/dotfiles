@@ -15,7 +15,6 @@ clang-format
 cmake
 coreutils
 dash
-ddrescue
 doctl
 fd
 fossil
@@ -94,7 +93,6 @@ python
 python3
 python@3.10
 python@3.8
-ranger
 rcm
 readline
 reattach-to-user-namespace
@@ -107,10 +105,7 @@ speedtest
 sqlite
 tcl-tk
 tfenv
-the_platinum_searcher
-the_silver_searcher
 tmux
-tokei
 tree
 tree-sitter
 unbound
@@ -118,13 +113,9 @@ unibilium
 unixodbc
 upx
 utf8proc
-vapoursynth
-watch
 wget
 xz
 yarn
 z3
-zimg
-zlib
 zsh
 zstd
