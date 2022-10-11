@@ -10,6 +10,7 @@ bash
 bat
 bdw-gc
 blueutil
+brotli
 ca-certificates
 clang-format
 cmake
@@ -17,6 +18,7 @@ coreutils
 dash
 doctl
 fd
+felinks
 fossil
 fswatch
 fzf
@@ -47,6 +49,7 @@ libevent
 libffi
 libgcrypt
 libgpg-error
+libidn
 libidn2
 libksba
 libnghttp2
@@ -106,6 +109,7 @@ sqlite
 tcl-tk
 tfenv
 tmux
+tre
 tree
 tree-sitter
 unbound
