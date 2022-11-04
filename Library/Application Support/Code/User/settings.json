@@ -102,6 +102,6 @@
         "tab.activeBorderTop": "#999"
     },
     "git.mergeEditor": true,
-    "window.zoomLevel": 0.5,
-    "commentWrap.printWidth": 120
+    "commentWrap.printWidth": 120,
+    "workspaceExplorer.workspaceStorageDirectory": "/Users/matt/.config/vscode/workspaces"
 }
