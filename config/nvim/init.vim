@@ -1,26 +1,14 @@
-if exists('g:vscode')
-call plug#begin('~/.local/share/nvim-vscode/plugged')
-
-let mapleader="\<Space>"
-Plug 'asvetliakov/vim-easymotion'
-
-else
-
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'neomake/neomake'
 
-Plug 'xolox/vim-misc'
-
 " Colors
-Plug 'lifepillar/vim-solarized8'
-Plug 'dunstontc/vim-vscode-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'dawikur/base16-vim-airline-themes'
 
 " Cursor/Edit
 Plug 'easymotion/vim-easymotion'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-surround'  " bracket group actions () [] {}
 Plug 'tpope/vim-repeat'  " improved action repeat
 Plug 'brooth/far.vim'  " find and replace
@@ -33,42 +21,24 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mhinz/vim-sayonara', { 'on' : 'Sayonara' }  " unified buffer/window close
 Plug 'tpope/vim-sleuth'    " tab width autodetect
-Plug 'kopischke/vim-stay'  " session management
 Plug 'danro/rename.vim'    " file rename
 Plug 'ervandew/supertab'   " better tabs
 
 " Formatting
-Plug 'sstallion/vim-whitespace'
+Plug 'sstallion/vim-whitespace'  " Adds command :WhitespaceStrip to remove trailing whitespace
 Plug 'junegunn/vim-easy-align'
-Plug 'sbdchd/neoformat'
-Plug 'rhysd/vim-clang-format'
-Plug 'kana/vim-operator-user'
 Plug 'vim-scripts/AdvancedSorters'
 
 " Languages
 Plug 'sheerun/vim-polyglot'
-Plug 'vim-syntastic/syntastic'
-Plug 'hashivim/vim-terraform'
-Plug 'juliosueiras/vim-terraform-completion'
-"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-"Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/gocode/nvim/symlink.sh' }
-"Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.local/share/nvim/plugged/gocode/nvim/symlink.sh' }
-"Plug 'arrufat/vala.vim'
-Plug 'prabirshrestha/vim-lsp'
-
-"" Scala
-"Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
-Plug 'derekwyatt/vim-scala'
-autocmd BufWritePost *.scala silent :EnTypeCheck
-nnoremap <localleader>t :EnType<CR>
-au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Autocomplete
 Plug 'neovim/nvim-lspconfig'
-Plug 'ms-jpq/coq_nvim'
+Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 
 " Linting
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 let g:ale_sh_shellcheck_options = '-x'
 Plug 'mhinz/vim-signify'
 
@@ -76,38 +46,23 @@ call plug#end()
 
 :imap `` <Esc>
 
-" vim-stay persistence
 silent !mkdir ~/.config/nvim/undo > /dev/null 2>&1
 set viewoptions=cursor,folds,slash,unix
 set undofile
 set undodir=~/.config/nvim/undo
-" vim-stay persistence
-
-" Yggdroot/indentLine solarized color
-let g:indentLine_color_gui = '#eee8d5'
-let g:indentLine_char = '│'
-let g:indentLine_noConcealCursor='nc'
-let g:vim_json_syntax_conceal = 0
-let g:vim_json_syntax_conceal = 0
-
-let g:syntastic_vala_modules = 'gio-2.0 gtk+-3.0 gee'
-"let g:syntastic_vala_vapi_dirs = '/usr/share/vala-0.40/vapi'
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_python_pylint_post_args='--max-line-length=120'
-let g:syntastic_python_pylint_args='--max-line-length=120'
 
 set termguicolors
 set mouse=a
 let g:solarized_term_italics = 1
 colorscheme base16-tomorrow-night-eighties
 "let g:airline_theme = 'base16-tomorrow-night'
-if $THEME_TINT == 'dark'
-    set background=dark
-    let g:airline_solarized_bg='dark'
-else
-    set background=light
-    let g:airline_solarized_bg='light'
-endif
+"if $THEME_TINT == 'dark'
+"    set background=dark
+"    let g:airline_solarized_bg='dark'
+"else
+"    set background=light
+"    let g:airline_solarized_bg='light'
+"endif
 
 let g:airline#extensions#tmuxline#enabled = 1
 
@@ -170,10 +125,6 @@ nmap <leader>t <Plug>AirlineSelectNextTab
 
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
-" deoplete keys, ctrl-space to open and tab to cycle
-"inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-"inoremap <C-Space> <C-x><C-o>
-
 " leader leader-w buffer close
 nmap <leader><leader>w :bd<CR>
 
@@ -187,17 +138,7 @@ let python_highlight_all = 1
 highlight! link ExtraWhitespace ErrorMsg
 
 :set number
-
-let g:neoformat_python_yapf = {
-            \ 'exe': 'python',
-            \ 'args': ["-m yapf", "--style='{based_on_style: pep8, column_limit: 120}'"],
-            \ 'replace': 0,
-            \ 'stdin': 1,
-            \ 'no_append': 1,
-            \ }
-
-let g:neoformat_enabled_python = ['yapf']
-
+"
 " Allows for editing files in same dir as buffer: edit %%/filename
 cabbr <expr> %% expand('%:p:h')
 
@@ -205,11 +146,6 @@ cabbr <expr> %% expand('%:p:h')
 set completeopt-=preview
 
 :set linebreak
-
-" vim-conda fix
-" https://github.com/cjrh/vim-conda
-let g:jedi#force_py_version = 2
-let g:UltisnipsUsePythonVersion = 2
 
 set backupdir-=.
 set backupdir^=~/.local/share/nvim/swap,~/tmp,/tmp
@@ -228,5 +164,100 @@ map <A-\> :set cursorcolumn!<CR>
 " Sort words in selected text
 :vnoremap <F2> d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
 
+lua <<EOF
+    require'lspconfig'.gopls.setup{}
+EOF
 
-end
+lua <<EOF
+  lspconfig = require "lspconfig"
+  util = require "lspconfig/util"
+
+  lspconfig.gopls.setup {
+    cmd = {"gopls", "serve"},
+    filetypes = {"go", "gomod"},
+    root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+      },
+    },
+  }
+EOF
+
+lua <<EOF
+  function go_org_imports(wait_ms)
+    local params = vim.lsp.util.make_range_params()
+    params.context = {only = {"source.organizeImports"}}
+    local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
+    for cid, res in pairs(result or {}) do
+      for _, r in pairs(res.result or {}) do
+        if r.edit then
+          local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
+          vim.lsp.util.apply_workspace_edit(r.edit, enc)
+        end
+      end
+    end
+  end
+EOF
+
+autocmd BufWritePre *.go lua go_org_imports()
+
+lua <<EOF
+local keymap = vim.keymap.set
+local saga = require('lspsaga')
+
+saga.init_lsp_saga()
+
+-- Lsp finder find the symbol definition implement reference
+-- if there is no implement it will hide
+-- when you use action in finder like open vsplit then you can
+-- use <C-t> to jump back
+keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
+
+-- Code action
+keymap({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+
+-- Rename
+keymap("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
+
+-- Peek Definition
+-- you can edit the definition file in this flaotwindow
+-- also support open/vsplit/etc operation check definition_action_keys
+-- support tagstack C-t jump back
+keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+
+-- Show line diagnostics
+keymap("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
+
+-- Show cursor diagnostic
+keymap("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
+
+-- Diagnsotic jump can use `<c-o>` to jump back
+keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
+keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
+
+-- Only jump to error
+keymap("n", "[E", function()
+  require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
+end, { silent = true })
+keymap("n", "]E", function()
+  require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
+end, { silent = true })
+
+-- Outline
+keymap("n","<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
+
+-- Hover Doc
+keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
+
+-- Float terminal
+keymap("n", "<A-d>", "<cmd>Lspsaga open_floaterm<CR>", { silent = true })
+-- if you want pass somc cli command into terminal you can do like this
+-- open lazygit in lspsaga float terminal
+keymap("n", "<A-d>", "<cmd>Lspsaga open_floaterm lazygit<CR>", { silent = true })
+-- close floaterm
+keymap("t", "<A-d>", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], { silent = true })
+EOF
