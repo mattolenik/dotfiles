@@ -17,7 +17,7 @@
     "go.useLanguageServer": true,
     "editor.fontSize": 13,
     "workbench.panel.defaultLocation": "right",
-    "files.autoSave": "off",
+    "files.autoSave": "afterDelay",
     "editor.minimap.enabled": false,
     "files.exclude": {
         ".fusebox": true,
