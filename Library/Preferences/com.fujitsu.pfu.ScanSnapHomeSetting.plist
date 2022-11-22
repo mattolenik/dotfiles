@@ -1,0 +1,4479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Common</key>
+	<dict>
+		<key>Auto Connect Wifi</key>
+		<integer>1</integer>
+		<key>AutoStart</key>
+		<integer>0</integer>
+		<key>CloudService App List</key>
+		<array>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.getdropbox.dropbox</string>
+				<key>Application Command</key>
+				<integer>300</integer>
+				<key>Application Location</key>
+				<string></string>
+				<key>Application Plist Location</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.evernote.Evernote</string>
+				<key>Application Command</key>
+				<integer>301</integer>
+				<key>Application Location</key>
+				<string></string>
+				<key>Application Plist Location</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.google.GoogleDrive</string>
+				<key>Application Command</key>
+				<integer>302</integer>
+				<key>Application Location</key>
+				<string></string>
+				<key>Application Plist Location</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.microsoft.OneDrive</string>
+				<key>Application Command</key>
+				<integer>303</integer>
+				<key>Application Location</key>
+				<string></string>
+				<key>Application Plist Location</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>Crop Report</key>
+		<integer>1</integer>
+		<key>Extension App List</key>
+		<array>
+			<dict>
+				<key>Application Bundle</key>
+				<string>jp.co.pfu.ScanSnap.STMApp</string>
+				<key>Application Command</key>
+				<integer>200</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/Scan to Office/Scan to E-mail.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>jp.co.pfu.ScanSnap.STPApp</string>
+				<key>Application Command</key>
+				<integer>201</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/Scan to Office/Scan to Print.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>jp.co.pfu.ScanSnap.ScanToFolder</string>
+				<key>Application Command</key>
+				<integer>202</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/Scan to Office/Scan to Folder.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.abbyy.FineReader for ScanSnap.Scan to Word</string>
+				<key>Application Command</key>
+				<integer>203</integer>
+				<key>Application Location</key>
+				<string>/Applications/ABBYY FineReader for ScanSnap/Tools/Scan to Word.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/scansnap2.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.abbyy.FineReader for ScanSnap.Scan to Excel</string>
+				<key>Application Command</key>
+				<integer>204</integer>
+				<key>Application Location</key>
+				<string>/Applications/ABBYY FineReader for ScanSnap/Tools/Scan to Excel.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/scansnap2.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.abbyy.FineReader for ScanSnap.Scan to PowerPoint</string>
+				<key>Application Command</key>
+				<integer>205</integer>
+				<key>Application Location</key>
+				<string>/Applications/ABBYY FineReader for ScanSnap/Tools/Scan to PowerPoint.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/scansnap2.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.abbyy.FineReader for ScanSnap</string>
+				<key>Application Command</key>
+				<integer>206</integer>
+				<key>Application Location</key>
+				<string>/Applications/ABBYY FineReader for ScanSnap/Tools/Scan to Searchable PDF.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/scansnap2.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+		</array>
+		<key>Extern App Index</key>
+		<integer>206</integer>
+		<key>Folder</key>
+		<dict>
+			<key>RootFolder</key>
+			<string>/Users/matt/Documents/ScanSnap Home folder</string>
+			<key>RootFolderType</key>
+			<integer>0</integer>
+		</dict>
+		<key>InfoAutoHosei</key>
+		<integer>1</integer>
+		<key>Multifeed Delete Scanned File</key>
+		<integer>0</integer>
+		<key>Noise Reduction</key>
+		<integer>0</integer>
+		<key>NoticeResult</key>
+		<integer>1</integer>
+		<key>OCRLang</key>
+		<dict>
+			<key>Card</key>
+			<integer>10</integer>
+			<key>Document</key>
+			<integer>10</integer>
+			<key>Receipt</key>
+			<integer>1014</integer>
+		</dict>
+		<key>Predefine App List</key>
+		<array>
+			<dict>
+				<key>Application Command</key>
+				<integer>55</integer>
+				<key>Application Location</key>
+				<string>/System/Applications/Preview.app</string>
+				<key>Application Name</key>
+				<string>Preview</string>
+			</dict>
+			<dict>
+				<key>Application Command</key>
+				<integer>52</integer>
+				<key>Application Location</key>
+				<string></string>
+				<key>Application Name</key>
+				<string>Acrobat(R)</string>
+			</dict>
+			<dict>
+				<key>Application Command</key>
+				<integer>53</integer>
+				<key>Application Location</key>
+				<string></string>
+				<key>Application Name</key>
+				<string>Acrobat(R) Reader(R)</string>
+			</dict>
+			<dict>
+				<key>Application Command</key>
+				<integer>59</integer>
+				<key>Application Location</key>
+				<string></string>
+				<key>Application Name</key>
+				<string>Power PDF</string>
+			</dict>
+			<dict>
+				<key>Application Command</key>
+				<integer>57</integer>
+				<key>Application Location</key>
+				<string></string>
+				<key>Application Name</key>
+				<string>PDF Converter</string>
+			</dict>
+		</array>
+		<key>RAWDataSave</key>
+		<integer>1</integer>
+		<key>ReceiptSetting</key>
+		<dict>
+			<key>Custom Currency</key>
+			<string></string>
+			<key>Default Currency</key>
+			<string>USD</string>
+		</dict>
+		<key>Reception Port</key>
+		<integer>53220</integer>
+		<key>Show Progress Window</key>
+		<integer>1</integer>
+		<key>Show Scan Files After Scan</key>
+		<integer>1</integer>
+		<key>ShowDuplicateUserNameMsg</key>
+		<integer>1</integer>
+		<key>ShowEscanMsg</key>
+		<integer>1</integer>
+		<key>ShowTitleAutoHoseiMsg</key>
+		<integer>1</integer>
+		<key>Specified IP</key>
+		<integer>0</integer>
+		<key>TitleAutoHosei</key>
+		<integer>1</integer>
+		<key>UserColor</key>
+		<integer>1</integer>
+		<key>UserID</key>
+		<string>1AFD54D73F2A43B0B1F46026A5B59AEF</string>
+		<key>UserIcon</key>
+		<string>001</string>
+		<key>UserName</key>
+		<string>Matt Olenik@Matt’s MacBook Pro</string>
+		<key>Wifi Connected Mac Address</key>
+		<array>
+			<string>84:25:3f:c8:13:7c</string>
+		</array>
+		<key>Wifi Connected Scanner</key>
+		<array>
+			<dict>
+				<key>AutoConnectInfo_ScannerInfo</key>
+				<dict>
+					<key>ConnectStatus1</key>
+					<integer>0</integer>
+					<key>ConnectStatus2</key>
+					<integer>0</integer>
+					<key>DeviceSCloudStatus</key>
+					<integer>0</integer>
+					<key>DeviceSettedMode</key>
+					<integer>0</integer>
+					<key>DeviceSingleMode</key>
+					<integer>64</integer>
+					<key>DeviceStatus</key>
+					<integer>1</integer>
+					<key>DeviceWifiMode</key>
+					<integer>0</integer>
+					<key>HostID</key>
+					<integer>6526714919265913303</integer>
+					<key>HostIPAddress</key>
+					<string>0.0.0.0</string>
+					<key>Ip</key>
+					<string>192.168.0.28</string>
+					<key>KeyCode</key>
+					<integer>1936936530</integer>
+					<key>Lastest Date</key>
+					<date>2022-11-22T20:03:52Z</date>
+					<key>MacAddress</key>
+					<string>84:25:3f:c8:13:7c</string>
+					<key>Name</key>
+					<string>iX1600-CCEA190902</string>
+					<key>PassWordExist</key>
+					<integer>0</integer>
+					<key>Port1</key>
+					<string>53218</string>
+					<key>Port2</key>
+					<string>53219</string>
+					<key>ProductID</key>
+					<string>ScanSnap iX1600 </string>
+					<key>SerialNo</key>
+					<string>CCEA190902</string>
+					<key>Type</key>
+					<integer>48</integer>
+					<key>UseIFVersion</key>
+					<integer>256</integer>
+				</dict>
+				<key>AutoConnectInfo_SpecifiedIP</key>
+				<integer>1</integer>
+			</dict>
+		</array>
+		<key>Wifi Info</key>
+		<dict>
+			<key>ConnectStatus1</key>
+			<integer>0</integer>
+			<key>ConnectStatus2</key>
+			<integer>0</integer>
+			<key>DeviceSCloudStatus</key>
+			<integer>0</integer>
+			<key>DeviceSettedMode</key>
+			<integer>0</integer>
+			<key>DeviceSingleMode</key>
+			<integer>64</integer>
+			<key>DeviceStatus</key>
+			<integer>1</integer>
+			<key>DeviceWifiMode</key>
+			<integer>0</integer>
+			<key>HostID</key>
+			<integer>6526714919265913303</integer>
+			<key>HostIPAddress</key>
+			<string>0.0.0.0</string>
+			<key>Ip</key>
+			<string>192.168.0.28</string>
+			<key>KeyCode</key>
+			<integer>1936936530</integer>
+			<key>Lastest Date</key>
+			<date>2022-11-22T20:03:52Z</date>
+			<key>MacAddress</key>
+			<string>84:25:3f:c8:13:7c</string>
+			<key>Name</key>
+			<string>iX1600-CCEA190902</string>
+			<key>PassWordExist</key>
+			<integer>0</integer>
+			<key>Port1</key>
+			<string>53218</string>
+			<key>Port2</key>
+			<string>53219</string>
+			<key>ProductID</key>
+			<string>ScanSnap iX1600 </string>
+			<key>SerialNo</key>
+			<string>CCEA190902</string>
+			<key>Type</key>
+			<integer>48</integer>
+			<key>UseIFVersion</key>
+			<integer>256</integer>
+		</dict>
+	</dict>
+	<key>Devices</key>
+	<array>
+		<dict>
+			<key>BatteryPowerOffTime</key>
+			<integer>5</integer>
+			<key>CreateDate</key>
+			<date>2022-11-22T18:36:46Z</date>
+			<key>Current Profile ID</key>
+			<string>BC4B2125E8E3493CB6BCFB2945780D89</string>
+			<key>DeviceMode</key>
+			<integer>3</integer>
+			<key>DeviceName</key>
+			<string>iX1600-CCEA190902</string>
+			<key>DeviceSerialNo</key>
+			<string>CCEA190902</string>
+			<key>DeviceType</key>
+			<integer>19</integer>
+			<key>FirmCategory</key>
+			<integer>0</integer>
+			<key>FirmwareVersion</key>
+			<string>0J00</string>
+			<key>LastConnectMode</key>
+			<integer>1</integer>
+			<key>MacAddress</key>
+			<string>84:25:3f:c8:13:7c</string>
+			<key>PowerOff</key>
+			<integer>1</integer>
+			<key>PowerOffTime</key>
+			<integer>240</integer>
+			<key>Profiles</key>
+			<array>
+				<dict>
+					<key>ID</key>
+					<string>8F1B48E8216E455BADEC46425874ED8A</string>
+					<key>LCDDisplay</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>897A6290769048E0A8A25423C47C427F</string>
+					<key>LCDDisplay</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>7250F8FAEFB24136A31C84D5F2259214</string>
+					<key>LCDDisplay</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>F9CEF5E83AEF4CBF98EFB6E15EC077B8</string>
+					<key>LCDDisplay</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>97149A856B9E44F89E7173B6E892847E</string>
+					<key>LCDDisplay</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>BC4B2125E8E3493CB6BCFB2945780D89</string>
+					<key>LCDDisplay</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>StartMode</key>
+			<integer>0</integer>
+			<key>WifiDisableMode</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>Modify</key>
+	<string>0</string>
+	<key>Profiles</key>
+	<array>
+		<dict>
+			<key>AppSettingsFolder</key>
+			<string>00001</string>
+			<key>Application ID</key>
+			<integer>0</integer>
+			<key>AutoName</key>
+			<integer>0</integer>
+			<key>AutoScan</key>
+			<integer>1</integer>
+			<key>Book Divide Type</key>
+			<integer>0</integer>
+			<key>CS Page Size Code</key>
+			<integer>1</integer>
+			<key>CS Process Mode</key>
+			<integer>1</integer>
+			<key>CS Sepa Page Size Code</key>
+			<integer>1</integer>
+			<key>Check Glaze paper</key>
+			<integer>0</integer>
+			<key>Configs</key>
+			<array>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>1</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>1</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>2</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>1</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>2</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>Company_Name</string>
+					<key>TypFNDateFormat</key>
+					<integer>1</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>3</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>1014</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>1014</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>ReceiptDate_Vendor_CardType_Amount</string>
+					<key>TypFNDateFormat</key>
+					<integer>1</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>4</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>3</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>2</integer>
+					<key>Color Mode</key>
+					<integer>2</integer>
+					<key>DocType</key>
+					<integer>4</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>2</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>1</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>4</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>1</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>Contents Correction Setting</key>
+			<integer>1</integer>
+			<key>Contents Correction Type</key>
+			<integer>1</integer>
+			<key>Continue Scan</key>
+			<integer>0</integer>
+			<key>Continue Scan For ReturnPath</key>
+			<integer>1</integer>
+			<key>Continue Scan For S1100</key>
+			<integer>1</integer>
+			<key>Dark Mode</key>
+			<integer>0</integer>
+			<key>Destination</key>
+			<integer>0</integer>
+			<key>DocType</key>
+			<integer>0</integer>
+			<key>Document Unite</key>
+			<integer>1</integer>
+			<key>Explanation</key>
+			<string>Saves to Scans/Carolyn, autodetect receipts, documents, biz cards, photos</string>
+			<key>Extension App Settings</key>
+			<dict/>
+			<key>First TimesScan Interval</key>
+			<integer>4</integer>
+			<key>HighQualityImage</key>
+			<integer>0</integer>
+			<key>HostName</key>
+			<string></string>
+			<key>Labels</key>
+			<array/>
+			<key>Mixed Paper Size Scan</key>
+			<integer>0</integer>
+			<key>Mixed Paper Size Scan With Multifeed</key>
+			<integer>2</integer>
+			<key>Multi crop</key>
+			<integer>1</integer>
+			<key>Non Viewer</key>
+			<integer>1</integer>
+			<key>NotRegisterToHome</key>
+			<integer>1</integer>
+			<key>Page Size Code</key>
+			<integer>0</integer>
+			<key>Paper Type</key>
+			<integer>0</integer>
+			<key>Pre Correction</key>
+			<integer>1</integer>
+			<key>ProfileID</key>
+			<string>8F1B48E8216E455BADEC46425874ED8A</string>
+			<key>ProfileIcon</key>
+			<string>001</string>
+			<key>RPP</key>
+			<integer>1</integer>
+			<key>ReduceStraightLine</key>
+			<integer>1</integer>
+			<key>SCloudCommon</key>
+			<dict>
+				<key>AccessToken</key>
+				<string></string>
+				<key>AccountName</key>
+				<string></string>
+				<key>ApiURL</key>
+				<string></string>
+				<key>AuthURL</key>
+				<string></string>
+				<key>DocTypeDefault</key>
+				<integer>1</integer>
+				<key>IsCloudEnabled</key>
+				<false/>
+				<key>NotifyURL</key>
+				<string></string>
+				<key>ProfileRevision</key>
+				<integer>1</integer>
+				<key>RefreshToken</key>
+				<string></string>
+				<key>ReleaseHold</key>
+				<integer>0</integer>
+			</dict>
+			<key>SCloudConfig</key>
+			<dict>
+				<key>BusinessFolder</key>
+				<integer>0</integer>
+				<key>BusinessMode</key>
+				<integer>0</integer>
+				<key>ExternalService</key>
+				<string>none</string>
+				<key>FolderID</key>
+				<string></string>
+				<key>FolderPath</key>
+				<string></string>
+				<key>FolderTitle</key>
+				<string></string>
+				<key>SyncExternalService</key>
+				<string>none</string>
+				<key>TransferFileType</key>
+				<integer>0</integer>
+			</dict>
+			<key>SV600 ContinueScan Mode</key>
+			<integer>0</integer>
+			<key>SV600 ContinueScan Setting</key>
+			<integer>0</integer>
+			<key>SV600 StartScan Setting</key>
+			<integer>0</integer>
+			<key>Save Folder</key>
+			<string>/Users/matt/Library/CloudStorage/OneDrive-Personal/Scans/Carolyn</string>
+			<key>Second TimesScan Interval</key>
+			<integer>4</integer>
+			<key>Service</key>
+			<string>Evernote</string>
+			<key>Setting Name</key>
+			<string>Carolyn</string>
+			<key>SharedFolder</key>
+			<string></string>
+			<key>Synchronized</key>
+			<integer>1</integer>
+			<key>TemplateID</key>
+			<integer>1</integer>
+			<key>UserColor</key>
+			<integer>1</integer>
+			<key>UserID</key>
+			<string>1AFD54D73F2A43B0B1F46026A5B59AEF</string>
+			<key>UserName</key>
+			<string>Matt Olenik@Matt’s MacBook Pro</string>
+			<key>VIAsCloud</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>AppSettingsFolder</key>
+			<string>00002</string>
+			<key>Application ID</key>
+			<integer>0</integer>
+			<key>AutoName</key>
+			<integer>0</integer>
+			<key>AutoScan</key>
+			<integer>1</integer>
+			<key>Book Divide Type</key>
+			<integer>0</integer>
+			<key>CS Page Size Code</key>
+			<integer>1</integer>
+			<key>CS Process Mode</key>
+			<integer>2</integer>
+			<key>CS Sepa Page Size Code</key>
+			<integer>1</integer>
+			<key>Check Glaze paper</key>
+			<integer>0</integer>
+			<key>Configs</key>
+			<array>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>2</integer>
+					<key>Color Mode</key>
+					<integer>2</integer>
+					<key>DocType</key>
+					<integer>1</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>3</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>3</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>2</integer>
+					<key>Color Mode</key>
+					<integer>2</integer>
+					<key>DocType</key>
+					<integer>2</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>3</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>Company_Name</string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>2</integer>
+					<key>DocType</key>
+					<integer>3</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>1014</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>1014</integer>
+					<key>QTbl</key>
+					<integer>3</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>ReceiptDate_Vendor_CardType_Amount</string>
+					<key>TypFNDateFormat</key>
+					<integer>1</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>4</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>3</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>1</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>2</integer>
+					<key>Color Mode</key>
+					<integer>2</integer>
+					<key>DocType</key>
+					<integer>4</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>2</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>1</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>3</integer>
+					<key>RedEyeHosei</key>
+					<integer>1</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>3</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>Contents Correction Setting</key>
+			<integer>0</integer>
+			<key>Contents Correction Type</key>
+			<integer>1</integer>
+			<key>Continue Scan</key>
+			<integer>2</integer>
+			<key>Continue Scan For ReturnPath</key>
+			<integer>1</integer>
+			<key>Continue Scan For S1100</key>
+			<integer>1</integer>
+			<key>Dark Mode</key>
+			<integer>0</integer>
+			<key>Destination</key>
+			<integer>0</integer>
+			<key>DocType</key>
+			<integer>3</integer>
+			<key>Document Unite</key>
+			<integer>1</integer>
+			<key>Explanation</key>
+			<string>Scan many receipts one after another, the scanner will scan them as they are inserted.</string>
+			<key>Extension App Settings</key>
+			<dict/>
+			<key>First TimesScan Interval</key>
+			<integer>4</integer>
+			<key>HighQualityImage</key>
+			<integer>0</integer>
+			<key>HostName</key>
+			<string></string>
+			<key>Labels</key>
+			<array/>
+			<key>Mixed Paper Size Scan</key>
+			<integer>0</integer>
+			<key>Mixed Paper Size Scan With Multifeed</key>
+			<integer>2</integer>
+			<key>Multi crop</key>
+			<integer>1</integer>
+			<key>Non Viewer</key>
+			<integer>1</integer>
+			<key>NotRegisterToHome</key>
+			<integer>1</integer>
+			<key>Page Size Code</key>
+			<integer>0</integer>
+			<key>Paper Type</key>
+			<integer>1</integer>
+			<key>Pre Correction</key>
+			<integer>1</integer>
+			<key>ProfileID</key>
+			<string>897A6290769048E0A8A25423C47C427F</string>
+			<key>ProfileIcon</key>
+			<string>024</string>
+			<key>RPP</key>
+			<integer>1</integer>
+			<key>ReduceStraightLine</key>
+			<integer>1</integer>
+			<key>SCloudCommon</key>
+			<dict>
+				<key>AccessToken</key>
+				<string></string>
+				<key>AccountName</key>
+				<string></string>
+				<key>ApiURL</key>
+				<string></string>
+				<key>AuthURL</key>
+				<string></string>
+				<key>DocTypeDefault</key>
+				<integer>1</integer>
+				<key>IsCloudEnabled</key>
+				<false/>
+				<key>NotifyURL</key>
+				<string></string>
+				<key>ProfileRevision</key>
+				<integer>1</integer>
+				<key>RefreshToken</key>
+				<string></string>
+				<key>ReleaseHold</key>
+				<integer>0</integer>
+			</dict>
+			<key>SCloudConfig</key>
+			<dict>
+				<key>BusinessFolder</key>
+				<integer>0</integer>
+				<key>BusinessMode</key>
+				<integer>0</integer>
+				<key>ExternalService</key>
+				<string>none</string>
+				<key>FolderID</key>
+				<string></string>
+				<key>FolderPath</key>
+				<string></string>
+				<key>FolderTitle</key>
+				<string></string>
+				<key>SyncExternalService</key>
+				<string>none</string>
+				<key>TransferFileType</key>
+				<integer>0</integer>
+			</dict>
+			<key>SV600 ContinueScan Mode</key>
+			<integer>0</integer>
+			<key>SV600 ContinueScan Setting</key>
+			<integer>0</integer>
+			<key>SV600 StartScan Setting</key>
+			<integer>0</integer>
+			<key>Save Folder</key>
+			<string>/Users/matt/Library/CloudStorage/OneDrive-Personal/Scans/Receipts</string>
+			<key>Second TimesScan Interval</key>
+			<integer>4</integer>
+			<key>Service</key>
+			<string>Evernote</string>
+			<key>Setting Name</key>
+			<string>Receipt Feed</string>
+			<key>SharedFolder</key>
+			<string></string>
+			<key>Synchronized</key>
+			<integer>1</integer>
+			<key>TemplateID</key>
+			<integer>9</integer>
+			<key>UserColor</key>
+			<integer>1</integer>
+			<key>UserID</key>
+			<string>1AFD54D73F2A43B0B1F46026A5B59AEF</string>
+			<key>UserName</key>
+			<string>Matt Olenik@Matt’s MacBook Pro</string>
+			<key>VIAsCloud</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>AppSettingsFolder</key>
+			<string>00003</string>
+			<key>Application ID</key>
+			<integer>0</integer>
+			<key>AutoName</key>
+			<integer>0</integer>
+			<key>AutoScan</key>
+			<integer>1</integer>
+			<key>Book Divide Type</key>
+			<integer>0</integer>
+			<key>CS Page Size Code</key>
+			<integer>1</integer>
+			<key>CS Process Mode</key>
+			<integer>1</integer>
+			<key>CS Sepa Page Size Code</key>
+			<integer>1</integer>
+			<key>Check Glaze paper</key>
+			<integer>0</integer>
+			<key>Configs</key>
+			<array>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>1</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>1</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>2</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>2</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>Company_Name</string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>3</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>1014</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>1014</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>ReceiptDate_Vendor</string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>1</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>4</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>2</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>1</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>3</integer>
+					<key>RedEyeHosei</key>
+					<integer>1</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>Contents Correction Setting</key>
+			<integer>1</integer>
+			<key>Contents Correction Type</key>
+			<integer>1</integer>
+			<key>Continue Scan</key>
+			<integer>0</integer>
+			<key>Continue Scan For ReturnPath</key>
+			<integer>1</integer>
+			<key>Continue Scan For S1100</key>
+			<integer>1</integer>
+			<key>Dark Mode</key>
+			<integer>0</integer>
+			<key>Destination</key>
+			<integer>0</integer>
+			<key>DocType</key>
+			<integer>1</integer>
+			<key>Document Unite</key>
+			<integer>1</integer>
+			<key>Explanation</key>
+			<string>Saves to Scans/Carolyn/Healthcare</string>
+			<key>Extension App Settings</key>
+			<dict/>
+			<key>First TimesScan Interval</key>
+			<integer>4</integer>
+			<key>HighQualityImage</key>
+			<integer>0</integer>
+			<key>HostName</key>
+			<string></string>
+			<key>Labels</key>
+			<array/>
+			<key>Mixed Paper Size Scan</key>
+			<integer>0</integer>
+			<key>Mixed Paper Size Scan With Multifeed</key>
+			<integer>2</integer>
+			<key>Multi crop</key>
+			<integer>1</integer>
+			<key>Non Viewer</key>
+			<integer>1</integer>
+			<key>NotRegisterToHome</key>
+			<integer>1</integer>
+			<key>Page Size Code</key>
+			<integer>0</integer>
+			<key>Paper Type</key>
+			<integer>0</integer>
+			<key>Pre Correction</key>
+			<integer>1</integer>
+			<key>ProfileID</key>
+			<string>7250F8FAEFB24136A31C84D5F2259214</string>
+			<key>ProfileIcon</key>
+			<string>044</string>
+			<key>RPP</key>
+			<integer>1</integer>
+			<key>ReduceStraightLine</key>
+			<integer>1</integer>
+			<key>SCloudCommon</key>
+			<dict>
+				<key>AccessToken</key>
+				<string></string>
+				<key>AccountName</key>
+				<string></string>
+				<key>ApiURL</key>
+				<string></string>
+				<key>AuthURL</key>
+				<string></string>
+				<key>DocTypeDefault</key>
+				<integer>1</integer>
+				<key>IsCloudEnabled</key>
+				<false/>
+				<key>NotifyURL</key>
+				<string></string>
+				<key>ProfileRevision</key>
+				<integer>1</integer>
+				<key>RefreshToken</key>
+				<string></string>
+				<key>ReleaseHold</key>
+				<integer>0</integer>
+			</dict>
+			<key>SCloudConfig</key>
+			<dict>
+				<key>BusinessFolder</key>
+				<integer>0</integer>
+				<key>BusinessMode</key>
+				<integer>0</integer>
+				<key>ExternalService</key>
+				<string>none</string>
+				<key>FolderID</key>
+				<string></string>
+				<key>FolderPath</key>
+				<string></string>
+				<key>FolderTitle</key>
+				<string></string>
+				<key>SyncExternalService</key>
+				<string>none</string>
+				<key>TransferFileType</key>
+				<integer>0</integer>
+			</dict>
+			<key>SV600 ContinueScan Mode</key>
+			<integer>0</integer>
+			<key>SV600 ContinueScan Setting</key>
+			<integer>0</integer>
+			<key>SV600 StartScan Setting</key>
+			<integer>0</integer>
+			<key>Save Folder</key>
+			<string>/Users/matt/Library/CloudStorage/OneDrive-Personal/Scans/Carolyn/Healthcare</string>
+			<key>Second TimesScan Interval</key>
+			<integer>4</integer>
+			<key>Service</key>
+			<string>Evernote</string>
+			<key>Setting Name</key>
+			<string>Carolyn Healthcare</string>
+			<key>SharedFolder</key>
+			<string></string>
+			<key>Synchronized</key>
+			<integer>1</integer>
+			<key>TemplateID</key>
+			<integer>15</integer>
+			<key>UserColor</key>
+			<integer>1</integer>
+			<key>UserID</key>
+			<string>1AFD54D73F2A43B0B1F46026A5B59AEF</string>
+			<key>UserName</key>
+			<string>Matt Olenik@Matt’s MacBook Pro</string>
+			<key>VIAsCloud</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>AppSettingsFolder</key>
+			<string>00004</string>
+			<key>Application ID</key>
+			<integer>0</integer>
+			<key>AutoName</key>
+			<integer>0</integer>
+			<key>AutoScan</key>
+			<integer>1</integer>
+			<key>Book Divide Type</key>
+			<integer>0</integer>
+			<key>CS Page Size Code</key>
+			<integer>1</integer>
+			<key>CS Process Mode</key>
+			<integer>1</integer>
+			<key>CS Sepa Page Size Code</key>
+			<integer>1</integer>
+			<key>Check Glaze paper</key>
+			<integer>0</integer>
+			<key>Configs</key>
+			<array>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>1</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>1</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>2</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>1</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>2</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>Company_Name</string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>3</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>1014</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>1014</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>ReceiptDate_Vendor</string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>1</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>4</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>2</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>1</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>3</integer>
+					<key>RedEyeHosei</key>
+					<integer>1</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>Contents Correction Setting</key>
+			<integer>1</integer>
+			<key>Contents Correction Type</key>
+			<integer>1</integer>
+			<key>Continue Scan</key>
+			<integer>0</integer>
+			<key>Continue Scan For ReturnPath</key>
+			<integer>1</integer>
+			<key>Continue Scan For S1100</key>
+			<integer>1</integer>
+			<key>Dark Mode</key>
+			<integer>0</integer>
+			<key>Destination</key>
+			<integer>0</integer>
+			<key>DocType</key>
+			<integer>1</integer>
+			<key>Document Unite</key>
+			<integer>1</integer>
+			<key>Explanation</key>
+			<string>Saves to Scans/Carolyn/Finance</string>
+			<key>Extension App Settings</key>
+			<dict/>
+			<key>First TimesScan Interval</key>
+			<integer>4</integer>
+			<key>HighQualityImage</key>
+			<integer>0</integer>
+			<key>HostName</key>
+			<string></string>
+			<key>Labels</key>
+			<array/>
+			<key>Mixed Paper Size Scan</key>
+			<integer>0</integer>
+			<key>Mixed Paper Size Scan With Multifeed</key>
+			<integer>2</integer>
+			<key>Multi crop</key>
+			<integer>1</integer>
+			<key>Non Viewer</key>
+			<integer>1</integer>
+			<key>NotRegisterToHome</key>
+			<integer>1</integer>
+			<key>Page Size Code</key>
+			<integer>0</integer>
+			<key>Paper Type</key>
+			<integer>0</integer>
+			<key>Pre Correction</key>
+			<integer>1</integer>
+			<key>ProfileID</key>
+			<string>F9CEF5E83AEF4CBF98EFB6E15EC077B8</string>
+			<key>ProfileIcon</key>
+			<string>025</string>
+			<key>RPP</key>
+			<integer>1</integer>
+			<key>ReduceStraightLine</key>
+			<integer>1</integer>
+			<key>SCloudCommon</key>
+			<dict>
+				<key>AccessToken</key>
+				<string></string>
+				<key>AccountName</key>
+				<string></string>
+				<key>ApiURL</key>
+				<string></string>
+				<key>AuthURL</key>
+				<string></string>
+				<key>DocTypeDefault</key>
+				<integer>1</integer>
+				<key>IsCloudEnabled</key>
+				<false/>
+				<key>NotifyURL</key>
+				<string></string>
+				<key>ProfileRevision</key>
+				<integer>1</integer>
+				<key>RefreshToken</key>
+				<string></string>
+				<key>ReleaseHold</key>
+				<integer>0</integer>
+			</dict>
+			<key>SCloudConfig</key>
+			<dict>
+				<key>BusinessFolder</key>
+				<integer>0</integer>
+				<key>BusinessMode</key>
+				<integer>0</integer>
+				<key>ExternalService</key>
+				<string>none</string>
+				<key>FolderID</key>
+				<string></string>
+				<key>FolderPath</key>
+				<string></string>
+				<key>FolderTitle</key>
+				<string></string>
+				<key>SyncExternalService</key>
+				<string>none</string>
+				<key>TransferFileType</key>
+				<integer>0</integer>
+			</dict>
+			<key>SV600 ContinueScan Mode</key>
+			<integer>0</integer>
+			<key>SV600 ContinueScan Setting</key>
+			<integer>0</integer>
+			<key>SV600 StartScan Setting</key>
+			<integer>0</integer>
+			<key>Save Folder</key>
+			<string>/Users/matt/Library/CloudStorage/OneDrive-Personal/Scans/Carolyn/Healthcare</string>
+			<key>Second TimesScan Interval</key>
+			<integer>4</integer>
+			<key>Service</key>
+			<string>Evernote</string>
+			<key>Setting Name</key>
+			<string>Carolyn Finance</string>
+			<key>SharedFolder</key>
+			<string></string>
+			<key>Synchronized</key>
+			<integer>1</integer>
+			<key>TemplateID</key>
+			<integer>15</integer>
+			<key>UserColor</key>
+			<integer>1</integer>
+			<key>UserID</key>
+			<string>1AFD54D73F2A43B0B1F46026A5B59AEF</string>
+			<key>UserName</key>
+			<string>Matt Olenik@Matt’s MacBook Pro</string>
+			<key>VIAsCloud</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>AppSettingsFolder</key>
+			<string>00005</string>
+			<key>Application ID</key>
+			<integer>0</integer>
+			<key>AutoName</key>
+			<integer>0</integer>
+			<key>AutoScan</key>
+			<integer>1</integer>
+			<key>Book Divide Type</key>
+			<integer>0</integer>
+			<key>CS Page Size Code</key>
+			<integer>1</integer>
+			<key>CS Process Mode</key>
+			<integer>1</integer>
+			<key>CS Sepa Page Size Code</key>
+			<integer>1</integer>
+			<key>Check Glaze paper</key>
+			<integer>0</integer>
+			<key>Configs</key>
+			<array>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>2</integer>
+					<key>DocType</key>
+					<integer>1</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>1</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>2</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>4</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>1</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>2</integer>
+					<key>DocType</key>
+					<integer>2</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>3</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>ScanDate_Name</string>
+					<key>TypFNDateFormat</key>
+					<integer>1</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>0</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>1</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>3</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>1014</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>1014</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>ReceiptDate_Vendor</string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>1</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>4</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>2</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>1</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>3</integer>
+					<key>RedEyeHosei</key>
+					<integer>1</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>Contents Correction Setting</key>
+			<integer>1</integer>
+			<key>Contents Correction Type</key>
+			<integer>1</integer>
+			<key>Continue Scan</key>
+			<integer>0</integer>
+			<key>Continue Scan For ReturnPath</key>
+			<integer>1</integer>
+			<key>Continue Scan For S1100</key>
+			<integer>1</integer>
+			<key>Dark Mode</key>
+			<integer>0</integer>
+			<key>Destination</key>
+			<integer>0</integer>
+			<key>DocType</key>
+			<integer>1</integer>
+			<key>Document Unite</key>
+			<integer>1</integer>
+			<key>Explanation</key>
+			<string>Saves to Scans/Carolyn/Checks</string>
+			<key>Extension App Settings</key>
+			<dict/>
+			<key>First TimesScan Interval</key>
+			<integer>4</integer>
+			<key>HighQualityImage</key>
+			<integer>0</integer>
+			<key>HostName</key>
+			<string></string>
+			<key>Labels</key>
+			<array/>
+			<key>Mixed Paper Size Scan</key>
+			<integer>0</integer>
+			<key>Mixed Paper Size Scan With Multifeed</key>
+			<integer>2</integer>
+			<key>Multi crop</key>
+			<integer>1</integer>
+			<key>Non Viewer</key>
+			<integer>1</integer>
+			<key>NotRegisterToHome</key>
+			<integer>1</integer>
+			<key>Page Size Code</key>
+			<integer>0</integer>
+			<key>Paper Type</key>
+			<integer>0</integer>
+			<key>Pre Correction</key>
+			<integer>1</integer>
+			<key>ProfileID</key>
+			<string>97149A856B9E44F89E7173B6E892847E</string>
+			<key>ProfileIcon</key>
+			<string>040</string>
+			<key>RPP</key>
+			<integer>1</integer>
+			<key>ReduceStraightLine</key>
+			<integer>1</integer>
+			<key>SCloudCommon</key>
+			<dict>
+				<key>AccessToken</key>
+				<string></string>
+				<key>AccountName</key>
+				<string></string>
+				<key>ApiURL</key>
+				<string></string>
+				<key>AuthURL</key>
+				<string></string>
+				<key>DocTypeDefault</key>
+				<integer>1</integer>
+				<key>IsCloudEnabled</key>
+				<false/>
+				<key>NotifyURL</key>
+				<string></string>
+				<key>ProfileRevision</key>
+				<integer>1</integer>
+				<key>RefreshToken</key>
+				<string></string>
+				<key>ReleaseHold</key>
+				<integer>0</integer>
+			</dict>
+			<key>SCloudConfig</key>
+			<dict>
+				<key>BusinessFolder</key>
+				<integer>0</integer>
+				<key>BusinessMode</key>
+				<integer>0</integer>
+				<key>ExternalService</key>
+				<string>none</string>
+				<key>FolderID</key>
+				<string></string>
+				<key>FolderPath</key>
+				<string></string>
+				<key>FolderTitle</key>
+				<string></string>
+				<key>SyncExternalService</key>
+				<string>none</string>
+				<key>TransferFileType</key>
+				<integer>0</integer>
+			</dict>
+			<key>SV600 ContinueScan Mode</key>
+			<integer>0</integer>
+			<key>SV600 ContinueScan Setting</key>
+			<integer>0</integer>
+			<key>SV600 StartScan Setting</key>
+			<integer>0</integer>
+			<key>Save Folder</key>
+			<string>/Users/matt/Library/CloudStorage/OneDrive-Personal/Scans/Carolyn/Checks</string>
+			<key>Second TimesScan Interval</key>
+			<integer>4</integer>
+			<key>Service</key>
+			<string>Evernote</string>
+			<key>Setting Name</key>
+			<string>Carolyn Checks</string>
+			<key>SharedFolder</key>
+			<string></string>
+			<key>Synchronized</key>
+			<integer>1</integer>
+			<key>TemplateID</key>
+			<integer>15</integer>
+			<key>UserColor</key>
+			<integer>1</integer>
+			<key>UserID</key>
+			<string>1AFD54D73F2A43B0B1F46026A5B59AEF</string>
+			<key>UserName</key>
+			<string>Matt Olenik@Matt’s MacBook Pro</string>
+			<key>VIAsCloud</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>AppSettingsFolder</key>
+			<string>00006</string>
+			<key>Application ID</key>
+			<integer>0</integer>
+			<key>AutoName</key>
+			<integer>0</integer>
+			<key>AutoScan</key>
+			<integer>1</integer>
+			<key>Book Divide Type</key>
+			<integer>0</integer>
+			<key>CS Page Size Code</key>
+			<integer>1</integer>
+			<key>CS Process Mode</key>
+			<integer>1</integer>
+			<key>CS Sepa Page Size Code</key>
+			<integer>1</integer>
+			<key>Check Glaze paper</key>
+			<integer>0</integer>
+			<key>Configs</key>
+			<array>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>2</integer>
+					<key>DocType</key>
+					<integer>1</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>1</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>1</integer>
+					<key>Katamuki Hosei</key>
+					<integer>1</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>3</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>1</integer>
+					<key>Resolutions</key>
+					<integer>3</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>1</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>2</integer>
+					<key>DocType</key>
+					<integer>2</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>1</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>0</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>3</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>ScanDate_Name</string>
+					<key>TypFNDateFormat</key>
+					<integer>1</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>0</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>1</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>0</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>3</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>1</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>0</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>1014</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>1014</integer>
+					<key>QTbl</key>
+					<integer>1</integer>
+					<key>RedEyeHosei</key>
+					<integer>0</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string>ReceiptDate_Vendor</string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>AutoHosei</key>
+					<integer>1</integer>
+					<key>BW Brightness Setting</key>
+					<integer>0</integer>
+					<key>Button Defination</key>
+					<integer>1</integer>
+					<key>Color Mode</key>
+					<integer>1</integer>
+					<key>DocType</key>
+					<integer>4</integer>
+					<key>Document mode</key>
+					<integer>0</integer>
+					<key>EScanMode</key>
+					<integer>0</integer>
+					<key>FadingHosei</key>
+					<integer>0</integer>
+					<key>File Format</key>
+					<integer>2</integer>
+					<key>File Split</key>
+					<integer>0</integer>
+					<key>File index digits</key>
+					<integer>3</integer>
+					<key>File name head</key>
+					<string>no title</string>
+					<key>File naming method</key>
+					<integer>1</integer>
+					<key>Katamuki Hosei</key>
+					<integer>0</integer>
+					<key>MMR2</key>
+					<integer>0</integer>
+					<key>Muki Hosei</key>
+					<integer>1</integer>
+					<key>PDFLagOcr</key>
+					<integer>10</integer>
+					<key>PDFSearchable</key>
+					<integer>0</integer>
+					<key>PaperLagOcr</key>
+					<integer>10</integer>
+					<key>QTbl</key>
+					<integer>3</integer>
+					<key>RedEyeHosei</key>
+					<integer>1</integer>
+					<key>Reduce Bleed Through</key>
+					<integer>0</integer>
+					<key>Resolutions</key>
+					<integer>5</integer>
+					<key>SCloudConfig</key>
+					<dict>
+						<key>BusinessFolder</key>
+						<integer>0</integer>
+						<key>BusinessMode</key>
+						<integer>0</integer>
+						<key>ExternalService</key>
+						<string>none</string>
+						<key>FolderID</key>
+						<string></string>
+						<key>FolderPath</key>
+						<string></string>
+						<key>FolderTitle</key>
+						<string></string>
+						<key>SyncExternalService</key>
+						<string>none</string>
+						<key>TransferFileType</key>
+						<integer>0</integer>
+					</dict>
+					<key>Skip Blank Page</key>
+					<integer>1</integer>
+					<key>Split Page Number</key>
+					<integer>1</integer>
+					<key>TypFNCustomFormat</key>
+					<string></string>
+					<key>TypFNDateFormat</key>
+					<integer>3</integer>
+					<key>TypFNUseDate</key>
+					<integer>0</integer>
+					<key>TypFNUseItem</key>
+					<dict>
+						<key>BusinessCard</key>
+						<dict>
+							<key>Address</key>
+							<integer>0</integer>
+							<key>Company</key>
+							<integer>1</integer>
+							<key>Department</key>
+							<integer>0</integer>
+							<key>Email</key>
+							<integer>0</integer>
+							<key>FAXNumber</key>
+							<integer>0</integer>
+							<key>JobTitle</key>
+							<integer>0</integer>
+							<key>Mobile</key>
+							<integer>0</integer>
+							<key>Name</key>
+							<integer>2</integer>
+							<key>PhoneNumber</key>
+							<integer>0</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Website</key>
+							<integer>0</integer>
+							<key>ZipCode</key>
+							<integer>0</integer>
+						</dict>
+						<key>Receipt</key>
+						<dict>
+							<key>Amount</key>
+							<integer>0</integer>
+							<key>CardNum</key>
+							<integer>0</integer>
+							<key>CardType</key>
+							<integer>0</integer>
+							<key>Currency</key>
+							<integer>0</integer>
+							<key>PaymentMethod</key>
+							<integer>0</integer>
+							<key>ReceiptDate</key>
+							<integer>1</integer>
+							<key>ScanDate</key>
+							<integer>0</integer>
+							<key>Tax</key>
+							<integer>0</integer>
+							<key>Vendor</key>
+							<integer>2</integer>
+						</dict>
+					</dict>
+					<key>TypFNUseTime</key>
+					<integer>0</integer>
+					<key>Use File index digits</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>Contents Correction Setting</key>
+			<integer>1</integer>
+			<key>Contents Correction Type</key>
+			<integer>1</integer>
+			<key>Continue Scan</key>
+			<integer>0</integer>
+			<key>Continue Scan For ReturnPath</key>
+			<integer>1</integer>
+			<key>Continue Scan For S1100</key>
+			<integer>1</integer>
+			<key>Dark Mode</key>
+			<integer>0</integer>
+			<key>Destination</key>
+			<integer>0</integer>
+			<key>DocType</key>
+			<integer>1</integer>
+			<key>Document Unite</key>
+			<integer>1</integer>
+			<key>Explanation</key>
+			<string>Saves to Scans/Carolyn/Notes</string>
+			<key>Extension App Settings</key>
+			<dict/>
+			<key>First TimesScan Interval</key>
+			<integer>4</integer>
+			<key>HighQualityImage</key>
+			<integer>0</integer>
+			<key>HostName</key>
+			<string></string>
+			<key>Labels</key>
+			<array/>
+			<key>Mixed Paper Size Scan</key>
+			<integer>0</integer>
+			<key>Mixed Paper Size Scan With Multifeed</key>
+			<integer>2</integer>
+			<key>Multi crop</key>
+			<integer>1</integer>
+			<key>Non Viewer</key>
+			<integer>1</integer>
+			<key>NotRegisterToHome</key>
+			<integer>1</integer>
+			<key>Page Size Code</key>
+			<integer>0</integer>
+			<key>Paper Type</key>
+			<integer>0</integer>
+			<key>Pre Correction</key>
+			<integer>1</integer>
+			<key>ProfileID</key>
+			<string>BC4B2125E8E3493CB6BCFB2945780D89</string>
+			<key>ProfileIcon</key>
+			<string>009</string>
+			<key>RPP</key>
+			<integer>1</integer>
+			<key>ReduceStraightLine</key>
+			<integer>1</integer>
+			<key>SCloudCommon</key>
+			<dict>
+				<key>AccessToken</key>
+				<string></string>
+				<key>AccountName</key>
+				<string></string>
+				<key>ApiURL</key>
+				<string></string>
+				<key>AuthURL</key>
+				<string></string>
+				<key>DocTypeDefault</key>
+				<integer>1</integer>
+				<key>IsCloudEnabled</key>
+				<false/>
+				<key>NotifyURL</key>
+				<string></string>
+				<key>ProfileRevision</key>
+				<integer>1</integer>
+				<key>RefreshToken</key>
+				<string></string>
+				<key>ReleaseHold</key>
+				<integer>0</integer>
+			</dict>
+			<key>SCloudConfig</key>
+			<dict>
+				<key>BusinessFolder</key>
+				<integer>0</integer>
+				<key>BusinessMode</key>
+				<integer>0</integer>
+				<key>ExternalService</key>
+				<string>none</string>
+				<key>FolderID</key>
+				<string></string>
+				<key>FolderPath</key>
+				<string></string>
+				<key>FolderTitle</key>
+				<string></string>
+				<key>SyncExternalService</key>
+				<string>none</string>
+				<key>TransferFileType</key>
+				<integer>0</integer>
+			</dict>
+			<key>SV600 ContinueScan Mode</key>
+			<integer>0</integer>
+			<key>SV600 ContinueScan Setting</key>
+			<integer>0</integer>
+			<key>SV600 StartScan Setting</key>
+			<integer>0</integer>
+			<key>Save Folder</key>
+			<string>/Users/matt/Library/CloudStorage/OneDrive-Personal/Scans/Carolyn/Notes</string>
+			<key>Second TimesScan Interval</key>
+			<integer>4</integer>
+			<key>Service</key>
+			<string>Evernote</string>
+			<key>Setting Name</key>
+			<string>Carolyn Notes</string>
+			<key>SharedFolder</key>
+			<string></string>
+			<key>Synchronized</key>
+			<integer>1</integer>
+			<key>TemplateID</key>
+			<integer>15</integer>
+			<key>UserColor</key>
+			<integer>1</integer>
+			<key>UserID</key>
+			<string>1AFD54D73F2A43B0B1F46026A5B59AEF</string>
+			<key>UserName</key>
+			<string>Matt Olenik@Matt’s MacBook Pro</string>
+			<key>VIAsCloud</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>Version</key>
+	<string>4</string>
+</dict>
+</plist>

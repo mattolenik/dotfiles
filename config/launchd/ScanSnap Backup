@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
-set -x
-
 HOME="${HOME:-/Users/matt}"  # Is $HOME available when run from launchd?
 
 plist="$HOME/Library/Preferences/com.fujitsu.pfu.ScanSnapHomeSetting.plist"
-dest=("$HOME/.dotfiles/Library/Preferences" "$HOME/OneDrive/Backup/ScanSnap Settings")
-
 if [[ ! -f "$plist" ]]; then
   exit 0
 fi
 
-for d in "${dest[@]}"; do
+destinations=("$HOME/.dotfiles/Library/Preferences" "$HOME/OneDrive/Backup/ScanSnap Settings")
+for d in "${destinations[@]}"; do
   if [[ -d $d ]]; then
-	cp -f "$plist" "$d"
+	cp -f "$plist" "$d/"
   fi
 done
+
