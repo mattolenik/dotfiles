@@ -5,28 +5,25 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export P10K_DIR="$HOME/.powerlevel10k"
+export P10K_VERSION="v1.16.1"
+
 BREWDIR=/opt/homebrew
 
 export EDITOR=nvim
+
 command_exists() {
   command -v "$@" &> /dev/null
 }
+
 source_if_exists() {
   if [[ -f $1 ]]; then
     source $1
   fi
 }
+
 error() { echo "$*" >&2; }
 fail() { echo "$1" >&2; exit "${2:-1}"; }
-
-
-_oh_my_zsh() {
-  export ZSH="$HOME/.oh-my-zsh"
-  #ZSH_THEME="robbyrussell"
-  ZSH_THEME="powerlevel10k/powerlevel10k"
-  plugins=(git)
-  source $ZSH/oh-my-zsh.sh
-}
 
 _zsh_settings() {
   unsetopt auto_cd
@@ -42,18 +39,27 @@ _custom_plugins() {
   [[ -d $zshrcd ]] && for f in $zshrcd/*; do source "$f"; done
 }
 
-# TODO: Verify this is needed, move to macOS specific file under .config if it i
-# [[ $(uname) == Darwin ]] && launchctl setenv PATH $PATH
+_fuzzy_finder() {
+  [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+}
 
-_oh_my_zsh
+_macos() {
+  if [[ $(uname) != Darwin ]]; then
+    return
+  fi
+  [[ -f $BREWDIR/bin/brew ]] && eval "$($BREWDIR/bin/brew shellenv)"
+  source_if_exists $BREWDIR/../Cellar/asdf/*/libexec/asdf.sh
+}
+
+_p10k() {
+  source_if_exists "$P10K_DIR/powerlevel10k.zsh-theme"
+  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+  source_if_exists ~/.p10k.zsh
+}
+
 _zsh_settings
 _custom_plugins
+_fuzzy_finder
+_macos
+_p10k
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# TODO: make a source_if_exists function
-#
-[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
-[[ -f $BREWDIR/bin/brew ]] && eval "$($BREWDIR/bin/brew shellenv)"
-[[ -f $BREWDIR/../Cellar/asdf/*/libexec/asdf.sh ]] && source $BREWDIR/../Cellar/asdf/*/libexec/asdf.sh

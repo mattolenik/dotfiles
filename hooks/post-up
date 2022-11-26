@@ -1,37 +1,46 @@
 #!/bin/sh
-DOTDIR="$PWD/.."
-TMUX_PLUGIN_DIR="$HOME/.tmux/plugins"
+DOTDIR="${DOTDIR:-}$PWD/.."
+TMUX_PLUGIN_DIR="${TMUX_PLUGIN_DIR}:-$HOME/.tmux/plugins"
+P10K_DIR="${P10K_DIR}:-$HOME/.powerlevel10k"
+P10K_REPO="${P10K_REPO}:-https://github.com/romkatv/powerlevel10k.git"
+P10K_VERSION="${P10K_VERSION}:-v1.16.1"
 
-install_vim_plug() {
-  plug="$HOME/.local/share/nvim/site/autoload/plug.vim"
-  if [ ! -e "$plug" ]; then
-    curl -fLo "$plug" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  fi
-}
+fail() { echo "$*" 1>&2; exit 1; }
+command_exists() { command -v $1 >/dev/null 2>&1; }
+require() { if ! command_exists $1; then fail "$1 is required for rcm post-up"; fi }
+
+require git
 
 install_tpm() {
   tpm="$TMUX_PLUGIN_DIR/tpm"
   if [ ! -e "$tpm" ]; then
-    git clone https://github.com/tmux-plugins/tpm "$tpm"
+    git clone --depth 1 https://github.com/tmux-plugins/tpm "$tpm"
   fi
 }
 
 install_tmux_powerline() {
   tmux_powerline="$TMUX_PLUGIN_DIR/tmux-powerline"
   if [ ! -e "$tmux_powerline" ]; then
-    git clone https://github.com/erikw/tmux-powerline "$tmux_powerline"
+    git clone --depth 1 https://github.com/erikw/tmux-powerline "$tmux_powerline"
+  fi
+}
+
+install_powerlevel10k() {
+  if [ ! -d "$P10K_DIR" ]; then
+    git clone --depth 1 --branch "$P10K_TAG" "$P10K_REPO" "$P10K_DIR"
   fi
 }
 
 restore_scansnap_plist() {
+  require rsync
   plist="Library/Preferences/com.fujitsu.pfu.ScanSnapHomeSetting.plist"
   rsync -u "$DOTDIR/$plist" "$HOME/$plist"
 }
 
 setup_all() {
-  install_vim_plug
   install_tpm
   install_tmux_powerline
+  install_powerlevel10k
 }
 
 setup_macos() {
