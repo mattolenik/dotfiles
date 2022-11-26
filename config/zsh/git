@@ -5,8 +5,12 @@ git-fetchbase () {
 }
 
 alias gs='git status'
-alias gd='git diff'
 alias gc='git commit'
+alias gcmsg='git commit -m'
+alias gl='git pull'
+alias gr='git remote'
+alias gd='git diff'
+alias gp='git push'
 alias ga='git add'
 alias gca='git commit --amend'
 

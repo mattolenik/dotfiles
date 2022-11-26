@@ -40,7 +40,7 @@ _custom_plugins() {
 }
 
 _fuzzy_finder() {
-  [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+  source_if_exists ~/.fzf.zsh
 }
 
 _macos() {
@@ -63,3 +63,11 @@ _fuzzy_finder
 _macos
 _p10k
 
+alias l='ls -lah'
+alias gs='git status'
+alias gcmsg='git commit -m'
+alias gl='git pull'
+alias gr='git remote'
+alias gd='git diff'
+alias gp='git push'
+alias cd=pushd

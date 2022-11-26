@@ -1,13 +1,14 @@
 #!/bin/sh
-DOTDIR="${DOTDIR:-}$PWD/.."
-TMUX_PLUGIN_DIR="${TMUX_PLUGIN_DIR}:-$HOME/.tmux/plugins"
-P10K_DIR="${P10K_DIR}:-$HOME/.powerlevel10k"
-P10K_REPO="${P10K_REPO}:-https://github.com/romkatv/powerlevel10k.git"
-P10K_VERSION="${P10K_VERSION}:-v1.16.1"
+set -x
+DOTDIR="${DOTDIR:-$PWD/..}"
+TMUX_PLUGIN_DIR="${TMUX_PLUGIN_DIR:-$HOME/.tmux/plugins}"
+P10K_DIR="${P10K_DIR:-$HOME/.powerlevel10k}"
+P10K_REPO="https://github.com/romkatv/powerlevel10k.git"
+P10K_VERSION="${P10K_VERSION:-v1.16.1}"
 
 fail() { echo "$*" 1>&2; exit 1; }
-command_exists() { command -v $1 >/dev/null 2>&1; }
-require() { if ! command_exists $1; then fail "$1 is required for rcm post-up"; fi }
+command_exists() { command -v "$1" >/dev/null 2>&1; }
+require() { if ! command_exists "$1"; then fail "$1 is required for rcm post-up"; fi }
 
 require git
 
@@ -27,7 +28,7 @@ install_tmux_powerline() {
 
 install_powerlevel10k() {
   if [ ! -d "$P10K_DIR" ]; then
-    git clone --depth 1 --branch "$P10K_TAG" "$P10K_REPO" "$P10K_DIR"
+    git clone --depth 1 --branch "$P10K_VERSION" "$P10K_REPO" "$P10K_DIR"
   fi
 }
 
