@@ -1,5 +1,4 @@
 #!/bin/sh
-set -x
 DOTDIR="${DOTDIR:-$PWD/..}"
 TMUX_PLUGIN_DIR="${TMUX_PLUGIN_DIR:-$HOME/.tmux/plugins}"
 P10K_DIR="${P10K_DIR:-$HOME/.powerlevel10k}"
