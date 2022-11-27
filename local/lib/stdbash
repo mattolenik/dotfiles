@@ -4,6 +4,19 @@ fail_if()        { eval "$1" && fail "$2" "${3:-1}"; }
 fail_unless()    { eval "$1" || fail "$2" "${3:-1}"; }
 command_exists() { command -v "$@" &> /dev/null; }
 
+continue_or_abort() {
+  read -rp "Press ENTER to continue, CTRL-C to abort "
+  echo
+}
+
+hlight() {
+  hue "$BGreen" "$*"
+}
+
+rlight() {
+  hue "$BRed" "$*"
+}
+
 hue() { 
   local color=$1
   shift

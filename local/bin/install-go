@@ -18,17 +18,27 @@ url="https://go.dev/dl/go${VERSION}.${OS,,}-${ARCH}.tar.gz"
 msg=$(
 cat << EOF
 Download Go ${VERSION} for ${OS} and ${ARCH} from this URL:
-    $(hue "$BGreen" "$url")
+    $(hlight "$url")
 
 And install into:
-    $(hue "$BGreen" "$GOROOT")
+    $(hlight "$GOROOT")
 
 EOF
 )
 
 echo -e "$msg"
+continue_or_abort
 
-read -rp "Press ENTER to continue, CTRL-C to abort "
+if [[ -d $GOROOT ]]; then
+  if [[ -f $GOROOT/misc/go.mod ]]; then
+    echo -e "Previous Go installation detected in $(hlight "$GOROOT"), delete it?"
+    continue_or_abort
+  else
+    echo -e "Something else was detected in $(rlight "$GOROOT"), delete it?"
+    continue_or_abort
+  fi
+  sudo rm -rf "$GOROOT"
+fi
 
 sudo mkdir -p "$GOROOT"
 curl -sSL "$url" | sudo tar xzfv - --strip-components=1 -C "$GOROOT"
