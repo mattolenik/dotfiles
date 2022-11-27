@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# shellcheck source=../lib/stdbash
+[[ -f $HOME/.local/lib/stdbash ]] && source "$HOME/.local/lib/stdbash"
+set -euo pipefail
+
+VERSION="${VERSION:-1.19.3}"
+ARCH="${ARCH:-$(uname -m)}"
+OS="${OS:-$(uname)}"
+
+GOROOT="${GOROOT:-/usr/local/go}"
+
+if [[ $ARCH == aarch64 ]]; then
+  ARCH=arm64
+fi
+
+url="https://go.dev/dl/go${VERSION}.${OS,,}-${ARCH}.tar.gz"
+
+msg=$(
+cat << EOF
+Download Go ${VERSION} for ${OS} and ${ARCH} from this URL:
+    $(hue "$BGreen" "$url")
+
+And install into:
+    $(hue "$BGreen" "$GOROOT")
+
+EOF
+)
+
+echo -e "$msg"
+
+read -rp "Press ENTER to continue, CTRL-C to abort "
+
+sudo mkdir -p "$GOROOT"
+curl -sSL "$url" | sudo tar xzfv - --strip-components=1 -C "$GOROOT"
+
