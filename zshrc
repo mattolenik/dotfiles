@@ -37,6 +37,26 @@ git_smartbranch() {
   print $changes
 }
 
+go_version() {
+  command_exists go || return
+  go version | awk -F'go| ' '/go version go/ {print $5}'
+}
+
+versions() {
+  printf "Go %s" "$(go_version)"
+}
+
+laststatus() {
+  local s=$1
+  local res=""
+  if (( $s == 0 )); then
+    res="$(deco -f 34 $s)"
+  else
+    res="$(deco -f 203 -u $s)"
+  fi
+  print -P "$res"
+}
+
 aliases() {
   alias ls='ls -C --color'
   alias l='ls -lAh --color'
@@ -80,7 +100,10 @@ zsh_settings() {
   setopt nosharehistory
   setopt PROMPT_SUBST
   PROMPT=$'\n''%~ $(git_smartbranch)'$'\n$ '
-  RPROMPT='%?'
+  # TODO: make colored RPROMPT work
+  #RPROMPT='$(deco -f 245 $(versions)) $(laststatus)'
+  #RPROMPT='$(laststatus $?)'
+  RPROMPT='$?'
 }
 
 aliases
