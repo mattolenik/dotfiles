@@ -1,5 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'github/copilot.vim'
 Plug 'neomake/neomake'
 
 " Colors
