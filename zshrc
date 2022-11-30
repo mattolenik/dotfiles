@@ -1,26 +1,18 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+[[ -f ~/.zsh/deco.zsh/deco.plugin.zsh ]] && source ~/.zsh/deco.zsh/deco.plugin.zsh
 
-#--------------------------------------#
-# P10K variables are used by the rcm post-up hook, see ~/.dotfiles/hooks/post-up
-export P10K_DIR="$HOME/.powerlevel10k"
-export P10K_VERSION="v1.16.1"
-#--------------------------------------#
+# TODO: move functions to proper zsh autoload thing so they can be used outside of interactive shell
+
 export EDITOR="nvim"
 
 HOMEBREW_PREFIX="/opt/homebrew"
 
 log() {
-  [[ -z $DEBUG ]] && return
-  echo "$*" 1>&2
+  [[ -z $LOG ]] && return
+  print -P "$*\n" 1>&2
 }
 
 warn() {
-  log "WARNING: $*"
+  print -P "$(deco -f yellow "WARNING: $*")"
 }
 
 command_exists() {
@@ -38,10 +30,24 @@ source_if_exists() {
   done
 }
 
+git_smartbranch() {
+  [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) == true ]] || return
+  local changes="$([[ -n $(git status --porcelain) ]] && print ' *')"
+  (git symbolic-ref --short HEAD 2>/dev/null || git branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}') | tr -d '\n'
+  print $changes
+}
+
 aliases() {
   alias ls='ls -C --color'
   alias l='ls -lAh --color'
+  alias tree='tree -lahC'
   alias cd=pushd
+  alias gco='git checkout'
+  alias gb='git branch'
+  alias gr='git remote'
+  alias gl='git pull'
+  alias gcmsg='git commit -m'
+  alias gca='git commit --amend'
 }
 
 asdf() {
@@ -66,18 +72,15 @@ homebrew() {
   [[ -f $HOMEBREW_PREFIX/bin/brew ]] && eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
 }
 
-p10k() {
-  source_if_exists "$P10K_DIR/powerlevel10k.zsh-theme"
-  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-  source_if_exists ~/.p10k.zsh
-}
-
 zsh_settings() {
   unsetopt auto_cd
   # Save history shared but only when exiting session
   #setopt noincappendhistory
   setopt inc_append_history
   setopt nosharehistory
+  setopt PROMPT_SUBST
+  PROMPT=$'\n''%~ $(git_smartbranch)'$'\n$ '
+  RPROMPT='%?'
 }
 
 aliases
@@ -85,7 +88,6 @@ asdf
 custom_plugins
 fuzzy_finder
 homebrew
-p10k
 zsh_settings
 
 # These functions helped with organization in this file and are unneeded elsewhere
@@ -94,6 +96,5 @@ unset -f asdf
 unset -f custom_plugins
 unset -f fuzzy_finder
 unset -f homebrew
-unset -f p10k
 unset -f zsh_settings
 
