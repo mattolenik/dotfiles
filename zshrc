@@ -5,14 +5,23 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#------------------------------#
-# EXPORTS USED ELSEWHERE, KEEP #
+#--------------------------------------#
+# P10K variables are used by the rcm post-up hook, see ~/.dotfiles/hooks/post-up
 export P10K_DIR="$HOME/.powerlevel10k"
 export P10K_VERSION="v1.16.1"
-export EDITOR=nvim
-#------------------------------#
+#--------------------------------------#
+export EDITOR="nvim"
 
-HOMEBREW_PREFIX="${HOMEBREW_PREFIX:-/opt/homebrew}"
+HOMEBREW_PREFIX="/opt/homebrew"
+
+log() {
+  [[ -z $DEBUG ]] && return
+  echo "$*" 1>&2
+}
+
+warn() {
+  log "WARNING: $*"
+}
 
 command_exists() {
   command -v "$@" &> /dev/null
@@ -21,9 +30,10 @@ command_exists() {
 source_if_exists() {
   for file in "$@"; do
     if [[ -f $1 ]]; then
-      source $1
+      log "sourcing file: '$file'"
+      source "$file"
     else
-      echo "Warning: file not found, unable to source: '$file'"
+      warn "file not found, unable to source: '$file'"
     fi
   done
 }
@@ -36,7 +46,7 @@ aliases() {
 
 asdf() {
   if [[ $(uname) == Darwin ]]; then
-    source_if_exists "$HOMEBREW_PREFIX/Cellar/asdf/*/libexec/asdf.sh"
+    source_if_exists "$HOMEBREW_PREFIX"/Cellar/asdf/*/libexec/asdf.sh
   else
     # TODO: asdf for Linux
   fi
