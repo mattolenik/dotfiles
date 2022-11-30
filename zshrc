@@ -5,27 +5,64 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+#------------------------------#
+# EXPORTS USED ELSEWHERE, KEEP #
 export P10K_DIR="$HOME/.powerlevel10k"
 export P10K_VERSION="v1.16.1"
-
-BREWDIR=/opt/homebrew
-
 export EDITOR=nvim
+#------------------------------#
+
+HOMEBREW_PREFIX="${HOMEBREW_PREFIX:-/opt/homebrew}"
 
 command_exists() {
   command -v "$@" &> /dev/null
 }
 
 source_if_exists() {
-  if [[ -f $1 ]]; then
-    source $1
+  for file in "$@"; do
+    if [[ -f $1 ]]; then
+      source $1
+    else
+      echo "Warning: file not found, unable to source: '$file'"
+    fi
+  done
+}
+
+aliases() {
+  alias ls='ls -C --color'
+  alias l='ls -lAh --color'
+  alias cd=pushd
+}
+
+asdf() {
+  if [[ $(uname) == Darwin ]]; then
+    source_if_exists "$HOMEBREW_PREFIX/Cellar/asdf/*/libexec/asdf.sh"
+  else
+    # TODO: asdf for Linux
   fi
 }
 
-error() { echo "$*" >&2; }
-fail() { echo "$1" >&2; exit "${2:-1}"; }
+custom_plugins() {
+  # Source everything under zsh config dir
+  zshrcd="$HOME/.config/zsh"
+  [[ -d $zshrcd ]] && for f in $zshrcd/*; do source "$f"; done
+}
 
-_zsh_settings() {
+fuzzy_finder() {
+  command_exists fzf && source_if_exists ~/.fzf.zsh
+}
+
+homebrew() {
+  [[ -f $HOMEBREW_PREFIX/bin/brew ]] && eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
+}
+
+p10k() {
+  source_if_exists "$P10K_DIR/powerlevel10k.zsh-theme"
+  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+  source_if_exists ~/.p10k.zsh
+}
+
+zsh_settings() {
   unsetopt auto_cd
   # Save history shared but only when exiting session
   #setopt noincappendhistory
@@ -33,36 +70,20 @@ _zsh_settings() {
   setopt nosharehistory
 }
 
-_custom_plugins() {
-  # Source everything under zsh config dir
-  zshrcd="$HOME/.config/zsh"
-  [[ -d $zshrcd ]] && for f in $zshrcd/*; do source "$f"; done
-}
+aliases
+asdf
+custom_plugins
+fuzzy_finder
+homebrew
+p10k
+zsh_settings
 
-_fuzzy_finder() {
-  command_exists fzf && source_if_exists ~/.fzf.zsh
-}
+# These functions helped with organization in this file and are unneeded elsewhere
+unset -f aliases
+unset -f asdf
+unset -f custom_plugins
+unset -f fuzzy_finder
+unset -f homebrew
+unset -f p10k
+unset -f zsh_settings
 
-_macos() {
-  if [[ $(uname) != Darwin ]]; then
-    return
-  fi
-  [[ -f $BREWDIR/bin/brew ]] && eval "$($BREWDIR/bin/brew shellenv)"
-  source_if_exists $BREWDIR/../Cellar/asdf/*/libexec/asdf.sh
-}
-
-_p10k() {
-  source_if_exists "$P10K_DIR/powerlevel10k.zsh-theme"
-  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-  source_if_exists ~/.p10k.zsh
-}
-
-_zsh_settings
-_custom_plugins
-_fuzzy_finder
-_macos
-_p10k
-
-alias ls='ls -C --color'
-alias l='ls -lAh --color'
-alias cd=pushd
