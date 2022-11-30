@@ -1,9 +1,10 @@
 #!/bin/sh
-DOTDIR="${DOTDIR:-$PWD/..}"
-TMUX_PLUGIN_DIR="${TMUX_PLUGIN_DIR:-$HOME/.tmux/plugins}"
-P10K_DIR="${P10K_DIR:-$HOME/.powerlevel10k}"
+set -uo
+DOTDIR="${DOTDIR:-"$PWD/.."}"
+TMUX_PLUGIN_DIR="${TMUX_PLUGIN_DIR:-"$HOME/.tmux/plugins"}"
+P10K_DIR="${P10K_DIR:-"$HOME/.powerlevel10k"}"
 P10K_REPO="https://github.com/romkatv/powerlevel10k.git"
-P10K_VERSION="${P10K_VERSION:-v1.16.1}"
+P10K_VERSION="${P10K_VERSION:-"v1.16.1"}"
 
 fail() { echo "$*" 1>&2; exit 1; }
 command_exists() { command -v "$1" >/dev/null 2>&1; }
