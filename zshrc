@@ -1,6 +1,5 @@
-for f in ~/.zsh/plugins/*/*.plugin.zsh; do
-  source "$f"
-done
+[[ -f ~/.zsh/deco.zsh/deco.plugin.zsh ]] && source ~/.zsh/deco.zsh/deco.plugin.zsh
+[[ -f ~/.zsh/zsh-async/async.plugin.zsh ]] && source ~/.zsh/zsh-async/async.plugin.zsh
 
 # TODO: move functions to proper zsh autoload thing so they can be used outside of interactive shell
 
@@ -34,9 +33,23 @@ source_if_exists() {
 
 git_smartbranch() {
   [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) == true ]] || return
-  local changes="$([[ -n $(git status --porcelain) ]] && print ' *')"
-  (git symbolic-ref --short HEAD 2>/dev/null || git branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}') | tr -d '\n'
-  print $changes
+  local changes branch remote remote_hash local_hash
+
+  changes="$([[ -n $(git status --porcelain) ]] && print ' *')"
+  branch="$(git symbolic-ref --short HEAD 2>/dev/null)"
+  if [[ -z $branch ]]; then
+    branch="$(git branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}') | tr -d '\n')"
+  else
+    remote="$(git rev-parse --abbrev-ref --symbolic-full-name @{u})"
+    remote="${remote%%/*}"
+    remote_hash=($(git ls-remote --head --exit-code "$remote"))
+    remote_hash="${remote_hash[1]}"
+    local_hash="$(git rev-parse "$branch")"
+    if [[ $local_hash != $remote_hash ]]; then
+      branch="$branch ^"
+    fi
+  fi
+  print -P "$changes $branch"
 }
 
 go_version() {
