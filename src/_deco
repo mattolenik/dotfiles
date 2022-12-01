@@ -1,0 +1,27 @@
+#compdef deco
+
+_deco() {
+  _arguments \
+    '(-f --fg --foreground)'{-f,--fg,--foreground}+'[set foreground color]:color name or number:->color' \
+    '(-b --bg --background)'{-b,--bg,--background}+'[set background color]:color name or number:->color' \
+    '(-u --underline)'{-u,--underline}'[draw underline]' \
+    '(-B --blink)'{-B,--blink}'[blink text]' \
+    '(-r --reverse)'{-r,--reverse}'[swap foreground color and background color]' \
+    '(-n --no-newline)'{-n,--no-newline}'[without newline]' \
+    '(- *)'{-h,--help}'[show the help text and exit]' \
+    '(- *)'{-v,--version}'[show the version and exit]' \
+    && return 0
+
+  case $state in
+    color)
+      local -a colors
+      colors=(
+        default
+        black red green yellow blue magenta cyan white
+        bright-black bright-red bright-green bright-yellow bright-blue bright-magenta bright-cyan bright-white $(seq 0 255))
+      _values 'select a color-name or a color-number' $colors
+    ;;
+  esac
+}
+
+_deco "$@"
