@@ -1,5 +1,6 @@
-[[ -f ~/.zsh/deco.zsh/deco.plugin.zsh ]] && source ~/.zsh/deco.zsh/deco.plugin.zsh
-[[ -f ~/.zsh/zsh-async/async.plugin.zsh ]] && source ~/.zsh/zsh-async/async.plugin.zsh
+for f in ~/.zsh/plugins/*/*.plugin.zsh; do
+  source "$f"
+done
 
 # TODO: move functions to proper zsh autoload thing so they can be used outside of interactive shell
 
