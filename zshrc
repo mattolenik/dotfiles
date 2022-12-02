@@ -30,32 +30,33 @@ source_if_exists() {
 }
 
 is_git() {
-  [[ $(cd "$1" && git rev-parse --is-inside-work-tree 2>/dev/null) == true ]]
+  local pwd="$1"
+  [[ $(git -C "$pwd" rev-parse --is-inside-work-tree 2>/dev/null) == true ]]
 }
 
 git_info() {
   local pwd="$1"
   if ! is_git "$pwd"; then
-    echo
     return
   fi
-  cd "$pwd"
+  alias _git="git -C $pwd"
   local changes branch remote remote_hash local_hash
 
-  changes="$([[ -n $(git status --porcelain) ]] && print ' *')"
-  branch="$(git symbolic-ref --short HEAD 2>/dev/null)"
+  changes="$([[ -n $(_git status --porcelain) ]] && print ' *')"
+  branch="$(_git symbolic-ref --short HEAD 2>/dev/null)"
   if [[ -z $branch ]]; then
-    branch="$(git branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}') | tr -d '\n')"
+    branch="$(_git branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}') | tr -d '\n')"
   else
-    remote="$(git rev-parse --abbrev-ref --symbolic-full-name @{u})"
+    remote="$(_git rev-parse --abbrev-ref --symbolic-full-name @{u})"
     remote="${remote%%/*}"
-    remote_hash=($(git ls-remote --head --exit-code "$remote"))
+    remote_hash=($(_git ls-remote --head --exit-code "$remote"))
     remote_hash="${remote_hash[1]}"
-    local_hash="$(git rev-parse "$branch")"
+    local_hash="$(_git rev-parse "$branch")"
     if [[ $local_hash != $remote_hash ]]; then
       branch="$branch ^"
     fi
   fi
+  unalias _git
   print "$changes $branch"
 }
 
@@ -154,11 +155,11 @@ worker_start
 
 add-zsh-hook precmd (){
   date_string=$(date +'%Y-%m-%d %H:%M:%S')
-  async_job prompt_worker git_info "$(pwd)"
+  async_job prompt_worker git_info "$PWD"
 }
 
 add-zsh-hook chpwd (){
-  if ! is_git "$(pwd)"; {
+  if ! is_git "$PWD"; {
     GIT_INFO=""
   }
 }
