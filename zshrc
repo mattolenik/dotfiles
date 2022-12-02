@@ -30,6 +30,18 @@ cau() {
   print -n "$(pcolor "$*" yellow none)"
 }
 
+faint() {
+  print -n "$(pcolor "$*" 8 none)"
+}
+
+faintacc() {
+  print -n "$(pcolor "$*" 5 none)"
+}
+
+vfaint() {
+  print -n "$(pcolor "$*" '#333333' none)"
+}
+
 pcolor() {
   local str=$1
   local fg=$2
@@ -109,7 +121,7 @@ git_info() {
     fi
   fi
   unalias _git
-  print -n "$branch $changes${pushpull+"$pushpull"}"
+  print -n "$(faintacc $branch) $changes${pushpull+"$pushpull"}"
 }
 
 go_version() {
@@ -172,7 +184,7 @@ zsh_settings() {
   setopt inc_append_history
   setopt nosharehistory
   setopt PROMPT_SUBST
-  PROMPT=$'\n''%~ $GIT_INFO'$'\n$ '
+  PROMPT=$'\n$(separator)$(faint %~) $GIT_INFO\n$ '
   RPROMPT='$(laststatus $?) at ${date_string}'
 }
 
@@ -191,8 +203,6 @@ prompt_callback() {
     fi
     GIT_INFO="return code $return_code"
   fi
-  #async_job prompt_worker git_info
-  #[ $more == 1 ]] || zle reset-prompt ??
 }
 
 TMOUT=1
@@ -200,6 +210,12 @@ TRAPALRM() { zle reset-prompt }
 
 SYMBOL_PUSH="$(acc ⇡)"
 SYMBOL_CHANGES="$(cau °)"
+SYMBOL_SEPARATOR=_
+
+separator() {
+  #print "$(vfaint $(printf "$SYMBOL_SEPARATOR"'%.0s' {1..$(tput cols)}))"
+  print
+}
 
 worker_start
 
