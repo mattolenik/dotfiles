@@ -2,6 +2,8 @@
 for f in ~/.zsh/plugins/*/*.plugin.zsh; do source "$f"; done
 autoload -U add-zsh-hook
 
+bindkey -v  # vi keybindings, starts in insert mode
+
 export EDITOR="nvim"
 
 HOMEBREW_PREFIX="/opt/homebrew"
