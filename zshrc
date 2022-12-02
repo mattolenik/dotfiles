@@ -1,7 +1,5 @@
-[[ -f ~/.zsh/deco.zsh/deco.plugin.zsh ]] && source ~/.zsh/deco.zsh/deco.plugin.zsh
-[[ -f ~/.zsh/zsh-async/async.plugin.zsh ]] && source ~/.zsh/zsh-async/async.plugin.zsh
-
-# TODO: move functions to proper zsh autoload thing so they can be used outside of interactive shell
+for f in ~/.zsh/plugins/*/*.plugin.zsh; do source "$f"; done
+autoload -U add-zsh-hook
 
 export EDITOR="nvim"
 
@@ -31,8 +29,15 @@ source_if_exists() {
   done
 }
 
-git_smartbranch() {
-  [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) == true ]] || return
+is_git() {
+  [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) == true ]]
+}
+
+git_info() {
+  if ! is_git; then
+    GIT_INFO=""
+    return
+  fi
   local changes branch remote remote_hash local_hash
 
   changes="$([[ -n $(git status --porcelain) ]] && print ' *')"
@@ -49,7 +54,7 @@ git_smartbranch() {
       branch="$branch ^"
     fi
   fi
-  print -P "$changes $branch"
+  print "$changes $branch"
 }
 
 go_version() {
@@ -114,12 +119,49 @@ zsh_settings() {
   setopt inc_append_history
   setopt nosharehistory
   setopt PROMPT_SUBST
-  PROMPT=$'\n''%~ $(git_smartbranch)'$'\n$ '
+  PROMPT=$'\n''%~ $GIT_INFO'$'\n$ '
   # TODO: make colored RPROMPT work
   #RPROMPT='$(deco -f 245 $(versions)) $(laststatus)'
   #RPROMPT='$(laststatus $?)'
-  RPROMPT='$?'
+  RPROMPT='$? at ${date_string}'
 }
+
+worker_start() {
+  async_start_worker prompt_worker
+  async_register_callback prompt_worker prompt_callback
+}
+
+prompt_callback() {
+  GIT_INFO="$3"
+  if [[ $job == '[async]' ]]; then
+    if (( return_code == 2 )); then
+        # Need to restart the worker. Stolen from
+        # https://github.com/mengelbrecht/slimline/blob/master/lib/async.zsh
+        worker_start
+    fi
+    GIT_INFO="return code $return_code"
+  fi
+  #async_job prompt_worker git_info
+  #[ $more == 1 ]] || zle reset-prompt ??
+}
+
+TMOUT=1
+TRAPALRM() { zle reset-prompt }
+
+async_flush_jobs prompt_worker
+worker_start
+
+add-zsh-hook precmd (){
+  date_string=$(date +'%Y-%m-%d %H:%M:%S')
+  async_job prompt_worker git_info
+}
+
+add-zsh-hook chpwd (){
+  if ! is_git; {
+    GIT_INFO=""
+  }
+}
+
 
 aliases
 asdf
@@ -129,10 +171,10 @@ homebrew
 zsh_settings
 
 # These functions helped with organization in this file and are unneeded elsewhere
-unset -f aliases
-unset -f asdf
-unset -f custom_plugins
-unset -f fuzzy_finder
-unset -f homebrew
-unset -f zsh_settings
+#unset -f aliases
+#unset -f asdf
+#unset -f custom_plugins
+#unset -f fuzzy_finder
+#unset -f homebrew
+#unset -f zsh_settings
 
