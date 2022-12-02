@@ -1,3 +1,4 @@
+# TODO: sort this file
 for f in ~/.zsh/plugins/*/*.plugin.zsh; do source "$f"; done
 autoload -U add-zsh-hook
 
@@ -173,10 +174,10 @@ homebrew
 zsh_settings
 
 # These functions helped with organization in this file and are unneeded elsewhere
-#unset -f aliases
-#unset -f asdf
-#unset -f custom_plugins
-#unset -f fuzzy_finder
-#unset -f homebrew
-#unset -f zsh_settings
+unset -f aliases
+unset -f asdf
+unset -f custom_plugins
+unset -f fuzzy_finder
+unset -f homebrew
+unset -f zsh_settings
 
