@@ -1,6 +1,7 @@
-# TODO: sort this file
+# TODO: sort this file, use plugin structure
 for f in ~/.zsh/plugins/*/*.plugin.zsh; do source "$f"; done
 autoload -U add-zsh-hook
+[[ $COLORTERM = *(24bit|truecolor)* ]] || zmodload zsh/nearcolor
 
 bindkey -v  # vi keybindings, starts in insert mode
 
@@ -14,7 +15,19 @@ log() {
 }
 
 warn() {
-  print -P "$(deco -n -f yellow "WARNING: $*")"
+  print -P "$(pcolor WARNING: yellow none bold) $*"
+}
+
+color() {
+  print -nP "$(pcolor $@)"
+}
+
+acc() {
+  print -n "$(pcolor "$*" green none)"
+}
+
+cau() {
+  print -n "$(pcolor "$*" yellow none)"
 }
 
 pcolor() {
@@ -42,20 +55,15 @@ pcolor() {
     suffix="%s$suffix"
   fi
   if (( attrs[(Ie)italic] )); then
-    prefix="$prefix$(echo -e '\e[3m')"
-    suffix="$(echo -e '\e[0m')$suffix"
+    prefix="$prefix"'\e[3m'
+    suffix='\e[0m'"$suffix"
   fi
   if (( attrs[(Ie)st] )); then
     prefix="$prefix"'\e[9m'
     suffix='\e[0m'"$suffix"
   fi
-  print -nP "$prefix$str$suffix"
+  print -n "%{$prefix%}$str%{$suffix%}"
 }
-
-#echo -e "\e[1mbold\e[0m"
-#echo -e "\e[3m\e[1mbold italic\e[0m"
-#echo -e "\e[4munderline\e[0m"
-#echo -e "\e[9mstrikethrough\e[0m"
 
 command_exists() {
   command -v "$@" &> /dev/null
@@ -83,9 +91,9 @@ git_info() {
     return
   fi
   alias _git="git -C $pwd"
-  local changes branch remote remote_hash local_hash
+  local changes branch remote remote_hash local_hash pushpull
 
-  changes="$([[ -n $(_git status --porcelain) ]] && print -nP " *")"
+  changes="$([[ -n $(_git status --porcelain) ]] && print -nP "$SYMBOL_CHANGES")"
   branch="$(_git symbolic-ref --short HEAD 2>/dev/null)"
   if [[ -z $branch ]]; then
     branch="$(_git branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}') | tr -d '\n')"
@@ -97,11 +105,11 @@ git_info() {
     local_hash="$(_git rev-parse "$branch")"
     if [[ $local_hash != $remote_hash ]]; then
       # TODO: differentiate which is newer, show up/down accordingly
-      branch="$branch ^"
+      pushpull="$SYMBOL_PUSH"
     fi
   fi
   unalias _git
-  print -n "$changes $branch"
+  print -n "$branch $changes${pushpull+"$pushpull"}"
 }
 
 go_version() {
@@ -116,9 +124,9 @@ versions() {
 laststatus() {
   local s=$1
   if (( s == 0 )); then
-    print -n "%{%F{green}%}$s%{%F{reset}%}"
+    pcolor "$s" green none bold
   else
-    print -n "%{%F{red}%}$s%{%F{reset}%}"
+    pcolor "$s" red none bold
   fi
 }
 
@@ -189,6 +197,9 @@ prompt_callback() {
 
 TMOUT=1
 TRAPALRM() { zle reset-prompt }
+
+SYMBOL_PUSH="$(acc ⇡)"
+SYMBOL_CHANGES="$(cau °)"
 
 worker_start
 
