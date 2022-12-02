@@ -56,6 +56,7 @@ git_info() {
     remote_hash="${remote_hash[1]}"
     local_hash="$(_git rev-parse "$branch")"
     if [[ $local_hash != $remote_hash ]]; then
+      # TODO: differentiate which is newer, show up/down accordingly
       branch="$branch ^"
     fi
   fi
