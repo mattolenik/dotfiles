@@ -17,6 +17,46 @@ warn() {
   print -P "$(deco -n -f yellow "WARNING: $*")"
 }
 
+pcolor() {
+  local str=$1
+  local fg=$2
+  local bg=$3
+  shift 3
+  local attrs=$@
+  local prefix="%F{$fg}"
+  local suffix="%f"
+  if [[ $bg != clear && $bg != none ]]; then
+    prefix="$prefix%K{$bg}"
+    suffix="%k$suffix"
+  fi
+  if (( attrs[(Ie)bold] )); then
+    prefix="$prefix%B"
+    suffix="%b$suffix"
+  fi
+  if (( attrs[(Ie)ul] )); then
+    prefix="$prefix%U"
+    suffix="%u$suffix"
+  fi
+  if (( attrs[(Ie)hl] )); then
+    prefix="$prefix%S"
+    suffix="%s$suffix"
+  fi
+  if (( attrs[(Ie)italic] )); then
+    prefix="$prefix$(echo -e '\e[3m')"
+    suffix="$(echo -e '\e[0m')$suffix"
+  fi
+  if (( attrs[(Ie)st] )); then
+    prefix="$prefix"'\e[9m'
+    suffix='\e[0m'"$suffix"
+  fi
+  print -nP "$prefix$str$suffix"
+}
+
+#echo -e "\e[1mbold\e[0m"
+#echo -e "\e[3m\e[1mbold italic\e[0m"
+#echo -e "\e[4munderline\e[0m"
+#echo -e "\e[9mstrikethrough\e[0m"
+
 command_exists() {
   command -v "$@" &> /dev/null
 }
