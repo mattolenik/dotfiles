@@ -14,7 +14,7 @@ log() {
 }
 
 warn() {
-  print -P "$(deco -f yellow "WARNING: $*")"
+  print -P "$(deco -n -f yellow "WARNING: $*")"
 }
 
 command_exists() {
@@ -45,7 +45,7 @@ git_info() {
   alias _git="git -C $pwd"
   local changes branch remote remote_hash local_hash
 
-  changes="$([[ -n $(_git status --porcelain) ]] && print ' *')"
+  changes="$([[ -n $(_git status --porcelain) ]] && print -nP " *")"
   branch="$(_git symbolic-ref --short HEAD 2>/dev/null)"
   if [[ -z $branch ]]; then
     branch="$(_git branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}') | tr -d '\n')"
@@ -61,7 +61,7 @@ git_info() {
     fi
   fi
   unalias _git
-  print "$changes $branch"
+  print -n "$changes $branch"
 }
 
 go_version() {
@@ -70,18 +70,16 @@ go_version() {
 }
 
 versions() {
-  printf "Go %s" "$(go_version)"
+  print -n "Go $(go_version)"
 }
 
 laststatus() {
   local s=$1
-  local res=""
-  if (( $s == 0 )); then
-    res="$(deco -f 34 $s)"
+  if (( s == 0 )); then
+    print -n "%{%F{green}%}$s%{%F{reset}%}"
   else
-    res="$(deco -f 203 -u $s)"
+    print -n "%{%F{red}%}$s%{%F{reset}%}"
   fi
-  print -P "$res"
 }
 
 aliases() {
@@ -127,10 +125,7 @@ zsh_settings() {
   setopt nosharehistory
   setopt PROMPT_SUBST
   PROMPT=$'\n''%~ $GIT_INFO'$'\n$ '
-  # TODO: make colored RPROMPT work
-  #RPROMPT='$(deco -f 245 $(versions)) $(laststatus)'
-  #RPROMPT='$(laststatus $?)'
-  RPROMPT='$? at ${date_string}'
+  RPROMPT='$(laststatus $?) at ${date_string}'
 }
 
 worker_start() {
@@ -158,7 +153,7 @@ TRAPALRM() { zle reset-prompt }
 worker_start
 
 add-zsh-hook precmd (){
-  date_string=$(date +'%Y-%m-%d %H:%M:%S')
+  date_string="$(date +'%Y-%m-%d %H:%M:%S')"
   async_job prompt_worker git_info "$PWD"
 }
 
