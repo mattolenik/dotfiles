@@ -30,14 +30,16 @@ source_if_exists() {
 }
 
 is_git() {
-  [[ $(git rev-parse --is-inside-work-tree 2>/dev/null) == true ]]
+  [[ $(cd "$1" && git rev-parse --is-inside-work-tree 2>/dev/null) == true ]]
 }
 
 git_info() {
-  if ! is_git; then
-    GIT_INFO=""
+  local pwd="$1"
+  if ! is_git "$pwd"; then
+    echo
     return
   fi
+  cd "$pwd"
   local changes branch remote remote_hash local_hash
 
   changes="$([[ -n $(git status --porcelain) ]] && print ' *')"
@@ -148,16 +150,15 @@ prompt_callback() {
 TMOUT=1
 TRAPALRM() { zle reset-prompt }
 
-async_flush_jobs prompt_worker
 worker_start
 
 add-zsh-hook precmd (){
   date_string=$(date +'%Y-%m-%d %H:%M:%S')
-  async_job prompt_worker git_info
+  async_job prompt_worker git_info "$(pwd)"
 }
 
 add-zsh-hook chpwd (){
-  if ! is_git; {
+  if ! is_git "$(pwd)"; {
     GIT_INFO=""
   }
 }
