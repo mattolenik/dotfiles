@@ -26,6 +26,10 @@ acc() {
   print -n "$(pcolor "$*" green none)"
 }
 
+acc2() {
+  print -n "$(pcolor "$*" blue none)"
+}
+
 cau() {
   print -n "$(pcolor "$*" yellow none)"
 }
@@ -122,7 +126,12 @@ git_info() {
     local_hash="$(_git rev-parse "$branch")"
     if [[ $local_hash != $remote_hash ]]; then
       # TODO: differentiate which is newer, show up/down accordingly
-      pushpull="$SYMBOL_PUSH"
+      if git merge-base --is-ancestor "$remote_hash" "$local_hash"; then
+        pushpull="$SYMBOL_PUSH"
+      fi
+      if git merge-base --is-ancestor "$local_hash" "$remote_hash"; then
+        pushpull="$pushpull$SYMBOL_PULL"
+      fi
     fi
   fi
   unalias _git
@@ -252,9 +261,11 @@ prompt_callback() {
 TMOUT=1
 TRAPALRM() { zle reset-prompt }
 
-SYMBOL_PUSH="$(acc ⇡)"
+SYMBOL_PUSH="$(acc ⭡)"
+SYMBOL_PULL="$(acc2 ⭣)"
 SYMBOL_CHANGES="$(cau °)"
 SYMBOL_SEPARATOR=_
+
 
 TIMER_ELAPSED=0
 
