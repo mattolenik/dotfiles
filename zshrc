@@ -92,6 +92,11 @@ source_if_exists() {
   done
 }
 
+benchmark_last() {
+  local last="$(fc -ln -1)"
+  hyperfine $@ "$last"
+}
+
 is_git() {
   local pwd="$1"
   [[ $(git -C "$pwd" rev-parse --is-inside-work-tree 2>/dev/null) == true ]]
