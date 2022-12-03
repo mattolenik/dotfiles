@@ -184,7 +184,7 @@ zsh_settings() {
   setopt inc_append_history
   setopt nosharehistory
   setopt PROMPT_SUBST
-  PROMPT=$'\n$(separator)$(faint %~) $GIT_INFO\n$ '
+  PROMPT=$'\n$(separator)$(faint %~) $GIT_INFO\n%(!.#.\$) '
   RPROMPT='$(laststatus $?) at ${date_string}'
 }
 
@@ -205,6 +205,7 @@ prompt_callback() {
   fi
 }
 
+# Necessary for async prompt
 TMOUT=1
 TRAPALRM() { zle reset-prompt }
 
