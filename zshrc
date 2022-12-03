@@ -128,9 +128,10 @@ git_info() {
       # TODO: differentiate which is newer, show up/down accordingly
       if git merge-base --is-ancestor "$remote_hash" "$local_hash"; then
         pushpull="$SYMBOL_PUSH"
-      fi
-      if git merge-base --is-ancestor "$local_hash" "$remote_hash"; then
+      elif git merge-base --is-ancestor "$local_hash" "$remote_hash"; then
         pushpull="$pushpull$SYMBOL_PULL"
+      else
+        pushpull="$SYMBOL_OUTOFSYNC"
       fi
     fi
   fi
@@ -265,6 +266,7 @@ SYMBOL_PUSH="$(acc ⭡)"
 SYMBOL_PULL="$(acc2 ⭣)"
 SYMBOL_CHANGES="$(cau °)"
 SYMBOL_SEPARATOR=_
+SYMBOL_OUTOFSYNC="$(cau ⮃)"
 
 
 TIMER_ELAPSED=0
