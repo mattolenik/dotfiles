@@ -125,12 +125,13 @@ git_info() {
     remote_hash="${remote_hash[1]}"
     local_hash="$(_git rev-parse "$branch")"
     if [[ $local_hash != $remote_hash ]]; then
-      # TODO: differentiate which is newer, show up/down accordingly
       if git merge-base --is-ancestor "$remote_hash" "$local_hash"; then
         pushpull="$SYMBOL_PUSH"
       elif git merge-base --is-ancestor "$local_hash" "$remote_hash"; then
         pushpull="$pushpull$SYMBOL_PULL"
       else
+        # Often it won't be possible to tell if "pull" is truly the right thing to depict,
+        # in those cases it's easier to just depict "out of sync."
         pushpull="$SYMBOL_OUTOFSYNC"
       fi
     fi
