@@ -108,7 +108,7 @@ git_info() {
   changes="$([[ -n $(_git status --porcelain) ]] && print -nP "$SYMBOL_CHANGES")"
   branch="$(_git symbolic-ref --short HEAD 2>/dev/null)"
   if [[ -z $branch ]]; then
-    branch="$(_git branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}') | tr -d '\n')"
+    branch="$(_git branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}')"
   else
     remote="$(_git rev-parse --abbrev-ref --symbolic-full-name @{u})"
     remote="${remote%%/*}"
@@ -218,6 +218,11 @@ separator() {
   print
 }
 
+git_branchinfo_fast() {
+  # TODO: dedupe code with above git_info
+  git -C "$1" symbolic-ref --short HEAD 2>/dev/null || git -C "$1" branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}'
+}
+
 worker_start
 
 add-zsh-hook precmd (){
@@ -226,9 +231,11 @@ add-zsh-hook precmd (){
 }
 
 add-zsh-hook chpwd (){
-  if ! is_git "$PWD"; {
+  if is_git "$PWD"; then
+    GIT_INFO="$(faintacc $(git_branchinfo_fast "$PWD"))"
+  else
     GIT_INFO=""
-  }
+  fi
 }
 
 
