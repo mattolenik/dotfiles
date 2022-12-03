@@ -185,7 +185,45 @@ zsh_settings() {
   setopt nosharehistory
   setopt PROMPT_SUBST
   PROMPT=$'\n$(separator)$(faint %~) $GIT_INFO\n%(!.#.\$) '
-  RPROMPT='$(laststatus $?) at ${date_string}'
+  RPROMPT='$(laststatus $?)$(last_command_elapsed)'
+}
+
+nicetime() {
+  local milliseconds=$1
+  if (( milliseconds == 0 )); then return; fi
+  local seconds=$(( milliseconds/1000 ))
+  local minutes=$(( milliseconds/60000 ))
+  local hours=$(( milliseconds/3600000 ))
+  local days=$(( milliseconds/86400000 ))
+  local hh=$(( hours-days*24 ))
+  local mm=$(( minutes - hh*60 - days*24*60))
+  local ss=$(( seconds - mm*60 - hh*60*60 - days*24*60*60 ))
+  local mss=$(( milliseconds - ss*1000 - mm*60*1000 - hh*60*60*1000 - days*24*60*60*1000 ))
+  local result
+  if (( days > 0 )); then
+    result+="${days}d "
+  fi
+  if (( hh > 0 )); then
+    result+="${hh}h "
+  fi
+  if (( mm > 0 )); then
+    result+="${mm}m "
+  fi
+  if (( ss > 0 )); then
+    result+="${ss}s "
+  fi
+  if (( mss > 0 )); then
+    result+="${mss}ms"
+  fi
+  print -n "$result"
+}
+
+last_command_elapsed() {
+  if [[ ! $TIMER_ELAPSED ]]; then return; fi
+  local nt="$(nicetime $TIMER_ELAPSED)"
+  if [[ -n $nt ]]; then
+    print -n " took $nt"
+  fi
 }
 
 worker_start() {
@@ -213,6 +251,8 @@ SYMBOL_PUSH="$(acc ⇡)"
 SYMBOL_CHANGES="$(cau °)"
 SYMBOL_SEPARATOR=_
 
+TIMER_ELAPSED=0
+
 separator() {
   #print "$(vfaint $(printf "$SYMBOL_SEPARATOR"'%.0s' {1..$(tput cols)}))"
   print
@@ -225,9 +265,18 @@ git_branchinfo_fast() {
 
 worker_start
 
+add-zsh-hook preexec() {
+  timer=$(($(print -P %D{%s%6.})/1000))
+}
+
 add-zsh-hook precmd (){
   date_string="$(date +'%Y-%m-%d %H:%M:%S')"
   async_job prompt_worker git_info "$PWD"
+  if [[ $timer ]]; then
+    now=$(($(print -P %D{%s%6.})/1000))
+    TIMER_ELAPSED=$((now-timer))
+    unset timer
+  fi
 }
 
 add-zsh-hook chpwd (){
