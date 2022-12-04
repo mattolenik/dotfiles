@@ -162,7 +162,6 @@ aliases() {
   alias ls='ls -C --color'
   alias l='ls -lAh --color'
   alias tree='tree -lahC'
-  alias cd=pushd
   alias gco='git checkout'
   alias gb='git branch'
   alias gr='git remote'
@@ -186,6 +185,8 @@ custom_plugins() {
 }
 
 fuzzy_finder() {
+  FZF_TMUX_OPTS="-p"
+  FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
   command_exists fzf && source_if_exists ~/.fzf.zsh
 }
 
@@ -200,6 +201,14 @@ zsh_settings() {
   setopt inc_append_history
   setopt nosharehistory
   setopt PROMPT_SUBST
+  setopt autopushd
+
+  autoload -U history-search-end
+  zle -N history-beginning-search-backward-end history-search-end
+  zle -N history-beginning-search-forward-end history-search-end
+  bindkey '^[[A' history-beginning-search-backward-end
+  bindkey '^[[B' history-beginning-search-forward-end
+
   PROMPT=$'\n$(separator)$(faint %~) $GIT_INFO\n%(!.#.\$) '
   RPROMPT='$(laststatus $?)$(last_command_elapsed)'
 }
