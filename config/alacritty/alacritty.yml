@@ -891,7 +891,7 @@ key_bindings:
   - { key: K,         mods: Alt,       chars: "\x1bk"  }
   - { key: L,         mods: Alt,       chars: "\x1bl"  }
   - { key: M,         mods: Alt,       chars: "\x1bm"  }
-  - { key: N,         mods: Alt,       chars: "\x1bn"  }
+  - { key: T,         mods: Command,   chars: "\x1bn"  }
   - { key: O,         mods: Alt,       chars: "\x1bo"  }
   - { key: P,         mods: Alt,       chars: "\x1bp"  }
   - { key: Q,         mods: Alt,       chars: "\x1bq"  }
@@ -901,9 +901,10 @@ key_bindings:
   - { key: U,         mods: Alt,       chars: "\x1bu"  }
   - { key: V,         mods: Alt,       chars: "\x1bv"  }
   - { key: W,         mods: Alt,       chars: "\x1bw"  }
+  - { key: W,         mods: Command,   chars: "\x1bW"  }
   - { key: X,         mods: Alt,       chars: "\x1bx"  }
   - { key: Y,         mods: Alt,       chars: "\x1by"  }
-  - { key: Z,         mods: Alt,       chars: "\x1bz"  }
+  - { key: Z,         mods: Command,   chars: "\x1bz"  }
   - { key: A,         mods: Alt|Shift, chars: "\x1bA"  }
   - { key: B,         mods: Alt|Shift, chars: "\x1bB"  }
   - { key: C,         mods: Alt|Shift, chars: "\x1bC"  }
@@ -930,16 +931,16 @@ key_bindings:
   - { key: X,         mods: Alt|Shift, chars: "\x1bX"  }
   - { key: Y,         mods: Alt|Shift, chars: "\x1bY"  }
   - { key: Z,         mods: Alt|Shift, chars: "\x1bZ"  }
-  - { key: Key1,      mods: Alt,       chars: "\x1b1"  }
-  - { key: Key2,      mods: Alt,       chars: "\x1b2"  }
-  - { key: Key3,      mods: Alt,       chars: "\x1b3"  }
-  - { key: Key4,      mods: Alt,       chars: "\x1b4"  }
-  - { key: Key5,      mods: Alt,       chars: "\x1b5"  }
-  - { key: Key6,      mods: Alt,       chars: "\x1b6"  }
-  - { key: Key7,      mods: Alt,       chars: "\x1b7"  }
-  - { key: Key8,      mods: Alt,       chars: "\x1b8"  }
-  - { key: Key9,      mods: Alt,       chars: "\x1b9"  }
-  - { key: Key0,      mods: Alt,       chars: "\x1b0"  }
+  - { key: Key1,      mods: Command,   chars: "\x1b1"  }
+  - { key: Key2,      mods: Command,   chars: "\x1b2"  }
+  - { key: Key3,      mods: Command,   chars: "\x1b3"  }
+  - { key: Key4,      mods: Command,   chars: "\x1b4"  }
+  - { key: Key5,      mods: Command,   chars: "\x1b5"  }
+  - { key: Key6,      mods: Command,   chars: "\x1b6"  }
+  - { key: Key7,      mods: Command,   chars: "\x1b7"  }
+  - { key: Key8,      mods: Command,   chars: "\x1b8"  }
+  - { key: Key9,      mods: Command,   chars: "\x1b9"  }
+  - { key: Key0,      mods: Command,   chars: "\x1b0"  }
   - { key: Space,     mods: Control,   chars: "\x00"   } # Ctrl + Space
   - { key: Grave,     mods: Alt,       chars: "\x1b`"  } # Alt + `
   - { key: Grave,     mods: Alt|Shift, chars: "\x1b~"  } # Alt + ~
