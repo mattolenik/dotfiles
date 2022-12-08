@@ -77,8 +77,15 @@ let mapleader="\<Space>"
 " Disable macro key
 "noremap q <Nop>
 
+" Ctrl-w close tab
 nnoremap <C-w> :Sayonara<cr>
+
+" Bind ctrl-s to save
 nnoremap <C-s> :w<cr>
+" Also bind alt-shift-s to save, a key combo which can be sent from Alacritty
+" more easily than control-s.
+nnoremap <M-S-s> :w<cr>
+
 nmap <silent> <leader>p :FZF<cr>
 
 
