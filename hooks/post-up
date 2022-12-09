@@ -1,11 +1,10 @@
 #!/bin/sh
 set -uo
-DOTDIR="${DOTDIR:-"$PWD/.."}"
-TMUX_PLUGIN_DIR="${TMUX_PLUGIN_DIR:-"$HOME/.tmux/plugins"}"
 
-fail() { echo "$*" 1>&2; exit 1; }
-command_exists() { command -v "$1" >/dev/null 2>&1; }
-require() { if ! command_exists "$1"; then fail "$1 is required for rcm post-up"; fi }
+. "common.sh"
+
+echo "DOTDIR: $DOTDIR"
+echo "ZDOTDIR: $ZDOTDIR"
 
 require git
 
@@ -29,9 +28,25 @@ restore_scansnap_plist() {
   rsync -u "$DOTDIR/$plist" "$HOME/$plist"
 }
 
+rcm_fixes() {
+  # rcm doesn't link files under $DOTDIR that have the dot prefix, so symlink them manually here
+  echo "Additional rcm linking..."
+  for file in $(rcfixes); do
+    source="$DOTDIR/$file"
+    dest="$HOME/.$file"
+    echo "  $dest -> $source"
+    ln -sf "$source" "$dest"
+  done
+  echo "...done."
+}
+
 setup_all() {
+  rcm_fixes
   install_tpm
   install_tmux_powerline
+  if [ "$(uname)" = "Darwin" ]; then
+    setup_macos
+  fi
 }
 
 setup_macos() {
@@ -39,7 +54,4 @@ setup_macos() {
 }
 
 setup_all
-if [ "$(uname)" = "Darwin" ]; then
-  setup_macos
-fi
 

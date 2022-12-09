@@ -1,0 +1,29 @@
+# vi: ft=zsh
+
+POSINT_PATTERN='^[0-9]+$'
+
+require_num_args() {
+  if [[ $# != 2 ]]; then
+    error "$funcstack[1] requires exactly 2 integer arguments but received $#"
+    return 1
+  fi
+  local expected=$1
+  local actual=$2
+  if ! [[ $expected =~ $POSINT_PATTERN ]]; then
+    error 'the value for `expected` must be a integer'
+    return 1
+  fi
+  if ! [[ $actual =~ $POSINT_PATTERN ]]; then
+    error 'the value for `actual` must be a integer'
+    return 1
+  fi
+  if (( expected != actual )); then
+    local caller=$funcstack[-1]
+    if [[ $caller == $funcstack[1] ]]; then
+      caller="<NON-FUNCTION>"
+    fi
+    error "the function $caller requires exactly $expected arguments but received $actual\n$(stacktrace)"
+    return 1
+  fi
+}
+

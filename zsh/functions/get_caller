@@ -1,0 +1,11 @@
+# vi: ft=zsh
+
+get_caller() {
+  local caller=$funcstack[-1]
+  if [[ $caller == $funcstack[1] ]]; then
+    caller="<NON-FUNCTION>"
+  else
+    caller=$funcstack[-2]
+  fi
+}
+

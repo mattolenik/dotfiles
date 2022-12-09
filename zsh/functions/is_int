@@ -1,0 +1,8 @@
+# vi: ft=zsh
+
+INT_PATTERN='^-?[0-9]+$'
+
+is_int() {
+  require_num_args 1 $#
+  [[ $1 =~ $INT_PATTERN ]]
+}

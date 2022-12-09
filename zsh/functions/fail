@@ -1,0 +1,14 @@
+# vi: ft=zsh
+
+fail() {
+  local exit_code=$1
+
+  shift 1
+  local msg="$*"
+  if [[ -z $msg ]]; then
+	msg="unknown error"
+  fi
+  printf "FATAL[$exit_code]: $msg"
+  exit $exit_code
+}
+

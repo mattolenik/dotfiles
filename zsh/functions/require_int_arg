@@ -1,0 +1,12 @@
+# vi: ft=zsh
+
+require_int_arg() {
+  require_num_args 2
+  local arg=$1
+  if is_int $arg; then
+    return
+  fi
+  local arg_name=$2
+  error "the function $(get_caller) expected the argument $(code $arg_name)"
+}
+
