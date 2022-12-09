@@ -1,7 +1,8 @@
 #!/bin/sh
 set -uo
 
-. "common.sh"
+echo "PWD: $(pwd)"
+. "$PWD/common.sh"
 
 echo "DOTDIR: $DOTDIR"
 echo "ZDOTDIR: $ZDOTDIR"
