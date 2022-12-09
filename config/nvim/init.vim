@@ -56,15 +56,6 @@ set termguicolors
 set mouse=a
 let g:solarized_term_italics = 1
 colorscheme base16-tomorrow-night-eighties
-"let g:airline_theme = 'base16-tomorrow-night'
-"if $THEME_TINT == 'dark'
-"    set background=dark
-"    let g:airline_solarized_bg='dark'
-"else
-"    set background=light
-"    let g:airline_solarized_bg='light'
-"endif
-
 let g:airline#extensions#tmuxline#enabled = 1
 
 :command! EditInit :e ~/.config/nvim/init.vim
