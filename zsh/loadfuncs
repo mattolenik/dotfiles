@@ -1,0 +1,12 @@
+# vi: ft=zsh
+
+func_dir="$ZDOTDIR/functions" 
+if [[ $fpath != *$ZDOTDIR/functions* ]]; then
+  fpath=( $ZDOTDIR/functions $fpath[@] )
+fi
+
+for f in $func_dir/*; do
+  autoload -Uz "$(basename "$f")"
+done
+
+unset func_dir
