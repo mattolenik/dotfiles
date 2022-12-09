@@ -1,6 +1,7 @@
 # vi: ft=zsh
 
 source_if_exists() {
+  local file
   for file in "$@"; do
     if [[ -f $1 ]]; then
       source "$file"

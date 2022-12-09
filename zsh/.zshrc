@@ -1,5 +1,10 @@
+if ! [[ $COLORTERM = *(24bit|truecolor)* ]]; then
+  zmodload zsh/nearcolor
+fi
 
-disabled_plugins=(zsh-autocomplete hue)  # hue is loaded in .zshenv
+source "$ZDOTDIR/loadfuncs"
+
+disabled_plugins=(zsh-autocomplete)
 
 for f in ~/.zsh/plugins/*/*.plugin.zsh; do
   name="${$(basename $f)%.plugin.zsh}"
@@ -8,8 +13,7 @@ for f in ~/.zsh/plugins/*/*.plugin.zsh; do
   fi
   source "$f";
 done
-
-[[ $COLORTERM = *(24bit|truecolor)* ]] || zmodload zsh/nearcolor
+unset f name disabled_plugins
 
 bindkey -v  # vi keybindings, starts in insert mode
 
@@ -32,6 +36,3 @@ bindkey '^[[B' history-beginning-search-forward-end
 source "$HOME/.zsh/aliases"
 source "$HOME/.zsh/prompt"
 
-tfunc() {
-  is_int 1 2 3
-}
