@@ -1,12 +1,10 @@
 # TODO: sort this file, use plugin structure
 
 for f in ~/.zsh/plugins/*/*.plugin.zsh; do source "$f"; done
-autoload -U add-zsh-hook
-[[ $COLORTERM = *(24bit|truecolor)* ]] || zmodload zsh/nearcolor
 
-# Setup homebrew if present
-HOMEBREW_PREFIX="/opt/homebrew"
-[[ -f $HOMEBREW_PREFIX/bin/brew ]] && eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
+autoload -U add-zsh-hook
+
+[[ $COLORTERM = *(24bit|truecolor)* ]] || zmodload zsh/nearcolor
 
 # Source everything under zsh config dir
 zshrcd="$HOME/.config/zsh"
@@ -16,85 +14,9 @@ bindkey -v  # vi keybindings, starts in insert mode
 
 export EDITOR="nvim"
 
-warn() {
-  print -P "$(pcolor WARNING: yellow none bold) $*"
-}
-
-error() {
-  print -P "$(pcolor ERROR: red none bold) $*"
-}
-
-color() {
-  print -nP "$(pcolor $@)"
-}
-
-acc() {
-  print -n "$(pcolor "$*" green none)"
-}
-
-acc2() {
-  print -n "$(pcolor "$*" blue none)"
-}
-
-cau() {
-  print -n "$(pcolor "$*" yellow none)"
-}
-
-faint() {
-  print -n "$(pcolor "$*" 8 none)"
-}
-
-faintacc() {
-  print -n "$(pcolor "$*" 5 none)"
-}
-
-vfaint() {
-  print -n "$(pcolor "$*" '#333333' none)"
-}
-
-pcolor() {
-  local str=$1
-  local fg=$2
-  local bg=$3
-  shift 3
-  local attrs=$@
-  local prefix="%F{$fg}"
-  local suffix="%f"
-  if [[ $bg != clear && $bg != none ]]; then
-    prefix="$prefix%K{$bg}"
-    suffix="%k$suffix"
-  fi
-  if (( attrs[(Ie)bold] )); then
-    prefix="$prefix%B"
-    suffix="%b$suffix"
-  fi
-  if (( attrs[(Ie)ul] )); then
-    prefix="$prefix%U"
-    suffix="%u$suffix"
-  fi
-  if (( attrs[(Ie)hl] )); then
-    prefix="$prefix%S"
-    suffix="%s$suffix"
-  fi
-  if (( attrs[(Ie)italic] )); then
-    prefix="$prefix"'\e[3m'
-    suffix='\e[0m'"$suffix"
-  fi
-  if (( attrs[(Ie)st] )); then
-    prefix="$prefix"'\e[9m'
-    suffix='\e[0m'"$suffix"
-  fi
-  print -n "%{$prefix%}$str%{$suffix%}"
-}
-
 benchmark_last() {
   local last="$(fc -ln -1)"
   hyperfine $@ "$last"
-}
-
-is_git() {
-  local pwd="$1"
-  [[ $(git -C "$pwd" rev-parse --is-inside-work-tree 2>/dev/null) == true ]]
 }
 
 _prompt_git_info() {
@@ -209,11 +131,7 @@ SYMBOL_PUSH="$(acc ⭡)"
 SYMBOL_PULL="$(acc2 ⭣)"
 SYMBOL_CHANGES="$(cau °)"
 SYMBOL_OUTOFSYNC="$(cau ⮃)"
-
-git_branchinfo_fast() {
-  # TODO: dedupe code with above _prompt_git_info
-  git -C "$1" symbolic-ref --short HEAD 2>/dev/null || git -C "$1" branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}'
-}
+PROMPT_GIT_INFO=
 
 add-zsh-hook preexec() {
   timer=$(($(print -P %D{%s%6.})/1000))
@@ -258,3 +176,61 @@ RPROMPT='$(_prompt_last_status $?)$(_rprompt_parts)'
 # Setup async prompt
 async_start_worker prompt_worker
 async_register_callback prompt_worker _prompt_callback
+
+
+### ALIASES ###
+
+alias strip-color="$SED -r 's/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g'"
+alias l='ls -lAh --color'
+alias tree='tree -lahC'
+alias gco='git checkout'
+alias gb='git branch'
+alias gr='git remote'
+alias gl='git pull'
+alias gs='git status'
+alias ga='git add'
+alias gcmsg='git commit -m'
+alias gca='git commit --amend'
+alias git-show-changed-files='git show --pretty="format:" --name-only'
+
+alias livecat='watch --color -n 1 ccat --color=always'
+alias edit-zshrc="$EDITOR ~/.zshrc"
+alias source-zshrc='source ~/.zshrc'
+alias edit-tmuxconf="$EDITOR ~/.tmux.conf"
+alias http-get='curl -w "\n%{http_code}"'
+alias http-post='curl -w "\n%{http_code}" -X POST'
+alias http-put='curl -w "\n%{http_code}" -X PUT'
+alias http-delete='curl -w "\n%{http_code}" -X DELETE'
+alias http-head='curl -w "\n%{http_code}" -I'
+alias http-get-status='curl -s -o /dev/null -w "%{http_code}"'
+alias gitroot='git rev-parse --show-toplevel'
+alias rg='rg --smart-case'
+
+mkcd() { mkdir -p $1 && cd $1 }
+pidof() { ps aux | grep -i "$1" | awk '{print $2}' }
+mypidof() { ps ux | grep -i "$1" | awk '{print $2}' }
+psinfo() { ps aux | grep -i "$1" }
+mypsinfo() { ps ux | grep -i "$1" }
+spy() { fswatch -0 -o "$1" | xargs -0 -n 1 -I {} ${@[2, -1]} }
+
+command_exists mdfind && alias mdhere='mdfind -onlyin .'
+
+tmuxx() {
+  local session="${1:-main}"
+  tmux new-session -t "$session"
+}
+
+alias grmg='() { go run main.go "$@"; }'
+
+neovim() {
+  if ! command -v &>/dev/null tmux; then
+    echo "neovim function requires tmux" && return 1
+  fi
+  if ! command -v &>/dev/null nvr; then
+    echo "neovim function requires neovim-remote pip package" && return 1
+  fi
+  NVIM_LISTEN_ADDRESS="/tmp/neovim-socket-$(tmux display-message -p '#I')" nvr --remote -s "$@"
+}
+
+alias pblast="echo \$(fc -ln -1) | tr -d '\n' | tee /dev/tty | pbcopy"
+

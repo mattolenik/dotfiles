@@ -1,6 +1,0 @@
-# vi: ft=zsh
-
-grmg() {
-  go run main.go "$@"
-}
-
