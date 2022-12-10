@@ -41,7 +41,24 @@ rcm_fixes() {
   echo "...done."
 }
 
+pname () { /bin/ps -o comm -p "$1" | tail -1; };
+
+packages() {
+  packages="git rcm fzf ripgrep neovim tmux"
+  if [ -f /etc/lsb-release ] && grep -q "Ubuntu" /etc/lsb-release; then
+    pid=$$
+    ppid="$(grep PPid: "/proc/${pid}/status" | awk '{print $2}')"
+    pppid="$(grep PPid: "/proc/${ppid}/status" | awk '{print $2}')"
+    echo "$(pname "$pppid")"
+    # shellcheck disable=SC2086
+    echo apt install $packages
+  fi
+}
+
+
 setup_all() {
+  #packages
+  echo $(pname $PPID)
   rcm_fixes
   install_tpm
   install_tmux_powerline
@@ -55,4 +72,5 @@ setup_macos() {
 }
 
 setup_all
+
 
