@@ -4,7 +4,7 @@ fi
 
 source "$ZDOTDIR/loadfuncs"
 
-disabled_plugins=(zsh-autocomplete)
+disabled_plugins=(zsh-autocomplete F-Sy-H)
 
 for f in ~/.zsh/plugins/*/*.plugin.zsh; do
   name="${$(basename $f)%.plugin.zsh}"
@@ -14,6 +14,7 @@ for f in ~/.zsh/plugins/*/*.plugin.zsh; do
   source "$f";
 done
 unset f name disabled_plugins
+source ~/.zsh/plugins/fast-syntax-highlighting/F-Sy-H.plugin.zsh
 
 bindkey -v  # vi keybindings, starts in insert mode
 
