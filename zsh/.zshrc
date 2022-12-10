@@ -2,11 +2,15 @@ if ! [[ $COLORTERM = *(24bit|truecolor)* ]]; then
   zmodload zsh/nearcolor
 fi
 
+autoload -Uz compinit
+compinit
+
 source "$ZDOTDIR/loadfuncs"
 
-disabled_plugins=(zsh-autocomplete F-Sy-H)
+disabled_plugins=(zsh-autocomplete F-Sy-H fzf-tab)
+source $ZPLUGIN_DIR/fzf-tab/fzf-tab.plugin.zsh
 
-for f in ~/.zsh/plugins/*/*.plugin.zsh; do
+for f in $ZPLUGIN_DIR/*/*.plugin.zsh; do
   name="${$(basename $f)%.plugin.zsh}"
   if (( $disabled_plugins[(Ie)$name] )); then
     continue
@@ -14,7 +18,8 @@ for f in ~/.zsh/plugins/*/*.plugin.zsh; do
   source "$f";
 done
 unset f name disabled_plugins
-source ~/.zsh/plugins/fast-syntax-highlighting/F-Sy-H.plugin.zsh
+
+source $ZPLUGIN_DIR/fast-syntax-highlighting/F-Sy-H.plugin.zsh
 
 bindkey -v  # vi keybindings, starts in insert mode
 
