@@ -57,7 +57,7 @@ packages() {
 
 
 setup_all() {
-  #packages
+  packages
   echo $(pname $PPID)
   rcm_fixes
   install_tpm
