@@ -5,6 +5,9 @@ fi
 autoload -Uz compinit
 compinit
 
+ZPLUGIN_DIR="$ZDOTDIR/plugins"
+ZFUNC_DIR="$ZDOTDIR/functions"
+
 source "$ZDOTDIR/loadfuncs"
 
 disabled_plugins=(zsh-autocomplete F-Sy-H fzf-tab)
