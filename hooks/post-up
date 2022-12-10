@@ -49,9 +49,11 @@ packages() {
     pid=$$
     ppid="$(grep PPid: "/proc/${pid}/status" | awk '{print $2}')"
     pppid="$(grep PPid: "/proc/${ppid}/status" | awk '{print $2}')"
-    echo "$(pname "$pppid")"
-    # shellcheck disable=SC2086
-    echo apt install $packages
+    pppname="$(pname "$pppid")"
+    if [ "$pppname" = "rcup" ]; then
+      # shellcheck disable=SC2086
+      echo apt install $packages
+    fi
   fi
 }
 
