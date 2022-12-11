@@ -7,7 +7,6 @@ source "$ZDOTDIR/loadfuncs"
 autoload -Uz compinit
 compinit
 
-
 disabled_plugins=(zsh-autocomplete F-Sy-H fzf-tab)
 
 source "$ZPLUGIN_DIR/fzf-tab/fzf-tab.plugin.zsh"
@@ -34,6 +33,7 @@ setopt inc_append_history
 setopt nosharehistory
 setopt PROMPT_SUBST
 setopt autopushd
+setopt ignoreeof # don't exit on ^D
 
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
@@ -43,4 +43,18 @@ bindkey '^[[B' history-beginning-search-forward-end
 
 source "$ZDOTDIR/aliases"
 source "$ZDOTDIR/prompt"
+
+# fzf-tab preferences and theming
+#
+# autocomplete for cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'tree-compact $realpath'
+# autocomplete for kill
+
+zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
+zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview '[[ $group == "[process ID]" ]] && ps --pid=$word -o cmd --no-headers -w -w'
+zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
+
+if ! is_macos && command_exists systemctl; then
+  zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
+fi
 
