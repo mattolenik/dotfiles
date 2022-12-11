@@ -10,7 +10,7 @@ compinit
 
 disabled_plugins=(zsh-autocomplete F-Sy-H fzf-tab)
 
-source $ZPLUGIN_DIR/fzf-tab/fzf-tab.plugin.zsh
+source "$ZPLUGIN_DIR/fzf-tab/fzf-tab.plugin.zsh"
 
 for f in $ZPLUGIN_DIR/*/*.plugin.zsh; do
   name="${$(basename $f)%.plugin.zsh}"
@@ -21,7 +21,7 @@ for f in $ZPLUGIN_DIR/*/*.plugin.zsh; do
 done
 unset f name disabled_plugins
 
-source $ZPLUGIN_DIR/fast-syntax-highlighting/F-Sy-H.plugin.zsh
+source "$ZPLUGIN_DIR/fast-syntax-highlighting/F-Sy-H.plugin.zsh"
 
 bindkey -v  # vi keybindings, starts in insert mode
 
@@ -41,6 +41,6 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey '^[[A' history-beginning-search-backward-end
 bindkey '^[[B' history-beginning-search-forward-end
 
-source "$HOME/.zsh/aliases"
-source "$HOME/.zsh/prompt"
+source "$ZDOTDIR/aliases"
+source "$ZDOTDIR/prompt"
 
