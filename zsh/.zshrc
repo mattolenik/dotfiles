@@ -2,15 +2,14 @@ if ! [[ $COLORTERM = *(24bit|truecolor)* ]]; then
   zmodload zsh/nearcolor
 fi
 
+source "$ZDOTDIR/loadfuncs"
+
 autoload -Uz compinit
 compinit
 
-ZPLUGIN_DIR="$ZDOTDIR/plugins"
-ZFUNC_DIR="$ZDOTDIR/functions"
-
-source "$ZDOTDIR/loadfuncs"
 
 disabled_plugins=(zsh-autocomplete F-Sy-H fzf-tab)
+
 source $ZPLUGIN_DIR/fzf-tab/fzf-tab.plugin.zsh
 
 for f in $ZPLUGIN_DIR/*/*.plugin.zsh; do

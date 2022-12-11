@@ -3,7 +3,7 @@
 [[ -f $HOME/.local/lib/stdbash ]] && source "$HOME/.local/lib/stdbash"
 set -euo pipefail
 
-VERSION="${VERSION:-1.19.3}"
+VERSION="${VERSION:-1.19.4}"
 ARCH="${ARCH:-$(uname -m)}"
 OS="${OS:-$(uname)}"
 
@@ -17,7 +17,7 @@ url="https://go.dev/dl/go${VERSION}.${OS,,}-${ARCH}.tar.gz"
 
 msg=$(
 cat << EOF
-Download Go ${VERSION} for ${OS} and ${ARCH} from this URL:
+Download Go ${VERSION} for ${OS,,} and ${ARCH} from this URL:
     $(hlight "$url")
 
 And install into:

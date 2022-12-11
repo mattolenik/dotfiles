@@ -41,26 +41,57 @@ rcm_fixes() {
   echo "...done."
 }
 
+
 pname () { /bin/ps -o comm -p "$1" | tail -1; };
 
+packages="zsh fzf ripgrep neovim tmux"
+
+macos_packages() {
+  echo brew install zsh fzf ripgrep neovim tmux
+}
+
+debian_packages() {
+  echo apt install -y $packages 
+}
+
+yum_packages() {
+  echo yum add -y $packages 
+}
+
+dnf_packages() {
+  echo dnf add -y $packages 
+}
+
+apk_packages() {
+  echo apk add -y $packages
+}
+
 packages() {
-  packages="git rcm fzf ripgrep neovim tmux"
-  if [ -f /etc/lsb-release ] && grep -q "Ubuntu" /etc/lsb-release; then
-    pid=$$
-    ppid="$(grep PPid: "/proc/${pid}/status" | awk '{print $2}')"
-    pppid="$(grep PPid: "/proc/${ppid}/status" | awk '{print $2}')"
-    pppname="$(pname "$pppid")"
-    if [ "$pppname" = "rcup" ]; then
-      # shellcheck disable=SC2086
-      echo apt install $packages
-    fi
+  pid=$$
+  ppid="$(grep PPid: "/proc/$pid/status" | awk '{print $2}')"
+  pppid="$(grep PPid: "/proc/$ppid/status" | awk '{print $2}')"
+  pppname="$(pname "$pppid")"
+  if [ "$pppname" != "rcup" ]; then
+    return
+  fi
+  if is_macos; then
+    macos_packages
+  elif command_exists apt; then
+    debian_packages
+  elif command_exists yum; then
+    yum_packages
+  elif command_exists dnf; then
+    dnf_packages
+  elif command_exists apk; then
+    apk_packages
+  else
+    printf 'Could not figure out how to bootstrap packages. Please install the following:\n%s' "$packages"
   fi
 }
 
 
 setup_all() {
   packages
-  echo $(pname $PPID)
   rcm_fixes
   install_tpm
   install_tmux_powerline
