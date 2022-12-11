@@ -14,6 +14,7 @@ alias gd='git diff'
 alias gp='git push'
 alias gcmsg='git commit -m'
 alias gca='git commit --amend'
+alias gc='git commit'
 alias git-show-changed-files='git show --pretty="format:" --name-only'
 
 alias livecat='watch --color -n 1 ccat --color=always'
