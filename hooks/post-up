@@ -9,6 +9,9 @@ echo "ZDOTDIR: $ZDOTDIR"
 
 require git
 
+packages="zsh fzf ripgrep neovim tmux jq exa tree bat"
+goodies="chafa exiftool"
+
 install_tpm() {
   tpm="$TMUX_PLUGIN_DIR/tpm"
   if [ ! -e "$tpm" ]; then
@@ -43,8 +46,6 @@ rcm_fixes() {
 
 
 pname () { /bin/ps -o comm -p "$1" | tail -1; };
-
-packages="zsh fzf ripgrep neovim tmux"
 
 macos_packages() {
   echo brew install zsh fzf ripgrep neovim tmux
