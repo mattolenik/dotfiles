@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# shellcheck disable=SC2068
+exec docker run -it --rm -v "$PWD:/pwd" -v "$HOME/.ssh:/root/.ssh" -w "/pwd" $@
+
