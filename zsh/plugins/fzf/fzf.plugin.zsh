@@ -33,7 +33,8 @@ done
 export FZF_TMUX_OPTS="-d"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 export FZF_CTRL_T_COMMAND="rg --files --smart-case${ctrl_t_args:+ ${ctrl_t_args[@]}}"
-export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND="$FZF_CTRL_T_COMMAND"
+#export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border --extended'
 
 source_if_exists "$HOME/.fzf.zsh"
