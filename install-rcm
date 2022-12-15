@@ -1,0 +1,19 @@
+#!/bin/sh
+set -euo
+
+RCM_VERSION="${RCM_VERSION:-"1.3.5"}"
+
+buildtemp="$HOME/.rcmbuild-temp"
+buildpath="$buildtemp/$RCM_VERSION"
+rm -rf "$buildpath"
+mkdir -p "$buildpath"
+cd "$buildpath"
+
+curl -sSL "https://thoughtbot.github.io/rcm/dist/rcm-${RCM_VERSION}.tar.gz" | tar xzf -
+cd "rcm-${RCM_VERSION}"
+./configure --prefix="$HOME/.local"
+make
+make install
+
+rm -rf "$buildtemp"
+
