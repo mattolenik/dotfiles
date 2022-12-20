@@ -126,6 +126,10 @@ _prompt_callback() {
   if (( $6 == 0 )); then
     # Reset prompt but only if there are no other prompt callbacks going on
     zle reset-prompt
+    if [[ -z "$ZPROMPT_DISABLE_ASYNC_BACKGROUND" ]]; then
+      _restart_worker
+      async_job $PROMPT_WORKER _prompt_git_info "$PWD"
+    fi
   fi
 }
 
