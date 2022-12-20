@@ -10,7 +10,7 @@ echo "ZDOTDIR: $ZDOTDIR"
 
 require git
 
-packages="asdf bash bat chafa delta exa exiftool fzf jq neovim ripgrep shellcheck tmux tree zsh"
+packages="asdf bash bat chafa delta dust exa exiftool fzf jq neovim ripgrep rsync shellcheck tmux tree zsh"
 
 # packages="jq tmux tree zsh"
 # amazonlinux:2 lacks: rcm, bat chafa delta exa exiftool fzf neovim ripgrep
