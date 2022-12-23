@@ -4,6 +4,20 @@ autoload -U add-zsh-hook
 
 PROMPT_WORKER=prompt_worker 
 
+export ZPROMPT_REQUEST_PIPE="$HOME/.local/state/zprompt/request.pipe"
+
+pwd_base64() {
+    pwd | base64
+}
+
+env_base64() {
+    env | base64
+}
+
+_zprompt_request() {
+  printf '%s %s\n' "$(pwd_base64)" "$(env_base64)"
+}
+
 _restart_worker() {
   async_stop_worker $PROMPT_WORKER
   async_start_worker $PROMPT_WORKER
