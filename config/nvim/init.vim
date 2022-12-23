@@ -17,9 +17,9 @@ Plug 'brooth/far.vim'  " find and replace
 " IDE
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/fzf'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mhinz/vim-sayonara', { 'on' : 'Sayonara' }  " unified buffer/window close
 Plug 'tpope/vim-sleuth'    " tab width autodetect
 Plug 'danro/rename.vim'    " file rename
@@ -271,4 +271,4 @@ nmenu PopUp.Go\ to\ type\ definition :ALEGoToTypeDefinition<CR>
 nmenu PopUp.Find\ references :ALEFindReferences<CR>
 nmenu PopUp.Rename :ALERename<CR>
 ]]
-EOF
+
