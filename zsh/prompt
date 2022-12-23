@@ -122,8 +122,9 @@ _prompt_callback() {
     fi
   fi
 
+  OLD_PROMPT_GIT_INFO="$PROMPT_GIT_INFO"
   PROMPT_GIT_INFO=$3
-  if (( $6 == 0 )); then
+  if [[ $OLD_PROMPT_INFO != $PROMPT_GIT_INFO ]] && (( $6 == 0 )); then
     # Reset prompt but only if there are no other prompt callbacks going on
     zle reset-prompt
     if [[ -z "$ZPROMPT_DISABLE_ASYNC_BACKGROUND" ]]; then
@@ -137,6 +138,7 @@ SYMBOL_PUSH="$(acc ⭡)"
 SYMBOL_PULL="$(acc2 ⭣)"
 SYMBOL_CHANGES="$(cau °)"
 SYMBOL_OUTOFSYNC="$(cau ⮃)"
+OLD_PROMPT_GIT_INFO=
 PROMPT_GIT_INFO=
 
 _start_worker
