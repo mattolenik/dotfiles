@@ -44,6 +44,7 @@ let g:ale_sh_shellcheck_options = '-x'
 Plug 'mhinz/vim-signify'
 
 call plug#end()
+:source ~/.config/nvim/plug-snapshot.vim
 
 :imap `` <Esc>
 
