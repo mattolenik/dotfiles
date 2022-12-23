@@ -261,6 +261,7 @@ keymap("n", "<A-d>", "<cmd>Lspsaga open_floaterm lazygit<CR>", { silent = true }
 keymap("t", "<A-d>", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], { silent = true })
 EOF
 
+" Right click menu items
 lua <<EOF
 vim.cmd [[
 silent! aunmenu PopUp.How-to\ disable\ mouse
@@ -268,5 +269,6 @@ nmenu PopUp.Go\ to\ definition :ALEGoToDefinition<CR>
 nmenu PopUp.Go\ to\ implementation :ALEGoToImplementation<CR>
 nmenu PopUp.Go\ to\ type\ definition :ALEGoToTypeDefinition<CR>
 nmenu PopUp.Find\ references :ALEFindReferences<CR>
+nmenu PopUp.Rename :ALERename<CR>
 ]]
 EOF
