@@ -1,0 +1,33 @@
+# vi: ft=zsh
+
+zprompt_ctrld_handler() {
+  if ! [[ $CURSOR == 0 && -z $BUFFER ]]; then
+    return
+  fi
+
+  if [[ -z $ZPROMPT_CTRLD_EXIT_COUNT ]] || (( ZPROMPT_CTRLD_EXIT_COUNT == 0 )); then
+    exit
+  fi
+
+  if [[ $LASTWIDGET != $funcstack[1] ]]; then
+    (( __ZPROMPT_CTRLD_COUNT = ZPROMPT_CTRLD_EXIT_COUNT + 1 ))
+  fi
+
+  local now=$EPOCHREALTIME
+  local last=${__ZPROMPT_LAST_CTRLD_TIME:-$(( now + 100 ))}
+  __ZPROMPT_LAST_CTRLD_TIME=$now
+
+  if (( now - last > 0.3 )); then
+    __ZPROMPT_CTRLD_COUNT=$ZPROMPT_CTRLD_EXIT_COUNT
+    return
+  fi
+
+  if (( --__ZPROMPT_CTRLD_COUNT <= 0 )); then
+    exit
+  fi
+}
+
+setopt ignoreeof
+zle -N zprompt_ctrld_handler
+bindkey "^D" zprompt_ctrld_handler
+

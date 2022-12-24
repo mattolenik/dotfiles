@@ -2,7 +2,12 @@ if ! [[ $COLORTERM = *(24bit|truecolor)* ]]; then
   zmodload zsh/nearcolor
 fi
 
+export EDITOR="nvim"
+
+
+source "$ZDOTDIR/shellopts"
 source "$ZDOTDIR/loadfuncs"
+source "$ZDOTDIR/widgets"
 
 autoload -Uz compinit
 compinit
@@ -22,24 +27,7 @@ unset f name disabled_plugins
 
 source "$ZPLUGIN_DIR/fast-syntax-highlighting/F-Sy-H.plugin.zsh"
 
-bindkey -v  # vi keybindings, starts in insert mode
 
-export EDITOR="nvim"
-
-unsetopt auto_cd
-# Save history shared but only when exiting session
-#setopt noincappendhistory
-setopt inc_append_history
-setopt nosharehistory
-setopt PROMPT_SUBST
-setopt autopushd
-setopt ignoreeof # don't exit on ^D
-
-autoload -U history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey '^[[A' history-beginning-search-backward-end
-bindkey '^[[B' history-beginning-search-forward-end
 
 source "$ZDOTDIR/aliases"
 source "$ZDOTDIR/prompt"
