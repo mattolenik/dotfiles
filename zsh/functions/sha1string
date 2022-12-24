@@ -1,0 +1,6 @@
+# vi: ft=zsh
+
+sha1string() {
+  printf '%s' "$*" | sha1sum | awk '{print $1}'
+}
+

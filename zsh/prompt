@@ -159,6 +159,9 @@ add-zsh-hook precmd () {
 }
 
 add-zsh-hook chpwd (){
+  if [[ -z ${ZPROMPT_DISABLE_PROJECT_FUNCTION:-} ]] && [[ -f "$PWD/.zsh/functions" ]]; then
+    source "$PWD/.zsh/functions"
+  fi
   if is_git "$PWD"; then
     PROMPT_GIT_INFO="$(faintacc $(git_branchinfo_fast "$PWD"))"
   else
