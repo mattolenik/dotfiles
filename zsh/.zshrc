@@ -3,68 +3,48 @@ if ! [[ $COLORTERM = *(24bit|truecolor)* ]]; then
 fi
 
 export EDITOR="nvim"
-
-
-source "$ZDOTDIR/shellopts"
-source "$ZDOTDIR/loadfuncs"
-source "$ZDOTDIR/widgets"
-
 autoload -Uz compinit
 compinit
 
-disabled_plugins=(F-Sy-H fzf-tab)
+_source() {
+  for file in "$@"; do
+    source "$ZDOTDIR/$file"
+  done
+}
 
-source "$ZPLUGIN_DIR/fzf-tab/fzf-tab.plugin.zsh"
+## Plugins
+_plugins() {
+  local first_plugins=(fzf-tab)
+  local last_plugins=(F-Sy-H)
+  local other_plugins=()
 
-for f in $ZPLUGIN_DIR/*/*.plugin.zsh; do
-  name="${$(basename $f)%.plugin.zsh}"
-  if (( $disabled_plugins[(Ie)$name] )); then
-    continue
-  fi
-  source "$f";
-done
-unset f name disabled_plugins
+  for f in "$ZPLUGIN_DIR"/*/*.plugin.zsh; do
+    local name="${$(basename $f)%.plugin.zsh}"
+    if ! (( $first_plugins[(Ie)$name] )) && ! (( $last_plugins[(Ie)$name] )); then
+      other_plugins+=($name)
+    fi
+  done
 
-source "$ZPLUGIN_DIR/fast-syntax-highlighting/F-Sy-H.plugin.zsh"
+  for p in $first_plugins; do
+    loadplugin "$p"
+  done
 
+  for p in $other_plugins; do
+    loadplugin "$p"
+  done
 
+  for p in $last_plugins; do
+    loadplugin "$p"
+  done
+}
 
-source "$ZDOTDIR/aliases"
-source "$ZDOTDIR/prompt"
+_setup() {
+  _source shellopts loadfuncs widgets
+  _plugins
+  _source aliases prompt autocomplete
+}
 
-# fzf-tab preferences and theming
-#
-# autocomplete for cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'tree-compact $realpath'
-# autocomplete for kill
+_setup
 
-zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
-zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-preview '[[ $group == "[process ID]" ]] && ps --pid=$word -o cmd --no-headers -w -w'
-zstyle ':fzf-tab:complete:(kill|ps):argument-rest' fzf-flags --preview-window=down:3:wrap
-
-if ! is_macos && command_exists systemctl; then
-  zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl status $word'
-fi
-
-zstyle ':fzf-tab:complete:git-(add|diff|restore):*' fzf-preview \
-	'git diff $word | delta'
-
-zstyle ':fzf-tab:complete:git-log:*' fzf-preview \
-	'git log --color=always $word'
-
-zstyle ':fzf-tab:complete:git-help:*' fzf-preview \
-	'git help $word | bat -plman --color=always'
-
-zstyle ':fzf-tab:complete:git-show:*' fzf-preview \
-	'case "$group" in
-	"commit tag") git show --color=always $word ;;
-	*) git show --color=always $word | delta ;;
-	esac'
-
-zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview \
-	'case "$group" in
-	"modified file") git diff $word | delta ;;
-	"recent commit object name") git show --color=always $word | delta ;;
-	*) git log --color=always $word ;;
-	esac'
+unfunction _plugins _setup _source
 
