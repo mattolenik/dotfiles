@@ -46,5 +46,3 @@ _setup() {
 
 _setup
 
-unfunction _plugins _setup _source
-
