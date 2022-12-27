@@ -271,10 +271,12 @@ nnoremap <M-g> :ALEGoToDefinition<CR>
 lua <<EOF
 vim.cmd [[
 silent! aunmenu PopUp.How-to\ disable\ mouse
+silent! aunmenu PopUp.-1-
 nmenu 500.300 PopUp.Go\ to\ definition :ALEGoToDefinition<CR>
 nmenu 500.300 PopUp.Go\ to\ implementation :ALEGoToImplementation<CR>
 nmenu 500.300 PopUp.Go\ to\ type\ definition :ALEGoToTypeDefinition<CR>
 nmenu 500.300 PopUp.Find\ references :ALEFindReferences<CR>
 nmenu 500.300 PopUp.Rename :ALERename<CR>
+nmenu 500.300 PopUp.-Sep- :
 ]]
 EOF
