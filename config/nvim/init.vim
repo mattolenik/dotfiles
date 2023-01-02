@@ -19,7 +19,8 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-sayonara', { 'on' : 'Sayonara' }  " unified buffer/window close
 Plug 'tpope/vim-sleuth'    " tab width autodetect
 Plug 'danro/rename.vim'    " file rename
