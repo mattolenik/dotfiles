@@ -19,12 +19,16 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Both fzf and fzf.vim are required
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'mhinz/vim-sayonara', { 'on' : 'Sayonara' }  " unified buffer/window close
+Plug 'ojroques/nvim-bufdel'  " Better buffer deletion
 Plug 'tpope/vim-sleuth'    " tab width autodetect
 Plug 'danro/rename.vim'    " file rename
 Plug 'ervandew/supertab'   " better tabs
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 
 " Formatting
 Plug 'sstallion/vim-whitespace'  " Adds command :WhitespaceStrip to remove trailing whitespace
@@ -46,6 +50,8 @@ Plug 'mhinz/vim-signify'
 
 call plug#end()
 :source ~/.config/nvim/plug-snapshot.vim
+
+set fillchars+=eob:\ " Keep trailing space, the value is an escaped space
 
 :imap `` <Esc>
 
@@ -71,7 +77,7 @@ let mapleader="\<Space>"
 "noremap q <Nop>
 
 " Ctrl-w close tab
-nnoremap <C-w> :Sayonara<cr>
+nnoremap <C-w> :BufDel<cr>
 
 " Bind ctrl-s to save
 nnoremap <C-s> :w<cr>
