@@ -19,9 +19,6 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Both fzf and fzf.vim are required
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'ojroques/nvim-bufdel'  " Better buffer deletion
 Plug 'tpope/vim-sleuth'    " tab width autodetect
 Plug 'danro/rename.vim'    " file rename
@@ -85,7 +82,10 @@ nnoremap <C-s> :w<cr>
 " more easily than control-s.
 nnoremap <M-S-s> :w<cr>
 
-nmap <silent> <leader>p :FZF<cr>
+nnoremap <leader>p <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
 noremap <leader>y "*y
