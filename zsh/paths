@@ -62,11 +62,11 @@ _fix_path() {
 }
 
 install_order=(
-  _fix_path
-  _homebrew_path
   _asdf_path
   _go_path
   _local_path
+  _homebrew_path
+  _fix_path
 )
 
 for f in $install_order[@]; do

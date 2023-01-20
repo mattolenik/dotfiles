@@ -42,6 +42,7 @@ _setup() {
   _source shellopts loadfuncs widgets
   _plugins
   _source aliases prompt autocomplete
+  _source paths
 }
 
 _setup
