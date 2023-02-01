@@ -43,6 +43,7 @@ _setup() {
   _plugins
   _source aliases prompt autocomplete
   _source paths
+  _source preferences
 }
 
 _setup
