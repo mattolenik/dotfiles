@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ "$(uname)" != "Darwin" ]; then
+  printf "This script is for macOS only.\n"
+  exit 1
+fi
+set +x
+wp_path="$HOME/.dotfiles/macos/lockscreen.png"
+if ! [ -f "$wp_path" ]; then
+  printf "Lockscreen wallpaper not found, expected to find it at '%s'.\n" "$wp_path"
+  exit 1
+fi
+cp "$wp_path" /Library/Caches/Desktop\ Pictures/*/
+
