@@ -17,12 +17,15 @@ _homebrew_path() {
   fi
 }
 
-if is_linux; then
-  # TODO: asdf on Linux
-fi
-
 _asdf_path() {
-  source_if_exists "$HOMEBREW_PREFIX"/Cellar/asdf/*/libexec/asdf.sh
+  if is_macos; then
+    local asdfs=("$HOMEBREW_PREFIX"/Cellar/asdf/*/libexec/asdf.sh)
+    if (( $#asdfs > 0 )); then
+      prepend_path "$asdfs[-1]"
+    fi
+  else
+    prepend_path "$HOME/.asdf/bin"
+  fi
 }
 
 _go_path() {
