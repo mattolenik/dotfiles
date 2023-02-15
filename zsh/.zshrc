@@ -2,9 +2,11 @@ if ! [[ $COLORTERM = *(24bit|truecolor)* ]]; then
   zmodload zsh/nearcolor
 fi
 
+source ~/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 export EDITOR="nvim"
 autoload -Uz compinit
-compinit
+#compinit
 
 _source() {
   for file in "$@"; do
@@ -14,7 +16,8 @@ _source() {
 
 ## Plugins
 _plugins() {
-  local first_plugins=(fzf-tab)
+  #local first_plugins=(fzf-tab)
+  local first_plugins=()
   local last_plugins=(F-Sy-H)
   local other_plugins=()
 
