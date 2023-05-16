@@ -1,0 +1,32 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.7.7",
+  "schemes" : [
+    {
+      "pointer" : {
+        "acceleration" : 4.4362,
+        "speed" : 0.0209,
+        "disableAcceleration" : false
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Razer Viper V2 Pro",
+          "serialNumber" : "000000000000",
+          "productID" : "0xa6",
+          "category" : "mouse",
+          "vendorID" : "0x1532"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    }
+  ]
+}
