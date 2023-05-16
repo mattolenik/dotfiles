@@ -71,6 +71,8 @@ let paths = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 let-env PATH = ($env.PATH | split row (char esep) | prepend $paths)
 
+let-env EDITOR = nvim
+
 alias l = ls
 alias tmuxx = tmux new-session -t main
 alias popd = cd -
