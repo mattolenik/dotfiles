@@ -49,7 +49,6 @@ let g:ale_sh_shellcheck_options = '-x'
 Plug 'mhinz/vim-signify'
 
 call plug#end()
-:source ~/.config/nvim/plug-snapshot.vim
 
 set fillchars+=eob:\ " Keep trailing space, the value is an escaped space
 
