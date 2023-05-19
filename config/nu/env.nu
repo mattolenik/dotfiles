@@ -68,8 +68,10 @@ let paths = [
   '/usr/local/bin'
 ]
 
+let newPaths = ($paths | where { |p| $p not-in $env.PATH })
+
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-let-env PATH = ($env.PATH | split row (char esep) | prepend $paths)
+let-env PATH = ($env.PATH | split row (char esep) | prepend $newPaths)
 
 let-env EDITOR = nvim
 
