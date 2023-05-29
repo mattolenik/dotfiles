@@ -8,6 +8,8 @@
 		<integer>1</integer>
 		<key>AutoStart</key>
 		<integer>0</integer>
+		<key>AutoStartUp</key>
+		<integer>1</integer>
 		<key>CloudService App List</key>
 		<array>
 			<dict>
