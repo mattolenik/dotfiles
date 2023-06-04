@@ -1,15 +1,13 @@
 #!/usr/bin/env sh
 
-#
-# for this to work you must configure sudo such that
-# it will be able to run the command without password
-#
-# see this wiki page for information:
-#  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
-#
-# yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-# sudo yabai --load-sa
-#
+if csrutil status | grep -v disabled; then
+    echo "SIP disabled, running --load-sa"
+    yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+    # sudoers must have entry to allow yabai to run without a password here
+    sudo yabai --load-sa
+else
+    echo "SIP enabled, skipping --load-sa"
+fi
 
 # global settings
 yabai -m config                                 \
@@ -24,16 +22,16 @@ yabai -m config                                 \
     window_animation_frame_rate  120            \
     window_opacity_duration      0.0            \
     active_window_opacity        1.0            \
-    normal_window_opacity        0.90           \
     window_opacity               off            \
-    insert_feedback_color        0xffd75f5f     \
+    #active_window_opacity        1.0            \
+    #normal_window_opacity        0.9            \
     active_window_border_color   0xff775759     \
     normal_window_border_color   0xff555555     \
     window_border_width          4              \
     window_border_radius         12             \
     window_border_blur           off            \
     window_border_hidpi          on             \
-    window_border                off            \
+    window_border                on             \
     split_ratio                  0.50           \
     split_type                   auto           \
     auto_balance                 off            \
