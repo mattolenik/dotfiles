@@ -1,14 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+set -euo pipefail
 
-if csrutil status | grep -q disabled; then
-    echo "SIP disabled, running --load-sa"
-    set -x
-    yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-    sudo yabai --load-sa
-    set +x
-else
-    echo "SIP enabled, skipping --load-sa"
-fi
+# Set to true for debugging and look for ~/yabai.<timestamp>.log
+LOG=false
 
 config=(
     mouse_follows_focus          off
@@ -20,14 +14,14 @@ config=(
     window_shadow                off
     window_animation_duration    0.0
     window_animation_frame_rate  120
-    window_opacity_duration      0.0
+    window_opacity_duration      0.1
     active_window_opacity        1.0
-    window_opacity               off
-    #active_window_opacity        1.0
-    #normal_window_opacity        0.9
+    window_opacity               on
+    active_window_opacity        1.0
+    normal_window_opacity        0.95
     active_window_border_color   0xff775759
     normal_window_border_color   0xff555555
-    window_border_width          4
+    window_border_width          2
     window_border_radius         12
     window_border_blur           off
     window_border_hidpi          on
@@ -47,16 +41,62 @@ config=(
     mouse_drop_action            swap
 )
 
-command="yabai -m config"
+print_config() {
+    # Print the config array in columns
+    echo "config=("
+    for ((i = 0; i < ${#config[@]}; i+=2)); do
+        key="${config[i]}"
+        value="${config[i+1]}"
+        printf "%-10s %s\n" "$key" "$value"
+    done | column -t | awk '{print "    " $0}'
+    echo ")"
+}
 
-for ((i = 0; i < ${#config[@]}; i+=2)); do
-  key="${config[i]}"
-  value="${config[i+1]}"
-  command+=" $key $value"
-done
+sa() {
+    if csrutil status | grep -q disabled; then
+        echo "SIP disabled, running --load-sa"
+        set -x
+        yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+        sudo yabai --load-sa
+        set +x
+    else
+        echo "SIP enabled, skipping --load-sa"
+    fi
+}
 
-set -x
-$command
-set +x
 
-echo "Running"
+run() {
+    local command="yabai -m config"
+
+    for ((i = 0; i < ${#config[@]}; i+=2)); do
+        key="${config[i]}"
+        value="${config[i+1]}"
+        command+=" $key $value"
+    done
+
+    set -x
+    $command
+    set +x
+
+    echo "Running"
+}
+
+log_name() {
+    local timestamp="$(date +"%a%d-%b-%Y_%H:%M:%S")"
+    echo "yabai.$timestamp.log"
+}
+
+main() {
+    print_config
+    sa
+    run
+}
+
+logfile="$HOME/$(log_name)"
+
+if [[ $LOG == true ]]; then
+    main | tee -a "$logfile"
+else
+    main
+fi
+
