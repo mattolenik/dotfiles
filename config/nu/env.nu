@@ -87,4 +87,9 @@ alias ga = git add
 alias gb = git branch
 alias gco = git checkout
 alias gd = git diff
+alias br = broot
+alias dc-down = docker-compose -f docker-compose.yml down -v --rmi all
+alias dc-up = docker-compose -f docker-compose.yml up --build
+alias tree = tree -hC
 
+alias ? = echo $env.LAST_EXIT_CODE
