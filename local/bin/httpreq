@@ -7,10 +7,13 @@ main() {
   local auth base_url content_type site_name
   local method="$1"
   local url="$2"
+  shift 2
   url="${url/#\//}"
   site_name="${url%%/*}"
   url="${url#*/}"
-
+  if [[ ${method,,} == get ]]; then
+    method=--get
+  fi
 
   auth="$(config ".$site_name.auth")"
   base_url="$(config ".$site_name.url")"
@@ -19,11 +22,7 @@ main() {
   if [[ -z $base_url ]]; then
     echo "Must set url in $config_path"; exit 1
   fi
-  auth="${auth:+-H \"Authorization: $auth\"}"
-  content_type="${content_type:+-H \"Content-Type: $content_type\"}"
-  local cmd="curl -sS -w '%{http_code}\n' -X ${method^^} $base_url/$url $auth $content_type"
-  #echo "$cmd"
-  eval "$cmd"
+  curl -w '%{http_code}\n%{url}\n' $method "$base_url/$url" ${auth:+-H "Authorization: $auth"} ${content_type:+-H "Content-Type: $content_type"} ${@/#/--data-urlencode }
 }
 
 config() {
