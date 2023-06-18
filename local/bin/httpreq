@@ -22,7 +22,7 @@ main() {
   if [[ -z $base_url ]]; then
     echo "Must set url in $config_path"; exit 1
   fi
-  curl -w '%{stderr}%{http_code}\n%{url}\n' $method "$base_url/$url" ${auth:+-H "Authorization: $auth"} ${content_type:+-H "Content-Type: $content_type"} ${@/#/--data-urlencode }
+  curl -sS -w '%{stderr}%{http_code} %{url}\n' $method "$base_url/$url" ${auth:+-H "Authorization: $auth"} ${content_type:+-H "Content-Type: $content_type"} ${@/#/--data-urlencode }
 }
 
 config() {

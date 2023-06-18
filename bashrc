@@ -3,3 +3,5 @@ PS1='$(code=${?##0};echo "\[\e[0;91m\]${code:+${code}}\[\e[0m\]")\n\w $(git symb
 alias ls='ls -C --color'
 alias l='ls -lAh --color'
 
+eval "$(starship init bash)"
+

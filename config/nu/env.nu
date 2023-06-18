@@ -93,3 +93,9 @@ alias dc-up = docker-compose -f docker-compose.yml up --build
 alias tree = tree -hC
 
 alias ? = echo $env.LAST_EXIT_CODE
+
+
+# End
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+
