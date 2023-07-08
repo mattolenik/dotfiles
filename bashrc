@@ -5,3 +5,14 @@ alias l='ls -lAh --color'
 
 eval "$(starship init bash)"
 
+alias ga='git add'
+alias gs='git status'
+alias gp='git push'
+alias gl='git pull'
+alias gd='git diff'
+alias gc='git commit'
+alias gb='git branch'
+alias gr='git remote'
+alias grb='git rebase'
+alias gco='git checkout'
+alias gcmsg='git commit -m'
