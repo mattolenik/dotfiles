@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+type="$1"
+shift
+summary="$*"
+
+jira issue create -t "$type" -a "$(jira me)" -s "$summary" "$@"
+
