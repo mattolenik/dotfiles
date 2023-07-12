@@ -91,8 +91,17 @@ alias br = broot
 alias dc-down = docker-compose -f docker-compose.yml down -v --rmi all
 alias dc-up = docker-compose -f docker-compose.yml up --build
 alias tree = tree -hC
+alias kc = kubectl
+alias kcprod = kubectl -n harpoon-prod
 
 alias ? = echo $env.LAST_EXIT_CODE
+
+alias k9sx = k9s -n harpoon-prod --readonly
+
+alias tf = terraform
+
+alias db = devbox
+alias dbr = devbox run
 
 
 # End
