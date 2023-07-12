@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -xuo pipefail
+
+docker rm -f $(docker ps -qa)
+docker rmi -f $(docker images -a)
+docker volume rm -f $(docker volume ls -q)
+docker system prune --force --volumes --all
+

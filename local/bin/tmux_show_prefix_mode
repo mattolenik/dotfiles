@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Get the current tmux client
+client="$(tmux display-message -p '#{client_name}')"
+
+# Get the current status-left
+current_status_left="$(tmux show -wgvq -t "$client" status-left)"
+
+# Set the visual indicator
+prefix_indicator="Prefix Mode"
+
+if [ "$1" = "notwaiting" ]; then
+    # Not in prefix mode, remove the visual indicator from status-left
+    tmux set -t "$client" status-left "${current_status_left/$prefix_indicator /}"
+else
+    # In prefix mode, append a visual indicator to status-left
+    tmux set -t "$client" status-left "$prefix_indicator ${current_status_left}"
+fi
+
