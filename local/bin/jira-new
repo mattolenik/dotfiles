@@ -5,5 +5,5 @@ type="$1"
 shift
 summary="$*"
 
-jira issue create -t "$type" -a "$(jira me)" -s "$summary" "$@"
+jira issue create -t "$type" -s "$summary"
 
