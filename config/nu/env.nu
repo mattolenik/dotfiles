@@ -93,6 +93,7 @@ alias dc-up = docker-compose -f docker-compose.yml up --build
 alias tree = tree -hC
 alias kc = kubectl
 alias kcprod = kubectl -n harpoon-prod
+alias kcs = kubectl -n harpoon-staging
 
 alias ? = echo $env.LAST_EXIT_CODE
 
@@ -102,6 +103,8 @@ alias tf = terraform
 
 alias db = devbox
 alias dbr = devbox run
+
+alias tfmt = terraform fmt -recursive .
 
 
 # End
