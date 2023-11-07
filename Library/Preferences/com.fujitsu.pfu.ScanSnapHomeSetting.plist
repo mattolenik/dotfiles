@@ -95,6 +95,30 @@
 			</dict>
 			<dict>
 				<key>Application Bundle</key>
+				<string>com.ricoh.pfu.ScanToSSHome</string>
+				<key>Application Command</key>
+				<integer>401</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/ScanToSSHome.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.ricoh.pfu.ScanToQBO</string>
+				<key>Application Command</key>
+				<integer>402</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/ScanToQBO.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
 				<string>com.abbyy.FineReader for ScanSnap.Scan to Word</string>
 				<key>Application Command</key>
 				<integer>203</integer>
@@ -143,7 +167,7 @@
 			</dict>
 		</array>
 		<key>Extern App Index</key>
-		<integer>206</integer>
+		<integer>402</integer>
 		<key>Folder</key>
 		<dict>
 			<key>RootFolder</key>
@@ -349,6 +373,8 @@
 	<key>Devices</key>
 	<array>
 		<dict>
+			<key>AEDevice</key>
+			<integer>0</integer>
 			<key>BatteryPowerOffTime</key>
 			<integer>5</integer>
 			<key>CreateDate</key>
@@ -729,7 +755,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -1404,7 +1430,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -2079,7 +2105,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -2754,7 +2780,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -3429,7 +3455,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -4104,7 +4130,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -4476,6 +4502,6 @@
 		</dict>
 	</array>
 	<key>Version</key>
-	<string>4</string>
+	<string>5</string>
 </dict>
 </plist>
