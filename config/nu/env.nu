@@ -104,7 +104,9 @@ alias tfmt = terraform fmt -recursive .
 
 
 # End
-mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
-source ~/.cache/starship/init.nu
+let not_found_msg = 'Starship not installed, run `brew install starship`'
+if (which starship | is-empty) {
+  print $not_found_msg
+}
+overlay use -r ~/.config/nu/starship.nu
 
