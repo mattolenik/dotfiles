@@ -92,12 +92,8 @@ alias dc-down = docker-compose -f docker-compose.yml down -v --rmi all
 alias dc-up = docker-compose -f docker-compose.yml up --build
 alias tree = tree -hC
 alias kc = kubectl
-alias kcprod = kubectl -n harpoon-prod
-alias kcs = kubectl -n harpoon-staging
 
 alias ? = echo $env.LAST_EXIT_CODE
-
-alias k9sx = k9s -n harpoon-prod --readonly
 
 alias tf = terraform
 
@@ -110,4 +106,5 @@ alias tfmt = terraform fmt -recursive .
 # End
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
+source ~/.cache/starship/init.nu
 
