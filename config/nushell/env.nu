@@ -108,5 +108,5 @@ let not_found_msg = 'Starship not installed, run `brew install starship`'
 if (which starship | is-empty) {
   print $not_found_msg
 }
-overlay use -r ~/.config/nu/starship.nu
+overlay use -r ~/.config/nushell/starship.nu
 
