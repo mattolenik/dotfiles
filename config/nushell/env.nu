@@ -75,6 +75,8 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend $newPaths)
 
 $env.EDITOR = nvim
 
+$env.INFINITIME_PUBLISH_DIR = $'($env.HOME)/iCloud/infinitime-builds'
+
 alias l = ls
 alias tmuxx = tmux new-session -t main
 alias popd = cd -
