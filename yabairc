@@ -75,8 +75,13 @@ run() {
     done
 
     set -x
+    yabai -m rule --add app="Dune 2000" title="^OpenRA" manage=off
+    yabai -m rule --add app="Red Alert" title="^OpenRA" manage=off
+    yabai -m rule --add app="Tiberian Dawn" title="^OpenRA" manage=off
+    yabai -m rule --add app="^System Settings$" manage=off
     $command
     set +x
+
 
     echo "Running"
 }
