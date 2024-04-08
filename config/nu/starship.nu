@@ -2,11 +2,10 @@
 # - overlay which can be loaded with `overlay use starship.nu`
 # - module which can be used with `use starship.nu`
 # - script which can be used with `source starship.nu`
-export-env { load-env {
-    STARSHIP_SHELL: "nu"
+export-env { $env.STARSHIP_SHELL = "nu"; load-env {
     STARSHIP_SESSION_KEY: (random chars -l 16)
     PROMPT_MULTILINE_INDICATOR: (
-        ^/usr/local/bin/starship prompt --continuation
+        ^/opt/homebrew/bin/starship prompt --continuation
     )
 
     # Does not play well with default character module.
@@ -16,7 +15,7 @@ export-env { load-env {
     PROMPT_COMMAND: {||
         # jobs are not supported
         (
-            ^/usr/local/bin/starship prompt
+            ^/opt/homebrew/bin/starship prompt
                 --cmd-duration $env.CMD_DURATION_MS
                 $"--status=($env.LAST_EXIT_CODE)"
                 --terminal-width (term size).columns
@@ -29,7 +28,7 @@ export-env { load-env {
 
     PROMPT_COMMAND_RIGHT: {||
         (
-            ^/usr/local/bin/starship prompt
+            ^/opt/homebrew/bin/starship prompt
                 --right
                 --cmd-duration $env.CMD_DURATION_MS
                 $"--status=($env.LAST_EXIT_CODE)"
