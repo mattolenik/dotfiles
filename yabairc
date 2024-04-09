@@ -79,6 +79,7 @@ run() {
     yabai -m rule --add app="Red Alert" title="^OpenRA" manage=off
     yabai -m rule --add app="Tiberian Dawn" title="^OpenRA" manage=off
     yabai -m rule --add app="^System Settings$" manage=off
+    yabai -m rule --add app="^python3" title="^CQ-Editor" manage=on
     $command
     set +x
 
