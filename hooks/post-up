@@ -103,7 +103,9 @@ setup_macos() {
   if [ "$(uname)" != "Darwin" ]; then
     return
   fi
-  restore_scansnap_plist
+  if [ "$USER" == "matt" ]; then
+    restore_scansnap_plist
+  fi
 }
 
 setup_all
