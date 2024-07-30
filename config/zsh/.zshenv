@@ -1,1 +1,0 @@
-/Users/matthew.olenik/.config/zsh/.zprezto/runcoms/zshenv
