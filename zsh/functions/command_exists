@@ -1,6 +1,0 @@
-# vi: ft=zsh
-
-command_exists() {
-  command -v "$@" &> /dev/null
-}
-

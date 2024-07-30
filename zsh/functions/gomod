@@ -1,6 +1,0 @@
-# vi: ft=zsh
-
-gomod() {
-  awk '/^module/ {print $2;exit;}' "$(go env | awk -F'"' '/GOMOD=/ {print $2}')"
-}
-

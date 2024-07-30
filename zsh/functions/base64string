@@ -1,6 +1,0 @@
-# vi: ft=zsh
-
-base64string() {
-  printf '%s' "$*" | base64
-}
-

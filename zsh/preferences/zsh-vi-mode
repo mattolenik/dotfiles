@@ -1,5 +1,0 @@
-# https://github.com/jeffreytse/zsh-vi-mode
-
-# Always starting with insert mode for each command line
-ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
-

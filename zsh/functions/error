@@ -1,6 +1,0 @@
-# vi: ft=zsh
-
-error() {
-  print "ERROR: $*"
-}
-

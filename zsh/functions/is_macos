@@ -1,6 +1,0 @@
-# vi: ft=zsh
-
-is_macos() {
-  [[ $(uname) == Darwin ]]
-}
-

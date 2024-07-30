@@ -1,7 +1,0 @@
-# vi: ft=zsh
-
-git_branchinfo_fast() {
-  # TODO: dedupe code with above _prompt_git_info
-  git -C "$1" symbolic-ref --short HEAD 2>/dev/null || git -C "$1" branch | awk -F'[ ()]' '/HEAD detached at/ {print $3,$4,$5,$6}'
-}
-
