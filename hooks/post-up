@@ -46,18 +46,6 @@ restore_scansnap_plist() {
   rsync -u "$DOTDIR/$plist" "$HOME/$plist"
 }
 
-rcm_fixes() {
-  # rcm doesn't link files under $DOTDIR that have the dot prefix, so symlink them manually here
-  echo "Additional rcm linking..."
-  for file in $(rcfixes); do
-    source="$DOTDIR/$file"
-    dest="$HOME/.$file"
-    echo "  $dest -> $source"
-    ln -sf "$source" "$dest"
-  done
-  echo "...done."
-}
-
 
 pname () { /bin/ps -o comm -p "$1" | tail -1; };
 
@@ -106,8 +94,6 @@ packages() {
 
 
 setup_all() {
-  packages
-  rcm_fixes
   install_tpm
   install_tmux_powerline
   setup_macos
