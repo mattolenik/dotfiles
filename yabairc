@@ -35,10 +35,10 @@ config=(
     right_padding                0
     window_gap                   8
     layout                       bsp
-    mouse_modifier               ctrl
-    mouse_action1                move
-    mouse_action2                resize
-    mouse_drop_action            swap
+    #mouse_modifier               ctrl
+    #mouse_action1                false
+    #mouse_action2                resize
+    #mouse_drop_action            swap
 )
 
 print_config() {
@@ -81,6 +81,7 @@ run() {
     yabai -m rule --add app="^System Settings$" manage=off
     yabai -m rule --add app="^python3" title="^CQ-Editor" manage=on
     yabai -m rule --add app="^RimWorld by Ludeon Studios$" manage=off
+    yabai -m rule --add app="dontstarve_steam" title="^Don't Starve$" manage=off
     $command
     set +x
 
