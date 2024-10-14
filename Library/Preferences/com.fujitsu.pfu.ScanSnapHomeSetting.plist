@@ -166,6 +166,8 @@
 				<integer>0</integer>
 			</dict>
 		</array>
+		<key>Extension App Settings for Home</key>
+		<dict/>
 		<key>Extern App Index</key>
 		<integer>402</integer>
 		<key>Folder</key>
@@ -300,7 +302,7 @@
 					<key>KeyCode</key>
 					<integer>1936936530</integer>
 					<key>Lastest Date</key>
-					<date>2024-05-08T10:23:41Z</date>
+					<date>2024-10-07T19:18:57Z</date>
 					<key>MacAddress</key>
 					<string>84:25:3f:c8:13:7c</string>
 					<key>Name</key>
@@ -349,7 +351,7 @@
 			<key>KeyCode</key>
 			<integer>1936936530</integer>
 			<key>Lastest Date</key>
-			<date>2024-05-08T10:23:41Z</date>
+			<date>2024-10-07T19:18:57Z</date>
 			<key>MacAddress</key>
 			<string>84:25:3f:c8:13:7c</string>
 			<key>Name</key>
