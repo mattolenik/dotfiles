@@ -56,3 +56,6 @@ benchmark_last() {
 if command_exists nvim && command_exists tmux && command_exists nvim-tmux; then
   alias nvim='nvim-tmux'
 fi
+
+alias tmuxn='tmux new-window -n'
+
