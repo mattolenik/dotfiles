@@ -59,3 +59,8 @@ fi
 
 alias tmuxn='tmux new-window -n'
 
+function openscadfix() {
+  sudo xattr -rd com.apple.quarantine /Applications/OpenSCAD.app
+  sudo codesign --force --deep --sign - /Applications/OpenSCAD.app
+}
+
