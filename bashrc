@@ -37,3 +37,4 @@ if [ -f "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 
+. "$HOME/.cargo/env"

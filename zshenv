@@ -8,3 +8,4 @@
 #source "$ZDOTDIR/loadfuncs"
 #source "$ZDOTDIR/paths"
 #
+. "$HOME/.cargo/env"

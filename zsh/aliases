@@ -1,8 +1,13 @@
 # vi: ft=zsh
 
 alias strip-color="$SED -r 's/\x1B\[([0-9]{1,3}(;[0-9]{1,2})?)?[mGK]//g'"
-alias l='ls -lAh --color'
-alias ls='ls --color'
+if command_exists lsd; then
+  alias l='lsd -l'
+  alias ls='lsd'
+else
+  alias l='ls -lAh --color'
+  alias ls='ls --color'
+fi
 alias tree='tree -lahC'
 alias gco='git checkout'
 alias gb='git branch'
@@ -28,7 +33,7 @@ alias http-delete='curl -w "\n%{http_code}" -X DELETE'
 alias http-head='curl -w "\n%{http_code}" -I'
 alias http-get-status='curl -s -o /dev/null -w "%{http_code}"'
 alias gitroot='git rev-parse --show-toplevel'
-alias rg='rg --smart-case'
+alias rg="rg --smart-case -g '!node_modules' -g '!.git'"
 
 mkcd() { mkdir -p $1 && cd $1 }
 pidof() { ps aux | grep -i "$1" | awk '{print $2}' }
