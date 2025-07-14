@@ -52,6 +52,16 @@
 				<key>Application Plist Location</key>
 				<string></string>
 			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>iCloud Drive</string>
+				<key>Application Command</key>
+				<integer>306</integer>
+				<key>Application Location</key>
+				<string></string>
+				<key>Application Plist Location</key>
+				<string></string>
+			</dict>
 		</array>
 		<key>Crop Report</key>
 		<integer>1</integer>
@@ -165,11 +175,71 @@
 				<key>Application Type</key>
 				<integer>0</integer>
 			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.ricoh.pfu.DragToTeams</string>
+				<key>Application Command</key>
+				<integer>407</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/DragToTeams.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.ricoh.pfu.DragToApp</string>
+				<key>Application Command</key>
+				<integer>409</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/DragToApp.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.ricoh.pfu.DragToOneNote</string>
+				<key>Application Command</key>
+				<integer>410</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/DragToOneNote.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.ricoh.pfu.DragToSharePointOnline</string>
+				<key>Application Command</key>
+				<integer>411</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/DragToSharePointOnline.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.ricoh.pfu.DragToNotion</string>
+				<key>Application Command</key>
+				<integer>412</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/DragToNotion.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
 		</array>
 		<key>Extension App Settings for Home</key>
 		<dict/>
 		<key>Extern App Index</key>
-		<integer>402</integer>
+		<integer>412</integer>
 		<key>Folder</key>
 		<dict>
 			<key>RootFolder</key>
@@ -237,6 +307,8 @@
 				<string>PDF Converter</string>
 			</dict>
 		</array>
+		<key>ProfileSync</key>
+		<integer>1</integer>
 		<key>RAWDataSave</key>
 		<integer>1</integer>
 		<key>ReceiptSetting</key>
@@ -302,7 +374,7 @@
 					<key>KeyCode</key>
 					<integer>1936936530</integer>
 					<key>Lastest Date</key>
-					<date>2025-05-22T19:09:57Z</date>
+					<date>2025-07-11T15:11:02Z</date>
 					<key>MacAddress</key>
 					<string>84:25:3f:c8:13:7c</string>
 					<key>Name</key>
@@ -351,7 +423,7 @@
 			<key>KeyCode</key>
 			<integer>1936936530</integer>
 			<key>Lastest Date</key>
-			<date>2025-05-22T19:09:57Z</date>
+			<date>2025-07-11T15:11:02Z</date>
 			<key>MacAddress</key>
 			<string>84:25:3f:c8:13:7c</string>
 			<key>Name</key>
@@ -450,6 +522,8 @@
 	</array>
 	<key>Modify</key>
 	<string>0</string>
+	<key>ProfileVersion</key>
+	<string>6</string>
 	<key>Profiles</key>
 	<array>
 		<dict>
@@ -625,7 +699,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -889,7 +963,7 @@
 					<key>File Format</key>
 					<integer>2</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -1300,7 +1374,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -1564,7 +1638,7 @@
 					<key>File Format</key>
 					<integer>2</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -1975,7 +2049,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -2239,7 +2313,7 @@
 					<key>File Format</key>
 					<integer>2</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -2650,7 +2724,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -2914,7 +2988,7 @@
 					<key>File Format</key>
 					<integer>2</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -3325,7 +3399,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -3589,7 +3663,7 @@
 					<key>File Format</key>
 					<integer>2</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -4000,7 +4074,7 @@
 					<key>File Format</key>
 					<integer>1</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -4264,7 +4338,7 @@
 					<key>File Format</key>
 					<integer>2</integer>
 					<key>File Split</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>File index digits</key>
 					<integer>3</integer>
 					<key>File name head</key>
@@ -4504,6 +4578,6 @@
 		</dict>
 	</array>
 	<key>Version</key>
-	<string>5</string>
+	<string>6</string>
 </dict>
 </plist>

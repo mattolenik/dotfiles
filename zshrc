@@ -27,3 +27,5 @@ export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
+setopt HIST_IGNORE_SPACE
+
