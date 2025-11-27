@@ -355,7 +355,11 @@
 					<integer>0</integer>
 					<key>ConnectStatus2</key>
 					<integer>0</integer>
+					<key>DeviceREDMode</key>
+					<integer>0</integer>
 					<key>DeviceSCloudStatus</key>
+					<integer>0</integer>
+					<key>DeviceSECMode</key>
 					<integer>0</integer>
 					<key>DeviceSettedMode</key>
 					<integer>0</integer>
@@ -374,7 +378,7 @@
 					<key>KeyCode</key>
 					<integer>1936936530</integer>
 					<key>Lastest Date</key>
-					<date>2025-07-11T15:11:02Z</date>
+					<date>2025-10-28T23:00:24Z</date>
 					<key>MacAddress</key>
 					<string>84:25:3f:c8:13:7c</string>
 					<key>Name</key>
@@ -404,7 +408,11 @@
 			<integer>0</integer>
 			<key>ConnectStatus2</key>
 			<integer>0</integer>
+			<key>DeviceREDMode</key>
+			<integer>0</integer>
 			<key>DeviceSCloudStatus</key>
+			<integer>0</integer>
+			<key>DeviceSECMode</key>
 			<integer>0</integer>
 			<key>DeviceSettedMode</key>
 			<integer>0</integer>
@@ -423,7 +431,7 @@
 			<key>KeyCode</key>
 			<integer>1936936530</integer>
 			<key>Lastest Date</key>
-			<date>2025-07-11T15:11:02Z</date>
+			<date>2025-10-28T23:00:24Z</date>
 			<key>MacAddress</key>
 			<string>84:25:3f:c8:13:7c</string>
 			<key>Name</key>
@@ -523,7 +531,7 @@
 	<key>Modify</key>
 	<string>0</string>
 	<key>ProfileVersion</key>
-	<string>6</string>
+	<string>7</string>
 	<key>Profiles</key>
 	<array>
 		<dict>
@@ -4578,6 +4586,6 @@
 		</dict>
 	</array>
 	<key>Version</key>
-	<string>6</string>
+	<string>7</string>
 </dict>
 </plist>

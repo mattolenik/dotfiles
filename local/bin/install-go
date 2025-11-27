@@ -3,7 +3,7 @@
 [[ -f $HOME/.local/lib/stdbash ]] && source "$HOME/.local/lib/stdbash"
 set -euo pipefail
 
-VERSION="${VERSION:-1.19.4}"
+VERSION="${VERSION:-1.25.4}"
 ARCH="${ARCH:-$(uname -m)}"
 OS="${OS:-$(uname)}"
 
