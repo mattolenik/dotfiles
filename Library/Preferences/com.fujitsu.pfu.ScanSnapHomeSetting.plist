@@ -4,6 +4,10 @@
 <dict>
 	<key>Common</key>
 	<dict>
+		<key>AccountColor</key>
+		<integer>1</integer>
+		<key>AccountName</key>
+		<string></string>
 		<key>Auto Connect Wifi</key>
 		<integer>1</integer>
 		<key>AutoStart</key>
@@ -378,7 +382,7 @@
 					<key>KeyCode</key>
 					<integer>1936936530</integer>
 					<key>Lastest Date</key>
-					<date>2025-10-28T23:00:24Z</date>
+					<date>2026-01-29T17:40:50Z</date>
 					<key>MacAddress</key>
 					<string>84:25:3f:c8:13:7c</string>
 					<key>Name</key>
@@ -431,7 +435,7 @@
 			<key>KeyCode</key>
 			<integer>1936936530</integer>
 			<key>Lastest Date</key>
-			<date>2025-10-28T23:00:24Z</date>
+			<date>2026-01-29T17:40:50Z</date>
 			<key>MacAddress</key>
 			<string>84:25:3f:c8:13:7c</string>
 			<key>Name</key>
@@ -462,7 +466,7 @@
 			<key>CreateDate</key>
 			<date>2022-11-22T18:36:46Z</date>
 			<key>Current Profile ID</key>
-			<string>BC4B2125E8E3493CB6BCFB2945780D89</string>
+			<string>8F1B48E8216E455BADEC46425874ED8A</string>
 			<key>DeviceMode</key>
 			<integer>3</integer>
 			<key>DeviceName</key>
@@ -474,7 +478,7 @@
 			<key>FirmCategory</key>
 			<integer>0</integer>
 			<key>FirmwareVersion</key>
-			<string>0J00</string>
+			<string>0V00</string>
 			<key>LastConnectMode</key>
 			<integer>1</integer>
 			<key>MacAddress</key>
