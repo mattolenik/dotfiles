@@ -6,8 +6,9 @@ $git_branch\
 $git_state\
 $git_status\
 $cmd_duration\
-$line_break\
 $python\
+${custom.devserver}\
+$line_break\
 $character"""
 
 [directory]
@@ -49,3 +50,10 @@ style = "bright-black"
 format = 'on [$symbol($profile )(\($region\) )]($style)'
 style = 'bold blue'
 symbol = '🅰 '
+
+[custom.devserver]
+command = 'jq -r ".port" .devserver.run'
+detect_files = ['.devserver.run']
+format = '[Ⓖ$output]($style) '
+style = 'yellow'
+
