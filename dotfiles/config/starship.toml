@@ -52,7 +52,7 @@ style = 'bold blue'
 symbol = '🅰 '
 
 [custom.devserver]
-command = 'jq -r ".port" .devserver.run'
+command = 'pid=$(jq -r ".pid" .devserver.run 2>/dev/null) && kill -0 "$pid" 2>/dev/null && jq -r ".port" .devserver.run'
 detect_files = ['.devserver.run']
 format = '[Ⓖ$output]($style) '
 style = 'yellow'
