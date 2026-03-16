@@ -47,8 +47,7 @@ spy() { fswatch -0 -o "$1" | xargs -0 -n 1 -I {} ${@[2, -1]} }
 command_exists mdfind && alias mdhere='mdfind -onlyin .'
 
 tmuxx() {
-  local session="${1:-main}"
-  tmux new-session -t "$session"
+  tmux new-session -t "${1:-main}"
 }
 
 alias grmg='() { go run main.go "$@"; }'
