@@ -133,6 +133,42 @@
 			</dict>
 			<dict>
 				<key>Application Bundle</key>
+				<string>com.ricoh.pfu.ScanToWord</string>
+				<key>Application Command</key>
+				<integer>403</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/Scan to Office/Scan to Word.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.ricoh.pfu.ScanToExcel</string>
+				<key>Application Command</key>
+				<integer>404</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/Scan to Office/Scan to Excel.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
+				<string>com.ricoh.pfu.ScanToPowerPoint</string>
+				<key>Application Command</key>
+				<integer>405</integer>
+				<key>Application Location</key>
+				<string>/Applications/ScanSnapHomeMain.app/Contents/Helpers/Scan to Office/Scan to PowerPoint.app</string>
+				<key>Application Plist Location</key>
+				<string>/Contents/Resources/ScanSnapInfo.plist</string>
+				<key>Application Type</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Application Bundle</key>
 				<string>com.abbyy.FineReader for ScanSnap.Scan to Word</string>
 				<key>Application Command</key>
 				<integer>203</integer>
@@ -382,7 +418,7 @@
 					<key>KeyCode</key>
 					<integer>1936936530</integer>
 					<key>Lastest Date</key>
-					<date>2026-01-29T17:40:50Z</date>
+					<date>2026-04-14T03:18:00Z</date>
 					<key>MacAddress</key>
 					<string>84:25:3f:c8:13:7c</string>
 					<key>Name</key>
@@ -435,7 +471,7 @@
 			<key>KeyCode</key>
 			<integer>1936936530</integer>
 			<key>Lastest Date</key>
-			<date>2026-01-29T17:40:50Z</date>
+			<date>2026-04-14T03:18:00Z</date>
 			<key>MacAddress</key>
 			<string>84:25:3f:c8:13:7c</string>
 			<key>Name</key>
@@ -527,6 +563,8 @@
 				</dict>
 			</array>
 			<key>StartMode</key>
+			<integer>0</integer>
+			<key>SupportLongPage</key>
 			<integer>0</integer>
 			<key>WifiDisableMode</key>
 			<integer>0</integer>
