@@ -31,3 +31,13 @@ setopt HIST_IGNORE_SPACE
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
+eval $(thefuck --alias)
+
+# Bind Alt + Left/Right for word movement
+bindkey '^[[1;3D' backward-word
+bindkey '^[[1;3C' forward-word
+
+# Bind Shift + Left/Right for word movement (if desired)
+bindkey '^[[1;2D' backward-word
+bindkey '^[[1;2C' forward-word
+
