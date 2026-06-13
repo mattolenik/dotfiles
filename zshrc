@@ -28,6 +28,7 @@ export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 setopt HIST_IGNORE_SPACE
+export SAVEHIST=32000
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
@@ -40,4 +41,6 @@ bindkey '^[[1;3C' forward-word
 # Bind Shift + Left/Right for word movement (if desired)
 bindkey '^[[1;2D' backward-word
 bindkey '^[[1;2C' forward-word
+
+alias cd=pushd
 
