@@ -50,6 +50,10 @@ tmuxx() {
   tmux new-session -t "${1:-main}"
 }
 
+tmuxw() {
+  tmux new-session -t "$(basename "$PWD")"
+}
+
 alias grmg='() { go run main.go "$@"; }'
 
 alias pblast="echo \$(fc -ln -1) | tr -d '\n' | tee /dev/tty | pbcopy"
