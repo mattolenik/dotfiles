@@ -8,8 +8,74 @@ auto_switch = false
 prefix = "ctrl+a"
 split_vertical = "prefix+|"
 
+[[keys.command]]
+key = "prefix+left"
+type = "popup"
+command = "\"$HOME/.config/herdr/scripts/resize-mode.zsh\" left"
+description = "resize pane left by 3% (repeat arrows, esc to exit)"
+width = 48
+height = 3
+
+[[keys.command]]
+key = "prefix+right"
+type = "popup"
+command = "\"$HOME/.config/herdr/scripts/resize-mode.zsh\" right"
+description = "resize pane right by 3% (repeat arrows, esc to exit)"
+width = 48
+height = 3
+
+[[keys.command]]
+key = "prefix+up"
+type = "popup"
+command = "\"$HOME/.config/herdr/scripts/resize-mode.zsh\" up"
+description = "resize pane up by 3% (repeat arrows, esc to exit)"
+width = 48
+height = 3
+
+[[keys.command]]
+key = "prefix+down"
+type = "popup"
+command = "\"$HOME/.config/herdr/scripts/resize-mode.zsh\" down"
+description = "resize pane down by 3% (repeat arrows, esc to exit)"
+width = 48
+height = 3
+
+[[keys.command]]
+key = "prefix+shift+left"
+type = "popup"
+command = "\"$HOME/.config/herdr/scripts/resize-mode.zsh\" left 1"
+description = "resize pane left by 1 cell (repeat arrows, esc to exit)"
+width = 48
+height = 3
+
+[[keys.command]]
+key = "prefix+shift+right"
+type = "popup"
+command = "\"$HOME/.config/herdr/scripts/resize-mode.zsh\" right 1"
+description = "resize pane right by 1 cell (repeat arrows, esc to exit)"
+width = 48
+height = 3
+
+[[keys.command]]
+key = "prefix+shift+up"
+type = "popup"
+command = "\"$HOME/.config/herdr/scripts/resize-mode.zsh\" up 1"
+description = "resize pane up by 1 cell (repeat arrows, esc to exit)"
+width = 48
+height = 3
+
+[[keys.command]]
+key = "prefix+shift+down"
+type = "popup"
+command = "\"$HOME/.config/herdr/scripts/resize-mode.zsh\" down 1"
+description = "resize pane down by 1 cell (repeat arrows, esc to exit)"
+width = 48
+height = 3
+
+
 [ui]
 host_cursor = "drawn"
 
 [experimental]
 kitty_graphics = true
+
