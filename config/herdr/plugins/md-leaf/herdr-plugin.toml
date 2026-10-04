@@ -1,0 +1,18 @@
+id = "local.md-leaf"
+name = "Markdown in leaf"
+version = "0.1.0"
+min_herdr_version = "0.9.3"
+description = "Ctrl-click a .md file link to open it with leaf in a new split pane"
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "open"
+title = "Open markdown in leaf"
+contexts = ["pane"]
+command = ["sh", "open-md.sh"]
+
+[[link_handlers]]
+id = "md-file"
+title = "Open markdown in leaf"
+pattern = "(?i)^(file://|(vscode|vscode-insiders|cursor|windsurf)://file/|https?://md\\.localhost/)[^?#]*?\\.(md|markdown|mdx)(:[0-9]+){0,2}([?#].*)?$"
+action = "open"

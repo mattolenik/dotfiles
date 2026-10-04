@@ -49,3 +49,14 @@ EDITOR=nvim
 # Instruct Claude Code to force output hyperlinks when running in herdr,
 # which it does not normally recognize as a supported terminal for links.
 [[ $TERM_PROGRAM == herdr ]] && export FORCE_HYPERLINK=1
+
+# Codex prints "label (url)" for links in terminals it doesn't recognize, and it
+# doesn't know herdr. Claim VTE (a generic emulator Codex treats as link-capable)
+# so it shows only the link label.
+codex() {
+  if [[ $TERM_PROGRAM == herdr ]]; then
+    TERM_PROGRAM=vte command codex "$@"
+  else
+    command codex "$@"
+  fi
+}

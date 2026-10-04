@@ -1,0 +1,9 @@
+onboarding = false
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[keys]
+prefix = "ctrl+a"
+split_vertical = "prefix+|"
