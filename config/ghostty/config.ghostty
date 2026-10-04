@@ -1,4 +1,4 @@
 font-family = "MesloLGS Nerd Font"
 font-size = 16
 font-thicken = true
-
+mouse-shift-capture = true
