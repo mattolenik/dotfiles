@@ -21,6 +21,7 @@ rcfixes() {
 
 fail() { echo "$*" 1>&2; exit 1; }
 command_exists() { command -v "$1" >/dev/null 2>&1; }
+app_exists() { [ -d "/Applications/$1.app" ]; }
 require() { if ! command_exists "$1"; then fail "$1 is required for rcm post-up"; fi }
 
 pname () { /bin/ps -o comm -p "$1" | tail -1; };

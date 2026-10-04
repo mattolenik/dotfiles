@@ -119,6 +119,10 @@ setup_macos() {
     return
   fi
   restore_scansnap_plist
+  if ! app_exists Finicky; then
+    echo "Finicky app not found, Codex links to markdown files may not open correctly in the browser."
+    echo "Install with: brew install --cask finicky"
+  fi
 }
 
 setup_herdr() {
