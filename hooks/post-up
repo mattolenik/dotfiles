@@ -106,10 +106,11 @@ packages() {
 
 
 setup_all() {
-  packages
+  #packages
+  setup_herdr
   rcm_fixes
-  install_tpm
-  install_tmux_powerline
+  #install_tpm
+  #install_tmux_powerline
   setup_macos
 }
 
@@ -118,6 +119,14 @@ setup_macos() {
     return
   fi
   restore_scansnap_plist
+}
+
+setup_herdr() {
+  if command_exists herdr; then
+    herdr plugin link ~/.config/herdr/plugins/md-leaf
+  else
+    echo "herdr not present, re-run rcup after installing herdr"
+  fi
 }
 
 setup_all
