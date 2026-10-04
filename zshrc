@@ -28,7 +28,7 @@ export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 setopt HIST_IGNORE_SPACE
-export SAVEHIST=32000
+export SAVEHIST=320000
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
@@ -44,3 +44,8 @@ bindkey '^[[1;2C' forward-word
 
 alias cd=pushd
 
+EDITOR=nvim
+
+# Instruct Claude Code to force output hyperlinks when running in herdr,
+# which it does not normally recognize as a supported terminal for links.
+[[ $TERM_PROGRAM == herdr ]] && export FORCE_HYPERLINK=1
