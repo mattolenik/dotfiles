@@ -573,7 +573,7 @@
 	<key>Modify</key>
 	<string>0</string>
 	<key>ProfileVersion</key>
-	<string>7</string>
+	<string>8</string>
 	<key>Profiles</key>
 	<array>
 		<dict>
@@ -612,6 +612,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -636,6 +649,23 @@
 					<integer>1</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>2</integer>
 					<key>RedEyeHosei</key>
@@ -728,6 +758,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -744,6 +795,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -768,6 +832,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -860,6 +941,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -876,6 +978,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -900,6 +1015,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>1014</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -992,6 +1124,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -1008,6 +1161,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -1032,6 +1198,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -1124,6 +1307,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 			</array>
 			<key>Contents Correction Setting</key>
@@ -1287,6 +1491,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -1311,6 +1528,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>3</integer>
 					<key>RedEyeHosei</key>
@@ -1403,6 +1637,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -1419,6 +1674,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -1443,6 +1711,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -1535,6 +1820,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -1551,6 +1857,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -1575,6 +1894,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>1014</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>3</integer>
 					<key>RedEyeHosei</key>
@@ -1667,6 +2003,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -1683,6 +2040,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -1707,6 +2077,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>3</integer>
 					<key>RedEyeHosei</key>
@@ -1799,6 +2186,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 			</array>
 			<key>Contents Correction Setting</key>
@@ -1962,6 +2370,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -1986,6 +2407,23 @@
 					<integer>1</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>2</integer>
 					<key>RedEyeHosei</key>
@@ -2078,6 +2516,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -2094,6 +2553,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -2118,6 +2590,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -2210,6 +2699,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -2226,6 +2736,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -2250,6 +2773,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>1014</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -2342,6 +2882,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -2358,6 +2919,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -2382,6 +2956,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>3</integer>
 					<key>RedEyeHosei</key>
@@ -2474,6 +3065,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 			</array>
 			<key>Contents Correction Setting</key>
@@ -2637,6 +3249,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -2661,6 +3286,23 @@
 					<integer>1</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>2</integer>
 					<key>RedEyeHosei</key>
@@ -2753,6 +3395,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -2769,6 +3432,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -2793,6 +3469,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -2885,6 +3578,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -2901,6 +3615,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -2925,6 +3652,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>1014</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -3017,6 +3761,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -3033,6 +3798,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -3057,6 +3835,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>3</integer>
 					<key>RedEyeHosei</key>
@@ -3149,6 +3944,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 			</array>
 			<key>Contents Correction Setting</key>
@@ -3312,6 +4128,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -3336,6 +4165,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>2</integer>
 					<key>RedEyeHosei</key>
@@ -3428,6 +4274,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -3444,6 +4311,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -3468,6 +4348,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -3560,6 +4457,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -3576,6 +4494,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -3600,6 +4531,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>1014</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -3692,6 +4640,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -3708,6 +4677,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -3732,6 +4714,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>3</integer>
 					<key>RedEyeHosei</key>
@@ -3824,6 +4823,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 			</array>
 			<key>Contents Correction Setting</key>
@@ -3987,6 +5007,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -4011,6 +5044,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>3</integer>
 					<key>RedEyeHosei</key>
@@ -4103,6 +5153,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -4119,6 +5190,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -4143,6 +5227,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -4235,6 +5336,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -4251,6 +5373,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -4275,6 +5410,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>1014</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>1</integer>
 					<key>RedEyeHosei</key>
@@ -4367,6 +5519,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 				<dict>
 					<key>AutoHosei</key>
@@ -4383,6 +5556,19 @@
 					<integer>0</integer>
 					<key>EScanMode</key>
 					<integer>0</integer>
+					<key>ExcelSettings</key>
+					<dict>
+						<key>ExcelFileSetting</key>
+						<integer>0</integer>
+						<key>ExcelFileSplit</key>
+						<integer>0</integer>
+						<key>ExcelLagOcr</key>
+						<integer>10</integer>
+						<key>ExcelSplitPageNumber</key>
+						<integer>1</integer>
+						<key>ExcelTableSetting</key>
+						<integer>0</integer>
+					</dict>
 					<key>FadingHosei</key>
 					<integer>0</integer>
 					<key>File Format</key>
@@ -4407,6 +5593,23 @@
 					<integer>0</integer>
 					<key>PaperLagOcr</key>
 					<integer>10</integer>
+					<key>PowerPointSettings</key>
+					<dict>
+						<key>PPTFileSetting</key>
+						<integer>0</integer>
+						<key>PPTFileSplit</key>
+						<integer>0</integer>
+						<key>PPTImageQuality</key>
+						<integer>1</integer>
+						<key>PPTKeepImages</key>
+						<integer>1</integer>
+						<key>PPTKeepLines</key>
+						<integer>0</integer>
+						<key>PPTLagOcr</key>
+						<integer>10</integer>
+						<key>PPTSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 					<key>QTbl</key>
 					<integer>3</integer>
 					<key>RedEyeHosei</key>
@@ -4499,6 +5702,27 @@
 					<integer>0</integer>
 					<key>Use File index digits</key>
 					<integer>1</integer>
+					<key>WordSettings</key>
+					<dict>
+						<key>WordFileSetting</key>
+						<integer>0</integer>
+						<key>WordFileSplit</key>
+						<integer>0</integer>
+						<key>WordHighLightError</key>
+						<integer>0</integer>
+						<key>WordImageQuality</key>
+						<integer>1</integer>
+						<key>WordKeepImages</key>
+						<integer>1</integer>
+						<key>WordKeepLines</key>
+						<integer>0</integer>
+						<key>WordKeepTextColor</key>
+						<integer>1</integer>
+						<key>WordLagOcr</key>
+						<integer>10</integer>
+						<key>WordSplitPageNumber</key>
+						<integer>1</integer>
+					</dict>
 				</dict>
 			</array>
 			<key>Contents Correction Setting</key>
