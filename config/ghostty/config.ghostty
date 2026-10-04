@@ -2,3 +2,6 @@ font-family = "MesloLGS Nerd Font"
 font-size = 16
 font-thicken = true
 mouse-shift-capture = true
+
+# Ghostty maps cmd+left to ctrl+a by default, which is the herdr prefix; send Home instead.
+keybind = super+arrow_left=csi:H

@@ -60,3 +60,6 @@ codex() {
     command codex "$@"
   fi
 }
+
+# Home sent as CSI H (e.g. Ghostty cmd+left) in addition to the default ^[OH.
+bindkey '^[[H' beginning-of-line
