@@ -75,6 +75,9 @@ height = 3
 
 [ui]
 host_cursor = "drawn"
+# Ctrl+right-click goes to the pane app (nvim PopUp menu) instead of herdr's pane menu.
+# Shift is not accepted here; herdr reserves Shift+mouse for the terminal.
+right_click_passthrough_modifier = "ctrl"
 
 [experimental]
 kitty_graphics = true

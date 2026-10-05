@@ -12,6 +12,12 @@ require git
 
 packages="asdf bash bat chafa delta dust exa exiftool fzf jq neovim ripgrep rsync shellcheck tmux tree zsh"
 
+# Neovim code-browsing deps (config/nvim/lua/ide.lua), not covered by $packages:
+#   brew install tree-sitter-cli          # nvim-treesitter (main) compiles parsers with it
+#   npm i -g @vtsls/language-server       # TypeScript LSP (vtsls)
+#   cargo install wgsl-analyzer           # WGSL LSP
+#   then in nvim: :PlugInstall | :TSInstallAll
+
 # packages="jq tmux tree zsh"
 # amazonlinux:2 lacks: rcm, bat chafa delta exa exiftool fzf neovim ripgrep
 # does have vim, zsh 5.8.1

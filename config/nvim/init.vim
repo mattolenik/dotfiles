@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'github/copilot.vim'
-Plug 'neomake/neomake'
 
 " Colors
 Plug 'chriskempson/base16-vim'
@@ -13,6 +12,7 @@ Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-surround'  " bracket group actions () [] {}
 Plug 'tpope/vim-repeat'  " improved action repeat
 Plug 'brooth/far.vim'  " find and replace
+Plug 'declancm/cinnamon.nvim'  " smooth scrolling; setup is below, after plug#end
 
 " IDE
 Plug 'edkolev/tmuxline.vim'
@@ -22,10 +22,15 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ojroques/nvim-bufdel'  " Better buffer deletion
 Plug 'tpope/vim-sleuth'    " tab width autodetect
 Plug 'danro/rename.vim'    " file rename
-Plug 'ervandew/supertab'   " better tabs
 
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope-ui-select.nvim'
+
+" Code browsing: treesitter (highlight/structure) + aerial (symbol outline)
+Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'main', 'do': ':TSUpdate' }
+Plug 'stevearc/aerial.nvim'
 
 " GUI
 Plug 'nvim-tree/nvim-web-devicons'
@@ -39,11 +44,13 @@ Plug 'vim-scripts/AdvancedSorters'
 Plug 'sheerun/vim-polyglot'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-" Autocomplete
+" LSP server configs (servers are enabled in lua/ide.lua via vim.lsp.enable)
 Plug 'neovim/nvim-lspconfig'
 
-" Linting
+" Linting only. LSP (go-to-def, rename, tsserver/deno) is handled by the native
+" client in lua/ide.lua, so ALE must not spawn its own servers.
 Plug 'dense-analysis/ale'
+let g:ale_disable_lsp = 1
 let g:ale_sh_shellcheck_options = '-x'
 Plug 'mhinz/vim-signify'
 
@@ -87,9 +94,7 @@ nnoremap <leader>p <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 "nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 "nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
-nnoremap <leader>fr <cmd>lua require('telescope.builtin').lsp_references()<cr>
-nnoremap <leader>fd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
-nnoremap <leader>fi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
+" LSP pickers (<leader>fr/fd/fi/fs/fS/ft/fe/fc) live in lua/ide.lua
 
 
 noremap <leader>y "*y
@@ -176,24 +181,29 @@ map <A-\> :set cursorcolumn!<CR>
 :vnoremap <F2> d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
 
 
-" More IDEish stuff
-
-nnoremap <M-r> :ALERename<CR>
-nnoremap <M-g> :ALEGoToDefinition<CR>
-
-" Right click menu items
+" Smooth scrolling. `basic` keymaps wrap <C-u>/<C-d>, <C-b>/<C-f>, PageUp/Down,
+" { }, n/N/*/#, <C-o>/<C-i>. `extra` (gg/G/0/^/$/zz/zt/zb) is off; flip it on
+" if you want those animated too.
 lua <<EOF
-vim.cmd [[
-silent! aunmenu PopUp.How-to\ disable\ mouse
-silent! aunmenu PopUp.-1-
-nmenu 500.300 PopUp.Go\ to\ definition :ALEGoToDefinition<CR>
-nmenu 500.300 PopUp.Go\ to\ implementation :ALEGoToImplementation<CR>
-nmenu 500.300 PopUp.Go\ to\ type\ definition :ALEGoToTypeDefinition<CR>
-nmenu 500.300 PopUp.Find\ references :ALEFindReferences<CR>
-nmenu 500.300 PopUp.Rename :ALERename<CR>
-nmenu 500.300 PopUp.-Sep- :
-]]
+local ok, cinnamon = pcall(require, 'cinnamon')
+if ok then
+  cinnamon.setup {
+    keymaps = { basic = true, extra = false },
+    options = {
+      mode = 'cursor',   -- 'window' scrolls the view without moving the cursor's screen position
+      -- ms per 1-line step. The plugin default (5) finishes a half-page in
+      -- ~100 ms, which is only a few terminal frames and reads as instant
+      -- through tmux/herdr. 15 ≈ 300 ms for <C-d>, ~650 ms for <C-f>.
+      delay = 15,
+      max_delta = { time = 800 },  -- cap for any single scroll (gg/G-sized jumps)
+    },
+  }
+end
 EOF
+
+" IDE / code browsing: native LSP, telescope, treesitter, aerial, keymaps,
+" mouse bindings and the right-click menu. See lua/ide.lua.
+lua require('ide')
 
 lua <<EOF
 require'nvim-web-devicons'.setup {
