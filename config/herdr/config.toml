@@ -72,6 +72,11 @@ description = "resize pane down by 1 cell (repeat arrows, esc to exit)"
 width = 48
 height = 3
 
+[[keys.command]]
+key = "prefix+f"
+type = "plugin_action"
+command = "herdr-workspace-selector.open"
+description = "workspace selector"
 
 [ui]
 host_cursor = "drawn"
@@ -79,6 +84,7 @@ host_cursor = "drawn"
 # Shift is not accepted here; herdr reserves Shift+mouse for the terminal.
 right_click_passthrough_modifier = "ctrl"
 
+status_indicators = "symbols"
 [experimental]
 kitty_graphics = true
 
