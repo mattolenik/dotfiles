@@ -280,6 +280,24 @@ map({ 'n', 'x', 'i' }, '<ScrollWheelUp>', wheel('up', '<ScrollWheelUp>'), { desc
 -- Right-click menu
 ---------------------------------------------------------------------------
 
+-- Border for popup menus (the mouse PopUp menu and completion pum share
+-- it). Neovim treats "shadow" as an alternative *style* to a line border,
+-- so it is one or the other: try `:set pumborder=shadow` to compare.
+vim.o.pumborder = 'rounded'
+
+-- Border colour: menu background with a muted foreground (Comment's fg),
+-- re-applied whenever the colorscheme changes.
+local function style_pum_border()
+  local pmenu = vim.api.nvim_get_hl(0, { name = 'Pmenu', link = false })
+  local comment = vim.api.nvim_get_hl(0, { name = 'Comment', link = false })
+  vim.api.nvim_set_hl(0, 'PmenuBorder', { bg = pmenu.bg, fg = comment.fg or pmenu.fg })
+end
+style_pum_border()
+vim.api.nvim_create_autocmd('ColorScheme', {
+  group = vim.api.nvim_create_augroup('ide_pum_border', { clear = true }),
+  callback = style_pum_border,
+})
+
 vim.cmd([[
   silent! aunmenu PopUp.How-to\ disable\ mouse
   silent! aunmenu PopUp.-1-
