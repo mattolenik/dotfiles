@@ -63,3 +63,12 @@ codex() {
 
 # Home sent as CSI H (e.g. Ghostty cmd+left) in addition to the default ^[OH.
 bindkey '^[[H' beginning-of-line
+
+# Unity CLI
+. "/Users/matt/.unity/env"
+
+# ai: ask an LLM for a shell command and drop it into the prompt
+_ai() {
+  print -z -- "$(llm -s "Output only one zsh command for $(uname) OS. No explanation, no markdown, no code fences." "$*" | sed -e '/^```/d' -e 's/^`//' -e 's/`$//')"
+}
+alias ai='noglob _ai'
