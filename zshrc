@@ -32,7 +32,7 @@ export SAVEHIST=320000
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
-eval $(thefuck --alias)
+command_exists thefuck && eval $(thefuck --alias)
 
 # Bind Alt + Left/Right for word movement
 bindkey '^[[1;3D' backward-word
@@ -65,7 +65,7 @@ codex() {
 bindkey '^[[H' beginning-of-line
 
 # Unity CLI
-. "/Users/matt/.unity/env"
+[[ -f "~/.unity/env" ]] && source "~/.unity/env"
 
 # ai: ask an LLM for a shell command and drop it into the prompt
 _ai() {
